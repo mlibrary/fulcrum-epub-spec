@@ -1,6 +1,6 @@
 /*
-  // Version 1.9
-  // Last update: December 19 2018
+  // Version 1.10
+  // Last update: January 16 2019
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -454,7 +454,7 @@ a.ennum:hover, a.ennum:active, a.ennum:focus {
 
 .fig {text-align:center; text-indent:0; margin-top: 1em;}
 .figatr {font-size:80%; text-align:left; text-indent: 0;}
-.figcap, .figcap1, .figh, .figh1, .fign, figcaption {
+.figcap, .figcap1, .figh, .figh1, .fign, figcaption, .figatr {
   font-size: .8em;
   text-align: left;
   text-indent: 0em;
