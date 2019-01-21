@@ -1,6 +1,6 @@
 /*
-  // Version 1.10
-  // Last update: January 16 2019
+  // Version 1.11
+  // Last update: January 21 2019
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -207,6 +207,10 @@ sup > a {
 .recipe {margin-right: 2.5em; margin-left:2.5em; margin-top: 2em; margin-bottom: 2em;}
 .references {margin-left:2em;}
 .senseline {margin-top: 1.5em; margin-bottom: 1.5em; margin-left: 2em; margin-right: 2em;}
+table.poetry_translation { border: 0px; }
+table.poetry_translation > tbody > tr > td { padding: 0; border: 0px; }
+table.poetry_translation > tbody > tr > td > div.senseline { margin-top: 0; margin-bottom: 0;}
+table.poetry_translation > tbody > tr > td > div.senseline > p {margin-bottom: 0; margin-top: .4em;}
 .sidebar {margin-top: 1.5em; margin-bottom: 1.5em; margin-left: 2em; margin-right: 2em;}
 .table {margin-top: 1em; margin-bottom: 1em;}
 .vol {}
@@ -755,7 +759,7 @@ a.fn:hover, a.fn:active, a.fn:focus {text-decoration: underline;}
 .sers {margin-top: .75em; margin-bottom: .75em; text-align:center; text-indent: 0; font-weight: bold;}
 .sert {font-size: large; margin-top: 2em; margin-bottom: 1em; text-align:center; text-indent: 0; font-weight: bold;}
 .sh {text-align:center; text-indent:0; font-size:large; font-weight: bold; margin-bottom:2em;}
-.sl { text-align:left; text-indent: -1em;}
+.sl { text-align:left; text-indent: -1em; margin-top: 0; margin-bottom: 0;}
 .sl1 { margin-left: 1.5em;  text-indent: -1em;}
 .sl1f { margin-left: 1.5em; margin-top: 1.5em;  text-indent: -1em;}
 .sl1l { margin-left: 1.5em; margin-top: .2em; margin-bottom: 1em; text-indent: -1em;}
@@ -783,13 +787,13 @@ a.fn:hover, a.fn:active, a.fn:focus {text-decoration: underline;}
 .sl9 { margin-left:9.5em; margin-top: -0.1em; margin-bottom: -0.1em; text-indent: -1em;}
 .sl9f { margin-left:9.5em; margin-top: 1.5em; margin-bottom: -0.1em; text-indent: -1em;}
 .sl9l { margin-left:9.5em; margin-top: .2em; margin-bottom: -0.1em; text-indent: -1em;}
-.slf { margin-top: 1.5em; text-align:left; text-indent: -1em;}
+.slf { margin-top: 1.5em; text-align:left; text-indent: -1em; margin-bottom: 0;}
 .slh {text-indent: -1em; font-style:italic; margin-top: 1em; margin-bottom: 0.5em; font-weight: bold;}
 .slh2 {margin-left: 1em; margin-bottom: -5em; font-size: medium; text-indent: 0; font-style:italic; margin-top: 3em; margin-bottom: 0.5em; font-weight: bold;}
 .sli {font-size: 80%; text-align:justify; text-indent: -1em;}
 .slif {font-size: 80%; text-align:justify; text-indent: -1em; margin-top: 1em;}
 .slil {font-size: 80%; text-align:justify; text-indent: -1em; margin-bottom: 1em;}
-.sll { text-align:justify; text-indent: -1em; }
+.sll { text-align:justify; text-indent: -1em; margin-top: 0; }
 .sls { margin-top: 1.5em; text-align:justify; text-indent: -1em;}
 .slt {text-indent: 0; text-align: center; margin-top: 0; margin-bottom: 0;}
 .st {text-align:left; text-indent:0;}
@@ -1085,7 +1089,7 @@ td {vertical-align:top;}
 .trh-i {font-style: italic;}
 
 table {
-  font-size: 0.75rem;
+  font-size: 1em;
   margin-bottom: 20px;
   page-break-inside: avoid;
   border: 1px solid #ddd;
