@@ -1,6 +1,6 @@
 /*
-  // Version 1.14
-  // Last update: January 24 2019
+  // Version 1.15
+  // Last update: February 6 2019
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -109,6 +109,11 @@ senseline, .senseline {
   font-size: 0.95em;
 }
 /*Structure*/
+section {
+  page-break-after: always;
+  page-break-inside: avoid;
+  break-after: column;
+ }
 .box {border-width: 2px; border-color: black; border-style: solid; margin-top: 1.5em; margin-bottom: 1.5em; margin-left: 2em; margin-right: 2em; padding: 1%;}
 .codeline {margin-top: 1.5em; margin-bottom: 1.5em;}
 .cover  {margin-top:-.75em; margin-bottom:0;}
