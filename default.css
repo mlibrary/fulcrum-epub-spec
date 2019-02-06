@@ -1,5 +1,5 @@
 /*
-  // Version 1.15
+  // Version 1.16
   // Last update: February 6 2019
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
@@ -709,33 +709,33 @@ a.fn:hover, a.fn:active, a.fn:focus {text-decoration: underline;}
 .sert {font-size: large; margin-top: 2em; margin-bottom: 1em; text-align:center; text-indent: 0; font-weight: bold;}
 .sh {text-align:center; text-indent:0; font-size:large; font-weight: bold; margin-bottom:2em;}
 .sl { text-align:left; text-indent: -1em; margin-top: 0; margin-bottom: 0;}
-.sl1 { margin-left: 1.5em;  text-indent: -1em;}
-.sl1f { margin-left: 1.5em; margin-top: 1.5em;  text-indent: -1em;}
-.sl1l { margin-left: 1.5em; margin-top: .2em; margin-bottom: 1em; text-indent: -1em;}
-.sl2 { margin-left: 2.5em; text-indent: -1em;}
+.sl1 { margin-left: 1.5em;  text-indent: -1em; margin-top: 0; margin-bottom: 0;}
+.sl1f { margin-left: 1.5em; margin-top: 1.5em;  text-indent: -1em; margin-bottom: 0;}
+.sl1l { margin-left: 1.5em; margin-top: 0em; margin-bottom: 1em; text-indent: -1em;}
+.sl2 { margin-left: 2.5em; text-indent: -1em; margin-top: 0; margin-bottom: 0;}
 .sl2f { margin-left: 2.5em; margin-top: 1.5em; margin-bottom: -0.1em; text-indent: -1em;}
-.sl2l { margin-left: 2.5em; margin-top: .2em; margin-bottom: 1em; text-indent: -1em;}
-.sl3 { margin-left: 3.5em; text-indent: -1em;}
+.sl2l { margin-left: 2.5em; margin-top: 0em; margin-bottom: 1em; text-indent: -1em;}
+.sl3 { margin-left: 3.5em; text-indent: -1em; margin-top: 0; margin-bottom: 0;}
 .sl3f { margin-left: 3.5em; margin-top: 1.5em; margin-bottom: -0.1em; text-indent: -1em;}
-.sl3l { margin-left: 3.5em; margin-top: .2em; margin-bottom: 1em; text-indent: -1em;}
-.sl4 { margin-left:4.5em; text-indent: -1em;}
+.sl3l { margin-left: 3.5em; margin-top: 0; margin-bottom: 1em; text-indent: -1em;}
+.sl4 { margin-left:4.5em; text-indent: -1em; margin-top: 0; margin-bottom: 0;}
 .sl4f { margin-left:4.5em; margin-top: 1.5em; margin-bottom: -0.1em; text-indent: -1em;}
-.sl4l { margin-left:4.5em; margin-top: .2em; margin-bottom: -0.1em; text-indent: -1em;}
+.sl4l { margin-left:4.5em; margin-top: 0em; margin-bottom: -0.1em; text-indent: -1em;}
 .sl5 { margin-left:5.5em; margin-top: -0.1em; margin-bottom: -0.1em; text-indent: -1em;}
 .sl5f { margin-left:5.5em; margin-top: 1.5em; margin-bottom: -0.1em; text-indent: -1em;}
-.sl5l { margin-left:5.5em; margin-top: .2em; margin-bottom: -0.1em; text-indent: -1em;}
+.sl5l { margin-left:5.5em; margin-top: 0em; margin-bottom: -0.1em; text-indent: -1em;}
 .sl6 { margin-left:6.5em; margin-top: -0.1em; margin-bottom: -0.1em; text-indent: -1em;}
 .sl6f { margin-left:6.5em; margin-top: 1.5em; margin-bottom: -0.1em; text-indent: -1em;}
-.sl6l { margin-left:6.5em; margin-top: .2em; margin-bottom: -0.1em; text-indent: -1em;}
+.sl6l { margin-left:6.5em; margin-top: 0em; margin-bottom: -0.1em; text-indent: -1em;}
 .sl7 { margin-left:7.5em; margin-top: -0.1em; margin-bottom: -0.1em; text-indent: -1em;}
 .sl7f { margin-left:7.5em; margin-top: 1.5em; margin-bottom: -0.1em; text-indent: -1em;}
-.sl7l { margin-left:7.5em; margin-top: .2em; margin-bottom: -0.1em; text-indent: -1em;}
+.sl7l { margin-left:7.5em; margin-top: 0em; margin-bottom: -0.1em; text-indent: -1em;}
 .sl8 { margin-left:8.5em; margin-top: -0.1em; margin-bottom: -0.1em; text-indent: -1em;}
 .sl8f { margin-left:8.5em; margin-top: 1.5em; margin-bottom: -0.1em; text-indent: -1em;}
-.sl8l { margin-left:8.5em; margin-top: .2em; margin-bottom: -0.1em; text-indent: -1em;}
+.sl8l { margin-left:8.5em; margin-top: 0em; margin-bottom: -0.1em; text-indent: -1em;}
 .sl9 { margin-left:9.5em; margin-top: -0.1em; margin-bottom: -0.1em; text-indent: -1em;}
 .sl9f { margin-left:9.5em; margin-top: 1.5em; margin-bottom: -0.1em; text-indent: -1em;}
-.sl9l { margin-left:9.5em; margin-top: .2em; margin-bottom: -0.1em; text-indent: -1em;}
+.sl9l { margin-left:9.5em; margin-top: 0em; margin-bottom: -0.1em; text-indent: -1em;}
 .slf { margin-top: 1.5em; text-align:left; text-indent: -1em; margin-bottom: 0;}
 .slh {text-indent: -1em; font-style:italic; margin-top: 1em; margin-bottom: 0.5em; font-weight: bold;}
 .slh2 {margin-left: 1em; margin-bottom: -5em; font-size: medium; text-indent: 0; font-style:italic; margin-top: 3em; margin-bottom: 0.5em; font-weight: bold;}
@@ -1086,6 +1086,13 @@ tbody {
     padding-top: 1em;
     padding-bottom: 1em;
     text-align: left;
+}
+
+/*  poetry footnotes */
+
+.senseline > p > a.enref, 
+.sesnseline > p> a.fnref {
+    margin-left: 1.8em;
 }
 
 /* tables for poetry translations */
