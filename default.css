@@ -1,6 +1,6 @@
 /*
   // Version 1.16
-  // Last update: February 6 2019
+  // Last update: February 7 2019
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -1174,14 +1174,28 @@ figure.code pre {
     margin: 0;
 }
 
-figure.code pre ol {
-    line-height: 10px;
+figure.code-linenumbers pre {
+  text-align: left;
+  line-height: 0;
+  counter-reset: line;
+  padding: .5em;
+  margin: 0;
+  font-size: .8em;  
+} 
+
+figure.code-linenumbers pre > span {
+    display: block;
+    line-height: 1.5em;
 }
 
-figure.code pre ol > li {
-    line-height: 1em;
-    margin-bottom: 0em;
-    padding-left: 2em;
+figure.code-linenumbers pre > span:before {
+    counter-increment: line;
+    content: counter(line);
+    display: inline-block;
+    border-right: 1px solid #ddd;
+    padding: 0 .5em;
+    margin-right: .5em;
+    color: #888
 }
 
 table.code {
