@@ -1,6 +1,6 @@
 /*
-  // Version 1.16
-  // Last update: February 7 2019
+  // Version 1.17
+  // Last update: February 15 2019
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -141,7 +141,7 @@ a.footnote, a.endnote {
  text-decoration: none;
 }
 a.footnote:hover, a.footnote:focus, a.footnote:active,
-a.endnote:hover, a.endnote:focuse, a.endnote:active {
+a.endnote:hover, a.endnote:focus, a.endnote:active {
   text-decoration: underline;
 }
 
@@ -208,9 +208,9 @@ sup > a {
 .bq1l {text-indent: -1em; margin-left: 10%; margin-top: -0.1em; margin-bottom: .3em; text-align:justify;}
 .bq1s {text-indent: -1em; margin-left: 10%; margin-top: .5em; margin-bottom: -0.1em; text-align:justify;}
 .bqaft {margin-right: 2em; margin-left:2em; text-indent:0; text-align:justify;}
-.bqf {margin-right: -1.5em; margin-left:-1.5em; text-indent:0; text-align:justify; margin-top: 1em;}
+.bqf {margin-right: -1.5em; margin-left:-1.5em; text-indent:0; text-align:justify; margin-top: 1em; margin-bottom: 0;}
 .bqh {font-weight: bold; text-indent:0; margin-right:2em; margin-left:2em; text-align:justify; font-style: italic; margin-bottom: 1em;}
-.bql {margin-right: -1.5em; margin-left:-1.5em; text-align:justify; margin-bottom: 1em; text-indent:0.7em;}
+.bql {margin-right: -1.5em; margin-left:-1.5em; text-align:justify; margin-bottom: 1em; text-indent:0.7em; margin-top: 0;}
 .bqnl { text-indent:0; margin-right:1em; margin-left:1em; text-align:justify;}
 .bqnlf { text-indent:0; margin-top: .75em; margin-right:1em; margin-left:1em; text-align:justify;}
 .bqnll { text-indent:0; margin-right:1em; margin-bottom: .75em; margin-left:1em; text-align:justify;}
@@ -287,7 +287,7 @@ sup > a {
 .chaft {font-size:medium; margin-bottom:2%; font-weight: bold; font-style: italic; text-align:left; text-indent: 0;}
 .chemb {font-weight: bold;}
 .chsect {text-align:center; margin-top: 3em; margin-bottom: .25em; font-size: large; font-weight: bold; text-indent: 0;}
-.chsubsect {text-align:center; margin-top: 2em; margin-bottom: .25em; font-size: large; font-weight: italic; text-indent: 0;}
+.chsubsect {text-align:center; margin-top: 2em; margin-bottom: .25em; font-size: large; font-style: italic; text-indent: 0;}
 .cip {font-size: small; text-align:left; text-indent: 0; margin-bottom:0; margin-top:0;}
 .cip-i {font-size: small; text-align:left; text-indent: 0; margin-bottom:0; margin-top:0; font-style: italic;}
 .cip1 {font-size: small; text-align:left; margin-top:0; margin-bottom:0; margin-left:2em;}
@@ -1090,20 +1090,20 @@ tbody {
 
 /*  poetry footnotes */
 
-.senseline > p > a.enref, 
+.senseline > p > a.enref,
 .sesnseline > p> a.fnref {
     margin-left: 1.8em;
 }
 
 /* tables for poetry translations */
-table.poetry_translation { 
-    border: 0px; border-spacing: 0px; 
+table.poetry_translation {
+    border: 0px; border-spacing: 0px;
 }
 
-table.poetry_translation > tbody > tr > td { 
-    padding: 0; border: 0px; line-height: .9em; 
+table.poetry_translation > tbody > tr > td {
+    padding: 0; border: 0px; line-height: .9em;
 }
-table.poetry_translation > tbody > tr > td > div.senseline { 
+table.poetry_translation > tbody > tr > td > div.senseline {
     margin-top: 0; margin-bottom: 0;
 }
 table.poetry_translation > tbody > tr > td > div.senseline > p {
@@ -1180,8 +1180,8 @@ figure.code-linenumbers pre {
   counter-reset: line;
   padding: .5em;
   margin: 0;
-  font-size: .8em;  
-} 
+  font-size: .8em;
+}
 
 figure.code-linenumbers pre > span {
     display: block;
@@ -1207,12 +1207,12 @@ table.code col.column-line {
     width: 20%;
 }
 
-table.code > tbody > tr > td { 
+table.code > tbody > tr > td {
     padding: 0px 0px 0px 5px; border: 0px; line-height: .9em; background-color: #f5f5f5;
 }
 
 table.code > tbody > tr > td:first-child,
-table.code.compare > tbody > tr > td:nth-child(2) { 
+table.code.compare > tbody > tr > td:nth-child(2) {
     border-right: 2px solid #ddd;
 }
 
@@ -1228,7 +1228,7 @@ table.code > tbody > tr:last-child > td:last-child {
     padding-bottom: .5em;
 }
 
-table.code > tbody > tr > td > pre { 
+table.code > tbody > tr > td > pre {
     margin: 0px; padding: 0px;
 }
 
