@@ -1,6 +1,6 @@
 /*
-  // Version 1.17
-  // Last update: February 15 2019
+  // Version 1.18
+  // Last update: February 25 2019
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -202,7 +202,7 @@ sup > a {
 .blp {text-indent: 0; text-align:justify;}
 .blpl {text-indent: 0; text-align:justify; margin-bottom: .5em;}
 .bls {text-indent: -1em; text-align:justify; margin-top: .75em; margin-bottom: .75em;}
-.bq {margin-right: -1.5em; margin-left:-1.5em; text-indent: .5em; text-align:justify;}
+.bq {margin-right: -1.5em; margin-left:-1.5em; text-indent: .5em; text-align:justify; margin-top: 0; margin-bottom: 0;}
 .bq1 {text-indent: -1em; margin-left: 10%; margin-top: -0.1em; margin-bottom: -0.1em; text-align:justify;}
 .bq1f {text-indent: -1em; margin-left: 10%; margin-top: .3em; margin-bottom: -0.1em; text-align:justify;}
 .bq1l {text-indent: -1em; margin-left: 10%; margin-top: -0.1em; margin-bottom: .3em; text-align:justify;}
@@ -786,7 +786,7 @@ a.fn:hover, a.fn:active, a.fn:focus {text-decoration: underline;}
 .tocpt {text-align:left; text-indent: 0; font-size:110%; font-weight: bold; margin-top: 2em; margin-bottom: 1em;}
 .tocut {text-align:left; text-indent: 0; font-size:medium; font-weight: bold; margin-top: 1em; margin-bottom: 1em;}
 
-.ul {text-indent: -1em; text-align:justify;}
+.ul {text-indent: -1em; text-align:justify; margin-top: 0; margin-bottom: 0;}
 .ul1 {text-indent: -1em; margin-left: 1em; text-align:justify;}
 .ul1f {text-indent: -1em; margin-left: 1em; text-align:justify;}
 .ul1l {text-indent: -1em; margin-left: 1em; text-align:justify;}
@@ -813,7 +813,7 @@ a.fn:hover, a.fn:active, a.fn:focus {text-decoration: underline;}
 .ul5l {text-indent: -1em; margin-left: 5em; text-align:justify; margin-bottom: .5em;}
 .ul5p {margin-left: 5em; text-align:justify;}
 .ul5s {text-indent: -1em; margin-left: 5em; text-align:justify; margin-top: .5em; margin-bottom: .5em;}
-.ulf {margin-top: 1em; text-indent: -1em; text-align:justify;}
+.ulf {margin-top: 1em; margin-bottom: 0; text-indent: -1em; text-align:justify;}
 .ulh {font-style:italic; margin-top:2%; margin-bottom:1%; text-align:justify; text-indent: -1em;}
 .ull {margin-bottom: 1em; text-indent: -1em; text-align:justify;}
 .ull2 {text-indent: 0; text-align:center;}
