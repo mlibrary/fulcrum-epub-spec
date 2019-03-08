@@ -1,6 +1,6 @@
 /*
-  // Version 1.18
-  // Last update: February 25 2019
+  // Version 1.19
+  // Last update: March 7 2019
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -744,7 +744,7 @@ a.fn:hover, a.fn:active, a.fn:focus {text-decoration: underline;}
 .slil {font-size: 80%; text-align:justify; text-indent: -1em; margin-bottom: 1em;}
 .sll { text-align:justify; text-indent: -1em; margin-top: 0; }
 .sls { margin-top: 1.5em; text-align:justify; text-indent: -1em;}
-.slt {text-indent: 0; text-align: center; margin-top: 0; margin-bottom: 0;}
+.slt {text-indent: 0; text-align: right; margin-top: 0; margin-bottom: 0;}
 .st {text-align:left; text-indent:0;}
 .stf {text-align:left; text-indent:0; margin-top: 1em;}
 .sth {font-weight:bold; font-size:large; margin-top:3%; margin-bottom:1%; text-indent:0; text-align:left;}
