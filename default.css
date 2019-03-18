@@ -1,6 +1,6 @@
 /*
-  // Version 1.19
-  // Last update: March 7 2019
+  // Version 1.20
+  // Last update: March 14 2019
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -42,7 +42,6 @@ a.enref, a.fnref {
   font-size: .6em;
   border: 0;
   position: relative;
-  display: inline-block;
   vertical-align: super;
   text-decoration: none;
 }
@@ -1086,13 +1085,6 @@ tbody {
     padding-top: 1em;
     padding-bottom: 1em;
     text-align: left;
-}
-
-/*  poetry footnotes */
-
-.senseline > p > a.enref,
-.sesnseline > p> a.fnref {
-    margin-left: 1.8em;
 }
 
 /* tables for poetry translations */
