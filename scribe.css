@@ -1,7 +1,7 @@
 /*
-  // Version 1.21
+  // Version 1.23
   // OEPS filename: default.css
-  // Last update: May 16 2019
+  // Last update: June 17 2019
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -39,7 +39,7 @@ a:hover, a:focus, a:active {
   color: #587abc;
 }
 
-a.enref, a.fnref {
+a.enref, a.fnref, a.tnref, a.tnnum  {
   font-size: .6em;
   border: 0;
   position: relative;
@@ -1027,7 +1027,7 @@ td {vertical-align:top;}
 .tdf {text-align: left; vertical-align:middle; padding: 2px; text-indent: 0; font-size: small; margin-top: .75em;}
 .tdl {text-align: left; vertical-align:middle; padding: 2px; text-indent: 0; font-size: small; margin-bottom: .75em;}
 .tdnl {text-align: left; vertical-align:middle; font-size: small; text-indent: 0; padding: 2px;}
-.tdul {vertical-align:middle; font-size: small; text-indent: -1em; padding: 2px;}
+.tdul {vertical-align:middle; font-size: small; margin-left:.75em; text-indent: -.75em; padding: 2px;}
 .tdp {vertical-align:middle; padding: 2px; text-indent: 0; font-size: small;}
 .tch {text-align: left; vertical-align:bottom; padding: 3px; font-weight: bold; text-indent: 0; font-size: small; padding-bottom: 0; margin-bottom: 0;}
 .tch1 {text-align: left; vertical-align:bottom; padding: 3px; font-weight: bold; text-indent: 0; font-size: small; padding-bottom: 0; margin-bottom: 0;}
