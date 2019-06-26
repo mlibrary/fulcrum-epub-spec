@@ -1,7 +1,7 @@
 /*
-  // Version 1.23
+  // Version 1.24
   // OEPS filename: default.css
-  // Last update: June 17 2019
+  // Last update: June 26 2019
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -459,7 +459,7 @@ a.fn:hover, a.fn:active, a.fn:focus {text-decoration: underline;}
 .ltsigs {font-size: 85%; margin-left: 3em; margin-right: 3em; text-indent: 0; margin-top: 1em; margin-bottom: 1em; text-align: justify;}
 
 .nl {text-indent: -1em; text-align:justify;}
-.nl1 {text-align:justify; margin-left: 1em; text-indent: -1em;}
+.nl1 {text-align:justify; margin-left: 1em; text-indent: -1em; font-size: initial;}
 .nl1f {text-align:justify; margin-left: 1em; text-indent: -1em; margin-top: .5em;}
 .nl1l {text-align:justify; margin-left: 1em; text-indent: -1em;}
 .nl1p {text-align:justify; margin-left: 1em; }
