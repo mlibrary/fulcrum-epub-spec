@@ -1,7 +1,7 @@
 /*
-  // Version 1.25
+  // Version 1.26
   // OEPS filename: default.css
-  // Last update: June 27 2019
+  // Last update: July 18 2019
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -131,6 +131,7 @@ section {
 .figure img, figure img {
   page-break-inside: avoid;
   margin-bottom: 1em;
+  height: auto !important;
 }
 a.footnote, a.endnote {
  font-size: .6em;
