@@ -108,12 +108,15 @@ blockquote, .blockquote {
 senseline, .senseline {
   font-size: 0.95em;
 }
+
 /*Structure*/
-section {
-  page-break-after: always;
-  page-break-inside: avoid;
-  break-after: column;
- }
+h4 { 
+  break-before: column; 
+} 
+body section section:nth-of-type(1) h4 { 
+  break-before: avoid; 
+}
+
 .box {border-width: 2px; border-color: black; border-style: solid; margin-top: 1.5em; margin-bottom: 1.5em; margin-left: 2em; margin-right: 2em; padding: 1%;}
 .codeline {margin-top: 1.5em; margin-bottom: 1.5em;}
 .cover  {margin-top:-.75em; margin-bottom:0;}
