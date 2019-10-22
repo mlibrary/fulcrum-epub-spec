@@ -20,6 +20,13 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,secti
  display:block;
 }
 
+h4 { 
+  break-before: column; 
+} 
+body section section:nth-of-type(1) h4 { 
+ break-before: avoid; 
+}
+
 h1,h2,h3,h4,h5,h6{
  font-family: "Gill Sans",Calibri,Helvetica,sans-serif;
  font-weight:600;
