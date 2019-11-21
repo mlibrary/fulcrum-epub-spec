@@ -1,7 +1,7 @@
 /*
   // Version 1.27
   // OEPS filename: default.css
-  // Last update: October 22 2019
+  // Last update: November 15 2019
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -108,7 +108,6 @@ blockquote, .blockquote {
 senseline, .senseline {
   font-size: 0.95em;
 }
-
 /*Structure*/
 h4 { 
   break-before: column; 
@@ -698,15 +697,15 @@ a.fn:hover, a.fn:active, a.fn:focus {text-decoration: underline;}
 .sbulp {text-indent: -1em; margin-left: 3em; margin-right: 2em; font-size:small;}
 .sbuls {text-indent: -1em; margin-left: 3em; margin-right: 2em; font-size:small;}
 .sec {text-align:center; margin-top: 1em; margin-bottom: 1em; text-indent: 0;}
-.ser {font-size: 80%; text-align:justify; text-indent: 0;}
+.ser {font-size: 80%; margin-bottom: 0; text-align:justify; text-indent: 0; font-style:italic;}
 .ser1 {font-size: 80%; margin-top: 0; margin-bottom: 0; text-align:justify; text-indent: 1em;}
 .ser2 {font-size: 80%; margin-top: 0; margin-bottom: 0; text-align:justify; text-indent: 2em;}
 .seraft {font-size: 80%; margin-top: 0; text-align:justify; text-indent: 0;}
 .serah {margin-top: .75em; margin-bottom: .5em; text-align:justify; text-indent: 0; font-weight: bold;}
 .serahaft {margin-top: 0; margin-bottom: .75em; text-align:justify; text-indent: 0; font-weight: bold;}
-.serau {font-size: 80%; margin-top: 0; margin-bottom: .5em; text-align:justify; text-indent: 0;}
+.serau {font-size: 80%; margin-top: 0; margin-bottom: .5em; text-align:justify; text-indent: 1em;}
 .serbh {font-size: 80%; margin-top: .75em; margin-bottom: .75em; text-align:justify; text-indent: 0; font-weight: bold;}
-.serf {font-size: 80%; margin-top: 1em; text-align:justify; text-indent: 0;}
+.serf {font-size: 80%; margin-top: 1em; margin-bottom: 0; text-align:justify; text-indent: 0; font-style: italic;}
 .serp {font-size: 80%; margin-top: 1em; text-align:justify; text-indent: 1em;}
 .serpf {font-size: 80%; margin-top: 1em; text-align:justify; text-indent: 0;}
 .sers {margin-top: .75em; margin-bottom: .75em; text-align:center; text-indent: 0; font-weight: bold;}
