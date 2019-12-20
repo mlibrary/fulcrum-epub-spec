@@ -1,7 +1,7 @@
 /*
-  // Version 1.28
+  // Version 1.30
   // OEPS filename: default.css
-  // Last update: December 13 2019
+  // Last update: December 18 2019
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -175,7 +175,7 @@ sup > a {
 
 .bh {font-size:.95em; font-weight: bold; margin-top:3%; margin-bottom:1%; text-indent:0; text-align:left;}
 .bhaft {font-size:.95em; font-weight: bold; margin-bottom:1%; text-indent:0; text-align:left;}
-.bk {margin-top:3em; text-align:center; font-size:2em; text-indent: 0; font-weight: normal;}
+.bk {margin-top:3em; text-align:center; font-size:2em; text-indent: 0; font-weight: normal; line-height: 1.25;}
 .bk1 {text-align:center; font-size:1.5em; margin-bottom:1em; text-indent: 0; font-weight: normal; font-style: italic;}
 .bk2 {text-align:center; font-size:.95em; margin-top:.5em; margin-bottom:.5em; font-weight: bold; text-indent: 0;}
 .bkalt {text-align:center; font-size:.95em; margin-top:.5em; font-weight:bold; text-indent: 0;}
@@ -217,9 +217,9 @@ sup > a {
 .bqt {text-align:right; font-style:italic; margin-right: .5em; margin-top:.5em; margin-bottom:.5em; font-size: 80%; text-indent: 0;}
 .bqul { margin-left: .5em; text-indent: -1em; text-align:justify;}
 .bqul1 { margin-left: 2em; text-indent: -1em; text-align:justify;}
-.bqulf { margin-left: 1em; text-indent: -1em; text-align:justify; margin-top: 1em;}
-.bqull { margin-left: 1em; text-indent: -1em; text-align:justify; margin-bottom: 1em;}
-.bquls { margin-left: 1em; text-indent: -1em; text-align:justify; margin-top: 1em; margin-bottom: 1em;}
+.bqulf { margin-left: .5em; text-indent: -1em; text-align:justify; margin-top: 1em;}
+.bqull { margin-left: .5em; text-indent: -1em; text-align:justify; margin-bottom: 1em;}
+.bquls { margin-left: .5em; text-indent: -1em; text-align:justify; margin-top: 1em; margin-bottom: 1em;}
 .bx {text-align:justify;}
 .bx1 {text-align:justify; margin-left: 1em;}
 .bx1aft {text-align:justify; text-indent: 0; margin-left: 1em;}
