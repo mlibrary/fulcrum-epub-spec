@@ -1,7 +1,7 @@
 /*
-  // Version 1.30
+  // Version 1.31
   // OEPS filename: default.css
-  // Last update: December 18 2019
+  // Last update: December 20 2019
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -26,7 +26,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,secti
 }
 
 a {
-  color: #40658f;
+  color: #315cce;
   text-decoration: underline;
 }
 
@@ -36,10 +36,12 @@ a:hover, a:focus, a:active {
 
 a.enref, a.fnref, a.tnref, a.tnnum  {
   font-size: .6em;
+  line-height: 1.2;
   border: 0;
   position: relative;
   vertical-align: super;
   text-decoration: none;
+  vertical-align: 35%;
 }
 
 a.enref:hover, a.enref:focus, a.enref:active,
