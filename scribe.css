@@ -1,7 +1,7 @@
 /*
-  // Version 1.31
+  // Version 1.32
   // OEPS filename: default.css
-  // Last update: December 20 2019
+  // Last update: January 29 2019
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -429,6 +429,7 @@ a.fn:hover, a.fn:active, a.fn:focus {text-decoration: underline;}
 .hb {text-align:center; margin-top: 1em; margin-bottom: 1em; text-indent: 0;}
 .hd {font-weight:bold; font-size:1.2em; margin-top:2em; margin-bottom:.5em; text-indent:0; text-align:center;}
 .hdn {font-weight:bold; margin-top:1em; margin-bottom:.5em; text-indent:0; text-align:center;}
+hr.sec-break {width: 0;}
 
 .in {text-indent: -1em; font-size:.8em; text-align: left;}
 .in1 {margin-left: 1em; text-indent: -1em; font-size:.8em; text-align: left;}
