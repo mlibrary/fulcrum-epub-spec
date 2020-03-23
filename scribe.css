@@ -1,7 +1,7 @@
 /*
-  // Version 1.32
+  // Version 1.33
   // OEPS filename: default.css
-  // Last update: January 29 2019
+  // Last update: March 23 2020
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -522,19 +522,19 @@ hr.sec-break {width: 0;}
 
 .opt {text-align:justify; text-indent: 0; margin-top: .5em; margin-bottom: .5em;}
 
-.paft {text-indent: 0; margin-top: .5em; text-align:justify;}
+.paft {text-indent: 0; margin-top: .5em; text-align:left;}
 .patr {text-align:right; margin-top:0;}
 .patr1 {text-align:right; margin-top:0;}
-.pcon {margin-top: 1em; text-indent: 0; text-align:justify;}
+.pcon {margin-top: 1em; text-indent: 0; text-align:left;}
 .pcust1 {}
 .pcust2 {}
 .pcust3 {}
-.pf {margin-top: 4em; text-align:justify; text-indent: 0;}
+.pf {margin-top: 4em; text-align:left; text-indent: 0;}
 .pn {font-size:2em; text-align:center; text-indent:0; margin-top:10%;}
 .pnum {}
 .ps {font-size:.95em; text-align:center; text-indent:0; margin-top:2.5%; margin-bottom: 2.5%;}
-.psec {margin-top: 2em; text-indent: 0; text-align:justify;}
-.psec1 {margin-top: 1em; text-indent: 0; text-align:justify;}
+.psec {margin-top: 2em; text-indent: 0; text-align:left;}
+.psec1 {margin-top: 1em; text-indent: 0; text-align:left;}
 .pt {font-size:1.5em; text-align:center; font-weight:bold; text-indent:0; margin-top:2.5%;}
 
 .qu {text-align:left; text-indent:0;}
