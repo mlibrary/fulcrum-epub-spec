@@ -1,7 +1,7 @@
 /*
-  // Version 1.33
+  // Version 1.34
   // OEPS filename: default.css
-  // Last update: March 23 2020
+  // Last update: April 9 2020
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -923,7 +923,7 @@ hr.sec-break {width: 0;}
     color: #666666;
     text-decoration: none;
 }
-h1 > span.page, h2 > span.page, h3 > span.page, #loi span.page {
+h1 > span.page, h2 > span.page, h3 > span.page {
   display: none;
 }
 
