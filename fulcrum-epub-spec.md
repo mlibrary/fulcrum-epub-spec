@@ -1287,7 +1287,7 @@ Setting the contrast between the background colors and images will help
 readers who have difficulty in distinguishing contrasts. Color contrast
 of 4:5:1 is the best practice followed in the industry. Check contrast
 using the following link.
-[[https://webaim.org/resources/contrastchecker/]{.underline}](https://webaim.org/resources/contrastchecker/).
+https://webaim.org/resources/contrastchecker/.
 
 ### Hidden Content
 
