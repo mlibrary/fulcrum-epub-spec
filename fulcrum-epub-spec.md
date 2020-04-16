@@ -342,6 +342,7 @@ convention.
 
 Where,
 
+
 <pre>
 <b><i>xx</i></b> = A sequential numeric book part identifier beginning with 00 and incrementing by 1 (e.g., 00, 01, 02, 03, and so on)
 <b><i>y</i></b> = An optional alphabetic section identifier used when book parts contain large numbers of image files (e.g., 01a, 01b, 01c, and so on)
@@ -405,19 +406,19 @@ Dublin Core metadata is required for the following items:
 
 **Example code:**
 
-<pre>
-&lt;dc:title>A Mid-Republican House from Gabii&lt;/dc:title>
-&lt;dc:creator>Rachel Opitz&lt;/dc:creator>
-&lt;dc:creator>Marcello Mogetta&lt;/dc:creator>
-&lt;dc:creator>Nicola Terrenato&lt;/dc:creator>
-&lt;dc:language>en-US&lt;/dc:language>
-&lt;dc:rights>© University of Michigan Press&lt;/dc:rights>
-&lt;dc:publisher>University of Michigan Press&lt;/dc:publisher>
-&lt;dc:identifier id="BookID">9780472999002&lt;/dc:identifier>
-&lt;dc:sourceid="src-id">urn:isbn:9780472999999&lt;/dc:source>
-&lt;meta refines="#src-id" property="dcterms:issued">2000-01-01&lt;/meta>
-&lt;dc:date>2018-03-03&lt;/dc:date>
-</pre>
+````
+<dc:title>A Mid-Republican House from Gabii</dc:title>
+<dc:creator>Rachel Opitz</dc:creator>
+<dc:creator>Marcello Mogetta</dc:creator>
+<dc:creator>Nicola Terrenato</dc:creator>
+<dc:language>en-US</dc:language>
+<dc:rights>© University of Michigan Press</dc:rights>
+<dc:publisher>University of Michigan Press</dc:publisher>
+<dc:identifier id="BookID">9780472999002</dc:identifier>
+<dc:sourceid="src-id">urn:isbn:9780472999999</dc:source>
+<meta refines="#src-id" property="dcterms:issued">2000-01-01</meta>
+<dc:date>2018-03-03</dc:date>
+````
 
 Accessibility Metadata
 ----------------------
@@ -439,16 +440,16 @@ For Apex created EPUBs, the follow meta tags will be placed inside the
 \<head\> tag in all the XHTML files. The meta tags are optional for
 third-party partners to University of Michigan.
 
-<pre>
-&lt;meta name="viewport" content="initial-scale=1.0,maximum-scale=5.0"/>
-&lt;meta content=" " name=" " role="section"/>
-</pre>
+````
+<meta name="viewport" content="initial-scale=1.0,maximum-scale=5.0"/>
+<meta content=" " name=" " role="section"/>
+````
 The chapter id should be provided as value for content attribute and the type of the
 section should be provided under name attribute. For example:
-<pre>
-&lt;meta content="dedication" name="dedication" role="section"/>
-&lt;meta content="chapter04" name="chapter04" role="section"/>
-</pre>
+````
+<meta content="dedication" name="dedication" role="section"/>
+<meta content="chapter04" name="chapter04" role="section"/>
+````
 
 ## Bookmark
 
@@ -486,20 +487,20 @@ through the documents, and, are essential for screen reader users.
 
 Example 1 --- One chapter/part per HTML
 
-<pre>
-&lt;html ...>
-&lt;title>Chapter 1 --- Hobo's Guide to the Universe&lt;/title>
-</pre>
+````
+<html ...>
+<title>Chapter 1 --- Hobo's Guide to the Universe</title>
+````
 
 Example 2 --- Multiple HTML files for one chapter/part
 
 If a document is split into multiple HTML files, the following method
 should be followed.
 
-<pre>
-&lt;html ...>
-&lt;title>Chapter 1 - Continued (2 of 3) --- Hobo's Guide to the Universe&lt;/title>
-</pre>
+````
+<html ...>
+<title>Chapter 1 - Continued (2 of 3) --- Hobo's Guide to the Universe</title>
+````
 
 Headings
 --------
@@ -509,38 +510,38 @@ the heading levels, apply heading tags ranging from h1 to h6 as needed.
 
 ### Numbered headings
 
-<pre>
-&lt;section role="doc-part">
-&lt;h1>Book One: 1805&lt;/h1>
-&lt;section role="doc-part">
-&lt;h2>Part 1&lt;/h2>
-&lt;section role="doc-chapter">
-&lt;h3>Chapter 1&lt;/h3>
-</pre>
+````
+<section role="doc-part">
+<h1>Book One: 1805</h1>
+<section role="doc-part">
+<h2>Part 1</h2>
+<section role="doc-chapter">
+<h3>Chapter 1</h3>
+````
 
 ### Separate heading and subtitle
 
 The title and subtitle are contained in separate elements, but grouped
 in a header element to better associate them. Use the role
 doc-subtitle to identify the subtitle.
-<pre>
-&lt;section role="doc-chapter">
-&lt;header>
-&lt;h1>ORIGIN OF THE WORLD.---FIRST DYNASTY.&lt;/h1>
-&lt;p role="doc-subtitle">URANUS AND GÆA. (Cœlus and Terra.)&lt;/p>
-&lt;/header>
-</pre>
+````
+<section role="doc-chapter">
+<header>
+<h1>ORIGIN OF THE WORLD.---FIRST DYNASTY.</h1>
+<p role="doc-subtitle">URANUS AND GÆA. (Cœlus and Terra.)</p>
+</header>
+````
 
 ### Merged heading and subtitle
 
 When the subtitle is contained within the same heading element as the
 title, identify it in a span with the role of doc-subtitle.
-<pre>
-&lt;section role="doc-chapter">
-&lt;h1>ORIGIN OF THE WORLD.---FIRST DYNASTY.
-&lt;span role="doc-subtitle">URANUS AND GÆA. (Cœlus and Terra.)&lt;/span>
-&lt;/h1>
-</pre>
+````
+<section role="doc-chapter">
+<h1>ORIGIN OF THE WORLD.---FIRST DYNASTY.
+<span role="doc-subtitle">URANUS AND GÆA. (Cœlus and Terra.)</span>
+</h1>
+````
 
 Tables
 ------
@@ -595,35 +596,35 @@ The following table has headers that span columns and rows:
 To make these headings accessible, use colgroup elements with the scope
 attribute:
 
-<pre>
-&lt;table border="1">
-&lt;colgroup span="2"/>
-&lt;colgroup span="1"/>
-&lt;colgroup span="2"/>
-&lt;colgroup span="2"/>
-&lt;colgroup span="1"/>
-&lt;thead>
-&lt;tr>
-&lt;th id="ship" colspan="2" scope="colgroup">Shipping.&lt;/th>
-&lt;th id="stock" rowspan="2" scope="colgroup">Stock.&lt;/th>
-&lt;th id="wages" colspan="2" scope="colgroup">Wages.&lt;/th>
-&lt;th id="wt" colspan="2" scope="colgroup">Weights.&lt;/th>
-&lt;th id="name" rowspan="2" scope="colgroup">Name of Colony.&lt;/th>
-&lt;/tr>
-&lt;tr>
-&lt;th scope="col">Book, page.&lt;/th>
-&lt;th scope="col">Appx, page.&lt;/th>
-&lt;th scope="col">Book, page.&lt;/th>
-&lt;th scope="col">Appx, page.&lt;/th>
-&lt;th scope="col">Book, page.&lt;/th>
-&lt;th scope="col">Appx, page.&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
+````
+<table border="1">
+<colgroup span="2"/>
+<colgroup span="1"/>
+<colgroup span="2"/>
+<colgroup span="2"/>
+<colgroup span="1"/>
+<thead>
+<tr>
+<th id="ship" colspan="2" scope="colgroup">Shipping.</th>
+<th id="stock" rowspan="2" scope="colgroup">Stock.</th>
+<th id="wages" colspan="2" scope="colgroup">Wages.</th>
+<th id="wt" colspan="2" scope="colgroup">Weights.</th>
+<th id="name" rowspan="2" scope="colgroup">Name of Colony.</th>
+</tr>
+<tr>
+<th scope="col">Book, page.</th>
+<th scope="col">Appx, page.</th>
+<th scope="col">Book, page.</th>
+<th scope="col">Appx, page.</th>
+<th scope="col">Book, page.</th>
+<th scope="col">Appx, page.</th>
+</tr>
+</thead>
+<tbody>
 ...
-&lt;/tbody>
-&lt;/table>
-</pre>
+</tbody>
+</table>
+````
 
 ### Complex headings
 
@@ -671,44 +672,44 @@ subsequent row:
 Use scope=\"col\" to make the start destinations the column headers and
 scope=\"row\" to make the end destinations the row headers:
 
-<pre>
-&lt;table border="1">
-&lt;thead>
-&lt;tr>
-&lt;th scope="col">Vancouver&lt;/th>
-&lt;th scope="col">Calgary&lt;/th>
-&lt;th scope="col">Saskaton&lt;/th>
-&lt;th scope="col">Winnipeg&lt;/th>
-&lt;th scope="col">Toronto&lt;/th>
-&lt;th scope="col">Montreal&lt;/th>
-&lt;th scope="col">St. John's&lt;/th>
-&lt;td>&lt;/td>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td class="center">7323&lt;/td>
-&lt;td class="center">6334&lt;/td>
-&lt;td class="center">5838&lt;/td>
-&lt;td class="center">5010&lt;/td>
-&lt;td class="center">3141&lt;/td>
-&lt;td class="center">2602&lt;/td>
-&lt;td class="center">&lt;/td>
-&lt;th scope="row">St. John's&lt;/th>
-&lt;/tr>
-&lt;tr>
-&lt;td class="center">4271&lt;/td>
-&lt;td class="center">3743&lt;/td>
-&lt;td class="center">3232&lt;/td>
-&lt;td class="center">2408&lt;/td>
-&lt;td class="center">539&lt;/td>
-&lt;td class="center">&lt;/td>
-&lt;td class="center">2602&lt;/td>
-&lt;th scope="row">Montreal&lt;/th>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-</pre>
+````
+<table border="1">
+<thead>
+<tr>
+<th scope="col">Vancouver</th>
+<th scope="col">Calgary</th>
+<th scope="col">Saskaton</th>
+<th scope="col">Winnipeg</th>
+<th scope="col">Toronto</th>
+<th scope="col">Montreal</th>
+<th scope="col">St. John's</th>
+<td></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">7323</td>
+<td class="center">6334</td>
+<td class="center">5838</td>
+<td class="center">5010</td>
+<td class="center">3141</td>
+<td class="center">2602</td>
+<td class="center"></td>
+<th scope="row">St. John's</th>
+</tr>
+<tr>
+<td class="center">4271</td>
+<td class="center">3743</td>
+<td class="center">3232</td>
+<td class="center">2408</td>
+<td class="center">539</td>
+<td class="center"></td>
+<td class="center">2602</td>
+<th scope="row">Montreal</th>
+</tr>
+</tbody>
+</table>
+````
 
 ### Layered headings
 
@@ -741,30 +742,30 @@ beginning of each row:
 The headers attribute is used to provide the IDs of the cells that
 contain the relevant heading text:
 
-<pre>
-&lt;table border="1">
-&lt;caption>Table IX.4 Income Distribution Among Families 1929-1997&lt;/caption>
-&lt;thead>
-&lt;tr>
-&lt;th id="t4-pct">% Families&lt;/th>
-&lt;th id="t4-1929" colspan="2">1929&lt;/th>
-&lt;th id="t4-1970" colspan="2">1970&lt;/th>
-&lt;th id="t4-1997" colspan="2">1997&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;th id="t4-low20">Lowest 20%&lt;/th>
-&lt;td headers="t4-1929 t4-low20">3.5%&lt;/td>
-&lt;td headers="t4-1929 t4-low20">3.5%&lt;/td>
-&lt;td headers="t4-1970 t4-low20">5.5%&lt;/td>
-&lt;td headers="t4-1970 t4-low20">5.5%&lt;/td>
-&lt;td headers="t4-1997 t4-low20">4.2%&lt;/td>
-&lt;td headers="t4-1997 t4-low20">4.2%&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-</pre>
+````
+<table border="1">
+<caption>Table IX.4 Income Distribution Among Families 1929-1997</caption>
+<thead>
+<tr>
+<th id="t4-pct">% Families</th>
+<th id="t4-1929" colspan="2">1929</th>
+<th id="t4-1970" colspan="2">1970</th>
+<th id="t4-1997" colspan="2">1997</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th id="t4-low20">Lowest 20%</th>
+<td headers="t4-1929 t4-low20">3.5%</td>
+<td headers="t4-1929 t4-low20">3.5%</td>
+<td headers="t4-1970 t4-low20">5.5%</td>
+<td headers="t4-1970 t4-low20">5.5%</td>
+<td headers="t4-1997 t4-low20">4.2%</td>
+<td headers="t4-1997 t4-low20">4.2%</td>
+</tr>
+</tbody>
+</table>
+````
 
 ## Lists
 
@@ -775,20 +776,20 @@ are reading list items.
 
 ### Unordered list
 
-<pre>
-&lt;ul>
-&lt;li>Credit, consumer, 164&lt;/li>
-&lt;li>Cross-functional contact, 10-11&lt;/li>
-&lt;li>Culture
-&lt;ul>
-&lt;li>buyer behavior and, 85&lt;/li>
-&lt;li>defined, 85, 98, 118&lt;/li>
+````
+<ul>
+<li>Credit, consumer, 164</li>
+<li>Cross-functional contact, 10-11</li>
+<li>Culture
+<ul>
+<li>buyer behavior and, 85</li>
+<li>defined, 85, 98, 118</li>
 ...
-&lt;/ul>
-&lt;/li>
+</ul>
+</li>
 ...
-&lt;/ul>
-</pre>
+</ul>
+````
 
 Excerpt from: Core Concepts of Marketing --- John Burnett
 
@@ -797,29 +798,29 @@ Excerpt from: Core Concepts of Marketing --- John Burnett
 Definition list tagging is required for Apex EPUB deliveries, but
 considered optional for third-party partners to University of Michigan.
 
-<pre>
-&lt;dl>
-&lt;dt>&lt;def>Exchange function&lt;/def>&lt;/dt>
-&lt;dd>
+````
+<dl>
+<dt><def>Exchange function</def></dt>
+<dd>
 Sales of the product to the various members
 of the channel of distribution.
-&lt;/dd>
-&lt;dt>&lt;def>Physical distribution function&lt;/def>&lt;/dt>
-&lt;dd>
+</dd>
+<dt><def>Physical distribution function</def></dt>
+<dd>
 Moves the product through the exchange
 channel, along with title and ownership.
-&lt;/dd>
-&lt;dt>&lt;def>Marketing channel&lt;/def>&lt;/dt>
-&lt;dd>
+</dd>
+<dt><def>Marketing channel</def></dt>
+<dd>
 Sets of independent organizations involved
 in the process of making a product or
 service available for use or consumption
 as well as providing a payment mechanism
 for the provider.
-&lt;/dd>
+</dd>
 ...
-&lt;/dl>
-</pre>
+</dl>
+````
 
 Excerpt from: Core Concepts of Marketing --- John Burnett
 
@@ -843,9 +844,9 @@ links are active.
 The user can determine the destination of the link from the text of
 the \<a\> element alone.
 
-<pre>
-&lt;p>For more information, refer to &lt;a href="#...">Section 1.1 of Web Publications&lt;/a>&lt;/p>
-</pre>
+````
+<p>For more information, refer to <a href="#...">Section 1.1 of Web Publications</a></p>
+````
 
 ### Link with alternate text
 
@@ -853,9 +854,9 @@ Adding alternate text is an optional best practice if neither of the
 above conditions are met. Use the title attribute to provide
 additional context.
 
-<pre>
-&lt;a href="#..." title="The EPUB specifications">click here&lt;/a>
-</pre>
+````
+<a href="#..." title="The EPUB specifications">click here</a>
+````
 
 ### Visual distinctive linking
 
@@ -863,24 +864,24 @@ additional context.
 bold one will make links visually stand out from their surrounding
 text.
 
-<pre>
+````
 a {
     text-decoration: none;
     font-weight: bolder;
     color: rgb(51,102,204);
   }
-</pre>
+````
 
 **Dotted Border Option:** A dotted border is placed under all links to
 highlight them instead of a line.
 
-<pre>
+````
 a {
     text-decoration: none;
     padding-bottom: 0.3rem;
     border-bottom: 0.1rem dotted rgb(100,100,100);
   }
-</pre>
+````
 
 ## Images
 
@@ -891,10 +892,9 @@ text provided by us.
 
 ### Significant simple image (no description required)
 
-<pre>
-&lt;img src="covers/9781449328030_lrg.jpg"
-     alt="Accessible EPUB 3 - First Edition"/>
-</pre>
+````
+<img src="covers/9781449328030_lrg.jpg" alt="Accessible EPUB 3 - First Edition"/>
+````
 
 ### Extended description via hyperlink
 
@@ -912,37 +912,37 @@ follows a link).
 An image could also be used to minimize the appearance of the link,
 but some reading systems have issues with such links.
 
-<pre>
-&lt;figure id="fig-01">
-&lt;img src="graphics/water-cycle.jpg"
+````
+<figure id="fig-01">
+<img src="graphics/water-cycle.jpg"
     alt="The hydrologic cycle, showing the
     circular nature of the process as water
     evaporates from a body of water and
     eventually returns to it"/>
-&lt;figcaption>
-The hydrologic cycle. &lt;a role="doc-noteref" href="#desc-01">Description&lt;/a>
-&lt;/figcaption>
-&lt;/figure>
+<figcaption>
+The hydrologic cycle. <a role="doc-noteref" href="#desc-01">Description</a>
+</figcaption>
+</figure>
 ...
-&lt;h2>Image Descriptions&lt;/h2>
-&lt;aside role="doc-footnote" id="desc-01">
-&lt;p>
-&lt;a role="doc-backlink" href="#fig-01">Figure 1.&lt;/a>
+<h2>Image Descriptions</h2>
+<aside role="doc-footnote" id="desc-01">
+<p>
+<a role="doc-backlink" href="#fig-01">Figure 1.</a>
  --- The diagram shows
 the processes of evaporation, condensation,
 evapotranspiration, water storage in ice and snow, and
 precipitation. A large body of water ...
-&lt;/p>
-&lt;/aside>
-</pre>
+</p>
+</aside>
+````
 
 ### Decorative image
 
 An empty alt attribute is complimented by the role presentation to
 indicate that the image contains no information for users.
-<pre>
-&lt;img src="graphics/gothic-border.png" role="presentation" alt=""/>
-</pre>
+````
+<img src="graphics/gothic-border.png" role="presentation" alt=""/>
+````
 
 ## Code Blocks
 
@@ -954,19 +954,19 @@ image to represent lines of code, inline code, or code blocks.
 
 Code to be displayed inline with paragraph text should be indicated with
 its equivalent semantic element.
-<pre>
-&lt;p>In table 2.2, the FizzBuzz algorithm ... is described as a
-&lt;i>loop&lt;/i> because it continues to compute results so long as the
+````
+<p>In table 2.2, the FizzBuzz algorithm ... is described as a
+<i>loop</i> because it continues to compute results so long as the
 proper conditions are met, in this case while the input amount
-(&lt;code>i&lt;/code>) is a number lower than or equal to 100.
+(<code>i</code>) is a number lower than or equal to 100.
 Example 2.2.a, on the left, frames its computation in an initial
-"catch-all" condition statement, that is, that &lt;code>i&lt;/code>
-is a multiple of three &lt;i>or&lt;/i> of five. (The syntax
-&lt;code>i%3&lt;/code> checks whether "&lt;code>i&lt;/code> divided by 3"
+"catch-all" condition statement, that is, that <code>i</code>
+is a multiple of three <i>or</i> of five. (The syntax
+<code>i%3</code> checks whether "<code>i</code> divided by 3"
 has a remainder of zero.) Then it checks each of those subconditions
-independently of one another. This means that &lt;code>i&lt;/code> ...
-&lt;/p>
-</pre>
+independently of one another. This means that <code>i</code> ...
+</p>
+````
 
 ### Code Blocks
 
@@ -976,10 +976,10 @@ with elements to preserve formatting of the code. Note the application
 of the CSS class code on the figure element. Rules defined in the
 associate spec CSS file help ensure formatting is preserved and line
 breaks occur when lines of code are excessively long.
+````
+<figure class="code">
 <pre>
-&lt;figure class="code">
-&lt;pre>
-&lt;code>
+<code>
 if invariance &#x3e; the random of engineering
         and not categorical then
     put ideals + one into media
@@ -991,14 +991,14 @@ if invariance &#x3e; the random of engineering
         put one into media
     end if
 end if
-&lt;/code>
-&lt;/pre>
-&lt;figcaption>
-&lt;span id="p51" class="page" epub:type="pagebreak" role="doc-pagebreak" aria-label="51">Page 51 &#8594;&lt;/span>
-&lt;p class="bqt">(Cayley 2002)&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
+</code>
 </pre>
+<figcaption>
+<span id="p51" class="page" epub:type="pagebreak" role="doc-pagebreak" aria-label="51">Page 51 &#8594;</span>
+<p class="bqt">(Cayley 2002)</p>
+</figcaption>
+</figure>
+````
 
 ### Code Blocks with Line Numbers
 
@@ -1009,21 +1009,21 @@ numbers included in the copied text. To do so one will need to divert
 from semantic encoding, and use CSS-only to include line numbers. Apply
 a CSS attribute which utilizes CSS line counting to provide line numbers
 automatically.
+````
+<figure class="code-linenumbers">
+<figcaption>
+<a data-locator="p157" class="page"></a>Practice Script 5.3: Revised simple statement combination
+</figcaption>
 <pre>
-&lt;figure class="code-linenumbers">
-&lt;figcaption>
-&lt;a data-locator="p157" class="page">&lt;/a>Practice Script 5.3: Revised simple statement combination
-&lt;/figcaption>
-&lt;pre>
-&lt;span>myVariable = true;&lt;/span>
-&lt;span>if (myVariable == true) {&lt;/span>
-&lt;span> "The value of myVariable is TRUE";&lt;/span>
-&lt;span>} else {&lt;/span>
-&lt;span> "The value of myVariable is FALSE";&lt;/span>
-&lt;span>}&lt;/span>
-&lt;/pre>
-&lt;/figure>
+<span>myVariable = true;</span>
+<span>if (myVariable == true) {</span>
+<span> "The value of myVariable is TRUE";</span>
+<span>} else {</span>
+<span> "The value of myVariable is FALSE";</span>
+<span>}</span>
 </pre>
+</figure>
+````
 
 ### Code Blocks with Line Numbers as Tables
 
@@ -1032,43 +1032,43 @@ display of line numbers is desirable, it is acceptable to encode the
 block of code as a table. For historical references to code this may be
 the most desirable, where excerpts of code are only needed to be
 displayed and line numbers start not a 1, but 3977, for example.
+````
+<table class="code">
+<thead>
+<tr>
+<th class="th" colspan="2"><a data-locator="p10"
+class="page"></a>Table 1.1. Excerpt from Heartbleed patch
+(t1\_lib.c) by snhenson et al. (2015)</th>
+</tr>
+<tr>
+<th class="tch">Line</th>
+<th class="tch">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<pre><code>3977</code></pre>
+</td>
+<td>
 <pre>
-&lt;table class="code">
-&lt;thead>
-&lt;tr>
-&lt;th class="th" colspan="2">&lt;a data-locator="p10"
-class="page">&lt;/a>Table 1.1. Excerpt from Heartbleed patch
-(t1\_lib.c) by snhenson et al. (2015)&lt;/th>
-&lt;/tr>
-&lt;tr>
-&lt;th class="tch">Line&lt;/th>
-&lt;th class="tch">Code&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>
-&lt;pre>&lt;code>3977&lt;/code>&lt;/pre>
-&lt;/td>
-&lt;td>
-&lt;pre>
-&lt;code>/* Read type and payload length first */&lt;/code>
-&lt;/pre>
-&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>
-&lt;pre>&lt;code>3978&lt;/code>&lt;/pre>
-&lt;/td>
-&lt;td>
-&lt;pre>
-&lt;code>if (1 + 2 + 16 &#x3e; s-&#x3e;s3-&#x3e;rrec.length)&lt;/code>
-&lt;/pre>
-&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
+<code>/* Read type and payload length first */</code>
 </pre>
+</td>
+</tr>
+<tr>
+<td>
+<pre><code>3978</code></pre>
+</td>
+<td>
+<pre>
+<code>if (1 + 2 + 16 &#x3e; s-&#x3e;s3-&#x3e;rrec.length)</code>
+</pre>
+</td>
+</tr>
+</tbody>
+</table>
+````
 
 ### Comparing Code Blocks with Line Numbers
 
@@ -1077,54 +1077,54 @@ one another side-by-side, along with the display of line numbers. In
 this case the code blocks should be encoded in a table, and follow the
 general pattern in 1.16.4. Note that in this case an additional CSS
 attribute is applied to the table element.
+````
+<table class="code compare">
+<thead>
+<tr>
+<th class="th" colspan="3"><a data-locator="p59"
+class="page"></a>Table 2.3. Two example FizzBuzz loops in
+Ruby</th>
+</tr>
+<tr>
+<th class="tch" style="width: 10%;">Line</th>
+<th class="tch">Example 2.3.a</th>
+<th class="tch">Example 2.3.b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<pre><code>1</code></pre>
+</td>
+<td>
 <pre>
-&lt;table class="code compare">
-&lt;thead>
-&lt;tr>
-&lt;th class="th" colspan="3">&lt;a data-locator="p59"
-class="page">&lt;/a>Table 2.3. Two example FizzBuzz loops in
-Ruby&lt;/th>
-&lt;/tr>
-&lt;tr>
-&lt;th class="tch" style="width: 10%;">Line&lt;/th>
-&lt;th class="tch">Example 2.3.a&lt;/th>
-&lt;th class="tch">Example 2.3.b&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>
-&lt;pre>&lt;code>1&lt;/code>&lt;/pre>
-&lt;/td>
-&lt;td>
-&lt;pre>
-&lt;code>for i in 1..100&lt;/code>
-&lt;/pre>
-&lt;/td>
-&lt;td>
-&lt;pre>
-&lt;code>100.times do |i|&lt;/code>
-&lt;/pre>
-&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>
-&lt;pre>&lt;code>2&lt;/code>&lt;/pre>
-&lt;/td>
-&lt;td>
-&lt;pre>
-&lt;code> if i%3 == 0 then&lt;/code>
-&lt;/pre>
-&lt;/td>
-&lt;td>
-&lt;pre>
-&lt;code> i = i+1&lt;/code>
-&lt;/pre>
-&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
+<code>for i in 1..100</code>
 </pre>
+</td>
+<td>
+<pre>
+<code>100.times do |i|</code>
+</pre>
+</td>
+</tr>
+<tr>
+<td>
+<pre><code>2</code></pre>
+</td>
+<td>
+<pre>
+<code> if i%3 == 0 then</code>
+</pre>
+</td>
+<td>
+<pre>
+<code> i = i+1</code>
+</pre>
+</td>
+</tr>
+</tbody>
+</table>
+````
 
 Footnotes and Endnotes
 ----------------------
@@ -1141,21 +1141,21 @@ Apex EPUB deliveries, but considered optional for third-party partners
 to University of Michigan.
 
 ### Footnotes in the body
-<pre>
-&lt;p>
-In that year&lt;a href="\#ft2f" epub:type="noteref">2&lt;/a>
+````
+<p>
+In that year<a href="\#ft2f" epub:type="noteref">2</a>
 there were 67 mills engaged in the manufacture of cotton goods ...
-&lt;/p>
-&lt;aside id="ft2f" epub:type="footnote">
-&lt;p>
+</p>
+<aside id="ft2f" epub:type="footnote">
+<p>
 2 The manufacturing statistics for 1900 which
 follow are not those given in the Twelfth
 Census, but are taken from the
-&lt;em>Census of Manufactures&lt;/em> ...
-&lt;/p>
-&lt;/aside>
-&lt;p>...&lt;/p>
-</pre>
+<em>Census of Manufactures</em> ...
+</p>
+</aside>
+<p>...</p>
+````
 
 ### Endnote section
 
@@ -1170,28 +1170,28 @@ each endnote item is encapsulated as a list item.
 A cluster of paras with \<p class="xxxxx"\> tagging does not afford the
 same flexibility as list encoding, nor provide precision for isolating
 start and end of notes.
-<pre>
-&lt;section epub:type="endnotes">
-&lt;h2>End Notes&lt;/h2>
-&lt;ol>
-&lt;li id="en001" epub:type="endnote">
+````
+<section epub:type="endnotes">
+<h2>End Notes</h2>
+<ol>
+<li id="en001" epub:type="endnote">
 According to the usual nomenclature, the
 branch flowing S.W. is called the Chattooga;
 this unites with the Tallulah to form the
 Tugaloo, which ...
-&lt;/li>
+</li>
 ...
-&lt;/ol>
-&lt;/section>
-</pre>
+</ol>
+</section>
+````
 
 ### Back-linking notes
-<pre>
-&lt;li id="en001" epub:type="endnote">
-&lt;a href="\#en01-ref" title="note reference 1">1&lt;/a>
+````
+<li id="en001" epub:type="endnote">
+<a href="\#en01-ref" title="note reference 1">1</a>
 According to the usual nomenclature, the ...
-&lt;/li>
-</pre>
+</li>
+````
 
 ## Content Numbering
 
@@ -1201,10 +1201,10 @@ Page numbers should follow the EPUB3 Accessibility Guidelines.
 <https://idpf.github.io/a11y-guidelines/content/xhtml/pagenum.html>
 
 **Example coding:**
-<pre>
-&lt;span id="p1" class="page" epub:type="pagebreak"
-      role="doc-pagebreak" aria-label="1">Page 1 &\#8594;&lt;/span>
-</pre>
+````
+<span id="p1" class="page" epub:type="pagebreak"
+      role="doc-pagebreak" aria-label="1">Page 1 &\#8594;</span>
+````
 
 ### Paragraph Numbering
 
@@ -1216,9 +1216,9 @@ the source document.
 
 Example coding:
 
-<pre>
-&lt;p class="numberedpara" id="para11" title="Para11"/>
-</pre>
+````
+<p class="numberedpara" id="para11" title="Para11"/>
+````
 
 ### Line Numbering
 
@@ -1226,9 +1226,9 @@ Line numbering requires adding a class identifier and id value to a
 \<p\>.
 
 Example coding:
-<pre>
-&lt;p class="numberedline" id="line11" title="Line11"/>
-</pre>
+````
+<p class="numberedline" id="line11" title="Line11"/>
+````
 
 Chapter Split
 -------------
@@ -1242,19 +1242,19 @@ represent relationships between all files for a chapter. The example
 snippet below is for file chapter2a. The reason for the metadata
 inclusion is to provide information so that UM is able to parse files to
 allow only chapters to display.
-<pre>
-&lt;html xmlns="http://www.w3.org/1999/xhtml"
+````
+<html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="eng">
-&lt;head>
-&lt;title>More&lt;/title>
-&lt;link rel="stylesheet" href="../Styles/stylesheet.css" type="text/css"/>
-&lt;meta name="viewport" content="initial-scale=1.0;maximum-scale=5.0"/>
-&lt;meta content="chapter2" name="chapter2a" role="section"/>
-&lt;/head>
-&lt;body>
-&lt;div>
-&lt;h3 class="subhead" id="sub4">&lt;em>The Mid-Republican Period: The House&lt;/em>&lt;/h3>
-</pre>
+<head>
+<title>More</title>
+<link rel="stylesheet" href="../Styles/stylesheet.css" type="text/css"/>
+<meta name="viewport" content="initial-scale=1.0;maximum-scale=5.0"/>
+<meta content="chapter2" name="chapter2a" role="section"/>
+</head>
+<body>
+<div>
+<h3 class="subhead" id="sub4"><em>The Mid-Republican Period: The House</em></h3>
+````
 
 ## CSS Stylesheet
 
