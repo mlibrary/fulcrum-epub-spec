@@ -12,6 +12,12 @@
 </tr>
 </thead>
 <tbody>
+<tr class="odd">
+<td>1.3</td>
+<td>April 15, 2020</td>
+<td>HELIO-2651</td>
+<td>tbelc@umich.edu</td>
+</tr>
 <tr class="even">
 <td>1.2</td>
 <td>Jan. 15, 2020</td>
@@ -552,7 +558,7 @@ should be contained within a *thead* element and footers within a
 *tfoot* element. The rows that represent the body of the table should be
 contained within a *tbody* element.
 
-### Irregular header 
+### Irregular header
 
 The following table has headers that span columns and rows:
 
@@ -619,7 +625,7 @@ attribute:
 &lt;/table>
 </pre>
 
-### Complex headings 
+### Complex headings
 
 The following table shows a distance chart with the start destinations
 defined in the first row and at the end destination at the end of each
@@ -704,7 +710,7 @@ scope=\"row\" to make the end destinations the row headers:
 &lt;/table>
 </pre>
 
-### Layered headings 
+### Layered headings
 
 The following table combines headers from the top of each column and
 beginning of each row:
@@ -767,7 +773,7 @@ Tag list items with proper list tags. Do not use other elements such as
 reader users can perceive meaningful information and will know that they
 are reading list items.
 
-### Unordered list 
+### Unordered list
 
 <pre>
 &lt;ul>
@@ -786,7 +792,7 @@ are reading list items.
 
 Excerpt from: Core Concepts of Marketing --- John Burnett
 
-### Definition list 
+### Definition list
 
 Definition list tagging is required for Apex EPUB deliveries, but
 considered optional for third-party partners to University of Michigan.
@@ -883,7 +889,7 @@ providing an alternate text for non-visual content, the screen reader
 users can perceive information about the image through the alternate
 text provided by us.
 
-### Significant simple image (no description required) 
+### Significant simple image (no description required)
 
 <pre>
 &lt;img src="covers/9781449328030_lrg.jpg"
@@ -908,7 +914,7 @@ but some reading systems have issues with such links.
 
 <pre>
 &lt;figure id="fig-01">
-&lt;img src="graphics/water-cycle.jpg" 
+&lt;img src="graphics/water-cycle.jpg"
     alt="The hydrologic cycle, showing the
     circular nature of the process as water
     evaporates from a body of water and
@@ -1134,7 +1140,7 @@ Footnote and endnote tagging per the following examples is required for
 Apex EPUB deliveries, but considered optional for third-party partners
 to University of Michigan.
 
-### Footnotes in the body 
+### Footnotes in the body
 <pre>
 &lt;p>
 In that year&lt;a href="\#ft2f" epub:type="noteref">2&lt;/a>
@@ -1151,7 +1157,7 @@ Census, but are taken from the
 &lt;p>...&lt;/p>
 </pre>
 
-### Endnote section 
+### Endnote section
 
 The HTML Model allows for lists to contain headings, paras, images,
 tables, etc. This means that applying list tagging can accommodate
@@ -1179,7 +1185,7 @@ Tugaloo, which ...
 &lt;/section>
 </pre>
 
-### Back-linking notes 
+### Back-linking notes
 <pre>
 &lt;li id="en001" epub:type="endnote">
 &lt;a href="\#en01-ref" title="note reference 1">1&lt;/a>
@@ -2454,4 +2460,3 @@ practice).
 
 -   Language of the page should be defined and any other language text
     inside the content should be defined with proper language code
-
