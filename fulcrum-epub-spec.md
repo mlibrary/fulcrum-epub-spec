@@ -84,147 +84,147 @@
 
 **Contents**
 
-[1.0 Target Specification -- EPUB3](#1.0-target-specification----epub3)
+[1.0 Target Specification -- EPUB3](#10-target-specification----epub3)
 
-[1.1 EPUB Version](#1.1-epub-version)
+[1.1 EPUB Version](#11-epub-version)
 
-[1.2 Element Specification](#1.2-element-specification)
+[1.2 Element Specification](#12-element-specification)
 
-[1.2.1 Standard Functionality Levels (ePub 3) for PDF source](#1.2.1-standard-functionality-levels-(epub-3)-for-pdf-source)
+[1.2.1 Standard Functionality Levels (ePub 3) for PDF source](#121-standard-functionality-levels-epub-3-for-pdf-source)
 
-[1.3 File Name](#1.3-file-name)
+[1.3 File Name](#13-file-name)
 
-[1.4 Folder Structure](#1.4-folder-structure)
+[1.4 Folder Structure](#14-folder-structure)
 
-[1.4.1 Optional File Inclusions](#1.4.1-optional-file-inclusions)
+[1.4.1 Optional File Inclusions](#141-optional-file-inclusions)
 
-[1.5 EPUB Package](#1.5-epub-package)
+[1.5 EPUB Package](#15-epub-package)
 
-[1.6 Metadata](#1.6-metadata)
+[1.6 Metadata](#16-metadata)
 
-[1.6.1 Dublin Core](#1.6.1-dublin-core)
+[1.6.1 Dublin Core](#161-dublin-core)
 
-[1.7 Accessibility Metadata](#1.7-accessibility-metadata)
+[1.7 Accessibility Metadata](#17-accessibility-metadata)
 
-[1.8 HTML Meta Header](#1.8-html-meta-header)
+[1.8 HTML Meta Header](#18-html-meta-header)
 
-[1.9 Bookmark](#1.9-bookmark)
+[1.9 Bookmark](#19-bookmark)
 
-[1.10 Html Title](#1.10-html-title)
+[1.10 Html Title](#110-html-title)
 
-[1.11 Headings](#1.11-headings)
+[1.11 Headings](#111-headings)
 
-[1.11.1 Numbered headings](#1.11.1-numbered-headings)
+[1.11.1 Numbered headings](#1111-numbered-headings)
 
-[1.11.2 Separate heading and subtitle](#1.11.2-separate-heading-and-subtitle)
+[1.11.2 Separate heading and subtitle](#1112-separate-heading-and-subtitle)
 
-[1.11.3 Merged heading and subtitle](#1.11.3-merged-heading-and-subtitle)
+[1.11.3 Merged heading and subtitle](#1113-merged-heading-and-subtitle)
 
-[1.12 Tables](#1.12-tables)
+[1.12 Tables](#112-tables)
 
-[1.12.1 Irregular header](#1.12.1-irregular-header)
+[1.12.1 Irregular header](#1121-irregular-header)
 
-[1.12.2 Complex headings](#1.12.2-complex-headings)
+[1.12.2 Complex headings](#1122-complex-headings)
 
-[1.12.3 Layered headings](#1.12.3-layered-headings)
+[1.12.3 Layered headings](#1123-layered-headings)
 
-[1.13 Lists](#1.13-lists)
+[1.13 Lists](#113-lists)
 
-[1.13.1 Unordered list](#1.13.1-unordered-list)
+[1.13.1 Unordered list](#1131-unordered-list)
 
-[1.13.2 Definition list](#1.13.2-definition-list)
+[1.13.2 Definition list](#1132-definition-list)
 
-[1.14 Links](#1.14-links)
+[1.14 Links](#114-links)
 
-[1.14.1 Links spec](#1.14.1-links-spec)
+[1.14.1 Links spec](#1141-links-spec)
 
-[1.14.2 Link with full context of destination](#1.14.2-link-with-full-context-of-destination)
+[1.14.2 Link with full context of destination](#1142-link-with-full-context-of-destination)
 
-[1.14.3 Link with alternate text](#1.14.3-link-with-alternate-text)
+[1.14.3 Link with alternate text](#1143-link-with-alternate-text)
 
-[1.14.4 Visual distinctive linking](#1.14.4-visual-distinctive-linking)
+[1.14.4 Visual distinctive linking](#1144-visual-distinctive-linking)
 
-[1.15 Images](#1.15-images)
+[1.15 Images](#115-images)
 
-[1.15.1 Significant simple image (no description required)](#1.15.1-significant-simple-image-(no-description-required))
+[1.15.1 Significant simple image (no description required)](#1151-significant-simple-image-no-description-required)
 
-[1.15.2 Extended description via hyperlink](#1.15.2-extended-description-via-hyperlink)
+[1.15.2 Extended description via hyperlink](#1152-extended-description-via-hyperlink)
 
-[1.15.3 Decorative image](#1.15.3-decorative-image)
+[1.15.3 Decorative image](#1153-decorative-image)
 
-[1.16 Code Blocks](#1.16-code-blocks)
+[1.16 Code Blocks](#116-code-blocks)
 
-[1.16.1 Inline Code](#1.16.1-inline-code)
+[1.16.1 Inline Code](#1161-inline-code)
 
-[1.16.2 Code Blocks](#1.16.2-code-blocks)
+[1.16.2 Code Blocks](#1162-code-blocks)
 
-[1.16.3 Code Blocks with Line Numbers](#1.16.3-code-blocks-with-line-numbers)
+[1.16.3 Code Blocks with Line Numbers](#1163-code-blocks-with-line-numbers)
 
-[1.16.4 Code Blocks with Line Numbers as Tables](#1.16.4-code-blocks-with-line-numbers-as-tables)
+[1.16.4 Code Blocks with Line Numbers as Tables](#1164-code-blocks-with-line-numbers-as-tables)
 
-[1.16.5 Comparing Code Blocks with Line Numbers](#1.16.5-comparing-code-blocks-with-line-numbers)
+[1.16.5 Comparing Code Blocks with Line Numbers](#1165-comparing-code-blocks-with-line-numbers)
 
-[1.17 Footnotes and Endnotes](#1.17-footnotes-and-endnotes)
+[1.17 Footnotes and Endnotes](#117-footnotes-and-endnotes)
 
-[1.17.1 Footnotes in the body](#1.17.1-footnotes-in-the-body)
+[1.17.1 Footnotes in the body](#1171-footnotes-in-the-body)
 
-[1.17.2 Endnote section](#1.17.2-endnote-section)
+[1.17.2 Endnote section](#1172-endnote-section)
 
-[1.17.3 Back-linking notes](#1.17.3-back-linking-notes)
+[1.17.3 Back-linking notes](#1173-back-linking-notes)
 
-[1.18 Content Numbering](#1.18-content-numbering)
+[1.18 Content Numbering](#118-content-numbering)
 
-[1.18.1 Page Break Numbering](#1.18.1-page-break-numbering)
+[1.18.1 Page Break Numbering](#1181-page-break-numbering)
 
-[1.18.2 Paragraph Numbering](#1.18.2-paragraph-numbering)
+[1.18.2 Paragraph Numbering](#1182-paragraph-numbering)
 
-[1.18.3 Line Numbering](#1.18.3-line-numbering)
+[1.18.3 Line Numbering](#1183-line-numbering)
 
-[1.19 Chapter Split](#1.19-chapter-split)
+[1.19 Chapter Split](#119-chapter-split)
 
-[1.20 CSS Stylesheet](#1.20-css-stylesheet)
+[1.20 CSS Stylesheet](#120-css-stylesheet)
 
-[1.20.1 Standard CSS](#1.20.1-standard-css)
+[1.20.1 Standard CSS](#1201-standard-css)
 
-[1.20.2 CSS Units](#1.20.2-css-units)
+[1.20.2 CSS Units](#1202-css-units)
 
-[1.20.3 Colors](#1.20.3-colors)
+[1.20.3 Colors](#1203-colors)
 
-[1.20.4 Background Images](#1.20.4-background-images)
+[1.20.4 Background Images](#1204-background-images)
 
-[1.20.5 Hidden Content](#1.20.5-hidden-content)
+[1.20.5 Hidden Content](#1205-hidden-content)
 
-[1.20.6 CSS Property Reference](#1.20.6-css-property-reference)
+[1.20.6 CSS Property Reference](#1206-css-property-reference)
 
-[1.20.7 CSS 2.1](#1.20.7-css-2.1)
+[1.20.7 CSS 2.1](#1207-css-21)
 
-[1.20.8 CSS 2.1 Pseudo-Classes](#1.20.8-css-2.1-pseudo-classes)
+[1.20.8 CSS 2.1 Pseudo-Classes](#1208-css-21-pseudo-classes)
 
-[1.20.9 CSS 2.1 Pseudo-Elements](#1.20.9-css-2.1-pseudo-elements)
+[1.20.9 CSS 2.1 Pseudo-Elements](#1209-css-21-pseudo-elements)
 
-[1.21 Images](#1.21-images)
+[1.21 Images](#121-images)
 
-[1.21.1 Image File Types](#1.21.1-image-file-types)
+[1.21.1 Image File Types](#1211-image-file-types)
 
-[1.21.2 Recommended Criteria](#1.21.2-recommended-criteria)
+[1.21.2 Recommended Criteria](#1212-recommended-criteria)
 
-[1.21.3 Cover Image](#1.21.3-cover-image)
+[1.21.3 Cover Image](#1213-cover-image)
 
-[1.21.4 Image/Graphic Placement](#1.21.4-image/graphic-placement)
+[1.21.4 Image/Graphic Placement](#1214-imagegraphic-placement)
 
-[1.22 Fonts](#1.22-fonts)
+[1.22 Fonts](#122-fonts)
 
-[1.23 Formatting](#1.23-formatting)
+[1.23 Formatting](#123-formatting)
 
-[1.24 Boxed Text](#1.24-boxed-text)
+[1.24 Boxed Text](#124-boxed-text)
 
-[1.25 Marginalia and Sidebars](#1.25-marginalia-and-sidebars)
+[1.25 Marginalia and Sidebars](#125-marginalia-and-sidebars)
 
-[1.26 Reading Order](#1.26-reading-order)
+[1.26 Reading Order](#126-reading-order)
 
-[1.27 DPUB ARIA Semantics](#1.27-dpub-aria-semantics)
+[1.27 DPUB ARIA Semantics](#127-dpub-aria-semantics)
 
-[1.28 Accessibility](#1.28-accessibility)
+[1.28 Accessibility](#128-accessibility)
 
 # 1.0 Target Specification -- EPUB3
 
