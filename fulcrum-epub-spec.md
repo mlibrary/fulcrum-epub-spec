@@ -226,9 +226,9 @@
 
 [1.28 Accessibility](#accessibility)
 
-# 1.0 Target Specification -- EPUB3
+# 1.0 Target Specification -- EPUB3 {: #target-specification----epub3 }
 
-## 1.1 EPUB Version
+## 1.1 EPUB Version {: #epub-version }
 
 EPUB version 3.0.1 is the recommended technical specification for EPUB
 created for submission to Fulcrum. Please note this document does not
