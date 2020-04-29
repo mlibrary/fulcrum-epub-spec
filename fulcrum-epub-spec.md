@@ -84,161 +84,151 @@
 
 **Contents**
 
-[1.0 Target Specification -- EPUB3 1-1](#_Toc441165)
+[1.0 Target Specification -- EPUB3](#target-specification----epub3)
 
-[1.1 EPUB Version 1-1](#epub-version)
+[1.1 EPUB Version](#epub-version)
 
-[1.2 Element Specification 1-1](#element-specification)
+[1.2 Element Specification](#element-specification)
 
-[1.2.1 Standard Functionality Levels (ePub 3) for PDF source
-1-1](#standard-functionality-levels-epub-3-for-pdf-source)
+[1.2.1 Standard Functionality Levels (ePub 3) for PDF source](#standard-functionality-levels-epub-3-for-pdf-source)
 
-[1.3 File Name 1-2](#file-name)
+[1.3 File Name](#file-name)
 
-[1.4 Folder Structure 1-2](#folder-structure)
+[1.4 Folder Structure](#folder-structure)
 
-[1.4.1 Optional File Inclusions 1-3](#optional-file-inclusions)
+[1.4.1 Optional File Inclusions](#optional-file-inclusions)
 
-[1.5 EPUB Package 1-3](#epub-package)
+[1.5 EPUB Package](#epub-package)
 
-[1.6 Metadata 1-4](#metadata)
+[1.6 Metadata](#metadata)
 
-[1.6.1 Dublin Core 1-4](#dublin-core)
+[1.6.1 Dublin Core](#dublin-core)
 
-[1.7 Accessibility Metadata 1-5](#accessibility-metadata)
+[1.7 Accessibility Metadata](#accessibility-metadata)
 
-[1.8 HTML Meta Header 1-5](#html-meta-header)
+[1.8 HTML Meta Header](#html-meta-header)
 
-[1.9 Bookmark 1-5](#bookmark)
+[1.9 Bookmark](#bookmark)
 
-[1.10 Html Title 1-6](#html-title)
+[1.10 Html Title](#html-title)
 
-[1.11 Headings 1-6](#headings)
+[1.11 Headings](#headings)
 
-[1.11.1 Numbered headings 1-6](#numbered-headings)
+[1.11.1 Numbered headings](#numbered-headings)
 
-[1.11.2 Separate heading and subtitle
-1-6](#separate-heading-and-subtitle)
+[1.11.2 Separate heading and subtitle](#separate-heading-and-subtitle)
 
-[1.11.3 Merged heading and subtitle 1-7](#merged-heading-and-subtitle)
+[1.11.3 Merged heading and subtitle](#merged-heading-and-subtitle)
 
-[1.12 Tables 1-7](#tables)
+[1.12 Tables](#tables)
 
-[1.12.1 Irregular header 1-7](#irregular-header)
+[1.12.1 Irregular header](#irregular-header)
 
-[1.12.2 Complex headings 1-8](#complex-headings)
+[1.12.2 Complex headings](#complex-headings)
 
-[1.12.3 Layered headings 1-8](#layered-headings)
+[1.12.3 Layered headings](#layered-headings)
 
-[1.13 Lists 1-9](#lists)
+[1.13 Lists](#lists)
 
-[1.13.1 Unordered list 1-9](#unordered-list)
+[1.13.1 Unordered list](#unordered-list)
 
-[1.13.2 Definition list 1-10](#definition-list)
+[1.13.2 Definition list](#definition-list)
 
-[1.14 Links 1-10](#links)
+[1.14 Links](#links)
 
-[1.14.1 Links spec 1-10](#links-spec)
+[1.14.1 Links spec](#links-spec)
 
-[1.14.2 Link with full context of destination
-1-10](#link-with-full-context-of-destination)
+[1.14.2 Link with full context of destination](#link-with-full-context-of-destination)
 
-[1.14.3 Link with alternate text 1-11](#link-with-alternate-text)
+[1.14.3 Link with alternate text](#link-with-alternate-text)
 
-[1.14.4 Visual distinctive linking 1-11](#visual-distinctive-linking)
+[1.14.4 Visual distinctive linking](#visual-distinctive-linking)
 
-[1.15 Images 1-11](#images)
+[1.15 Images](#images)
 
-[1.15.1 Significant simple image (no description required)
-1-11](#significant-simple-image-no-description-required)
+[1.15.1 Significant simple image (no description required)](#significant-simple-image-no-description-required)
 
-[1.15.2 Extended description via hyperlink
-1-11](#extended-description-via-hyperlink)
+[1.15.2 Extended description via hyperlink](#extended-description-via-hyperlink)
 
-[1.15.3 Decorative image 1-12](#decorative-image)
+[1.15.3 Decorative image](#decorative-image)
 
-[1.16 Code Blocks 1-12](#code-blocks)
+[1.16 Code Blocks](#code-blocks)
 
-[1.16.1 Inline Code 1-12](#inline-code)
+[1.16.1 Inline Code](#inline-code)
 
-[1.16.2 Code Blocks 1-13](#code-blocks-1)
+[1.16.2 Code Blocks](#code-blocks-1)
 
-[1.16.3 Code Blocks with Line Numbers
-1-13](#code-blocks-with-line-numbers)
+[1.16.3 Code Blocks with Line Numbers](#code-blocks-with-line-numbers)
 
-[1.16.4 Code Blocks with Line Numbers as Tables
-1-14](#code-blocks-with-line-numbers-as-tables)
+[1.16.4 Code Blocks with Line Numbers as Tables](#code-blocks-with-line-numbers-as-tables)
 
-[1.16.5 Comparing Code Blocks with Line Numbers
-1-15](#comparing-code-blocks-with-line-numbers)
+[1.16.5 Comparing Code Blocks with Line Numbers](#comparing-code-blocks-with-line-numbers)
 
-[1.17 Footnotes and Endnotes 1-16](#footnotes-and-endnotes)
+[1.17 Footnotes and Endnotes](#footnotes-and-endnotes)
 
-[1.17.1 Footnotes in the body 1-16](#footnotes-in-the-body)
+[1.17.1 Footnotes in the body](#footnotes-in-the-body)
 
-[1.17.2 Endnote section 1-16](#endnote-section)
+[1.17.2 Endnote section](#endnote-section)
 
-[1.17.3 Back-linking notes 1-17](#back-linking-notes)
+[1.17.3 Back-linking notes](#back-linking-notes)
 
-[1.18 Content Numbering 1-17](#content-numbering)
+[1.18 Content Numbering](#content-numbering)
 
-[1.18.1 Page Break Numbering 1-17](#page-break-numbering)
+[1.18.1 Page Break Numbering](#page-break-numbering)
 
-[1.18.2 Paragraph Numbering 1-17](#paragraph-numbering)
+[1.18.2 Paragraph Numbering](#paragraph-numbering)
 
-[1.18.3 Line Numbering 1-17](#line-numbering)
+[1.18.3 Line Numbering](#line-numbering)
 
-[1.19 Chapter Split 1-17](#chapter-split)
+[1.19 Chapter Split](#chapter-split)
 
-[1.20 CSS Stylesheet 1-18](#css-stylesheet)
+[1.20 CSS Stylesheet](#css-stylesheet)
 
-[1.20.1 Standard CSS 1-18](#standard-css)
+[1.20.1 Standard CSS](#standard-css)
 
-[1.20.2 CSS Units 1-18](#css-units)
+[1.20.2 CSS Units](#css-units)
 
-[1.20.3 Colors 1-18](#colors)
+[1.20.3 Colors](#colors)
 
-[1.20.4 Background Images 1-18](#background-images)
+[1.20.4 Background Images](#background-images)
 
-[1.20.5 Hidden Content 1-19](#hidden-content)
+[1.20.5 Hidden Content](#hidden-content)
 
-[1.20.6 CSS Property Reference 1-19](#css-property-reference)
+[1.20.6 CSS Property Reference](#css-property-reference)
 
-[1.20.7 CSS 2.1 1-19](#css-2.1)
+[1.20.7 CSS 2.1](#css-2.1)
 
-[1.20.8 CSS 2.1 Pseudo-Classes 1-25](#css-2.1-pseudo-classes)
+[1.20.8 CSS 2.1 Pseudo-Classes](#css-2.1-pseudo-classes)
 
-[1.20.9 CSS 2.1 Pseudo-Elements 1-26](#css-2.1-pseudo-elements)
+[1.20.9 CSS 2.1 Pseudo-Elements](#css-2.1-pseudo-elements)
 
-[1.21 Images 1-27](#images-1)
+[1.21 Images](#images-1)
 
-[1.21.1 Image File Types 1-27](#image-file-types)
+[1.21.1 Image File Types](#image-file-types)
 
-[1.21.2 Recommended Criteria 1-27](#recommended-criteria)
+[1.21.2 Recommended Criteria](#recommended-criteria)
 
-[1.21.3 Cover Image 1-27](#cover-image)
+[1.21.3 Cover Image](#cover-image)
 
-[1.21.4 Image/Graphic Placement 1-28](#imagegraphic-placement)
+[1.21.4 Image/Graphic Placement](#imagegraphic-placement)
 
-[1.22 Fonts 1-28](#fonts)
+[1.22 Fonts](#fonts)
 
-[1.23 Formatting 1-28](#formatting)
+[1.23 Formatting](#formatting)
 
-[1.24 Boxed Text 1-28](#boxed-text)
+[1.24 Boxed Text](#boxed-text)
 
-[1.25 Marginalia and Sidebars 1-29](#marginalia-and-sidebars)
+[1.25 Marginalia and Sidebars](#marginalia-and-sidebars)
 
-[1.26 Reading Order 1-29](#reading-order)
+[1.26 Reading Order](#reading-order)
 
-[1.27 DPUB ARIA Semantics 1-29](#dpub-aria-semantics)
+[1.27 DPUB ARIA Semantics](#dpub-aria-semantics)
 
-[1.28 Accessibility 1-31](#accessibility)
+[1.28 Accessibility](#accessibility)
 
-Target Specification -- EPUB3
-=============================
+# 1.0 Target Specification -- EPUB3
 
-EPUB Version
-------------
+## 1.1 EPUB Version
 
 EPUB version 3.0.1 is the recommended technical specification for EPUB
 created for submission to Fulcrum. Please note this document does not
@@ -260,14 +250,13 @@ The full EPUB 3.0.1 specification is located here:
 
 -   XHTML files validated with CSE HTML validator version 10.0
 
-Element Specification
----------------------
+## 1.2 Element Specification
 
 The following matrix details recommendations how to convert different
 elements. The treatments are optional for third-party partners to
 University of Michigan.
 
-### Standard Functionality Levels (ePub 3) for PDF source
+### 1.2.1 Standard Functionality Levels (ePub 3) for PDF source
 
 | **Element**                   | **Conversion**                           |
 | ----------------------------- | ---------------------------------------- |
@@ -299,8 +288,7 @@ University of Michigan.
 **<span class="underline">Note</span>:** If the input is ePub, then output should be in
 the same format.
 
-File Name
----------
+## 1.3 File Name
 
 The EPUB3 output file name will be the 13-digit ISBN number of the same
 input file name for Apex Production.
@@ -310,8 +298,7 @@ third-party partners to University of Michigan. However, file naming
 conventions must be consistent across titles submitted to the
 university.
 
-Folder Structure
-----------------
+## 1.4 Folder Structure
 
 The following folder structure is required for Apex deliverables to the
 University of Michigan. The folder structure below is optional for
@@ -354,7 +341,7 @@ Where,
 <b><i>stylesheet</i></b> = A human readable CSS stylesheet name.
 </pre>
 
-### Optional File Inclusions
+### 1.4.1 Optional File Inclusions
 
 Additional inclusions supporting alternative EPUB Reader systems, such
 as ibooks and the com.apple.ibooks.display-options.xml file, is
@@ -362,8 +349,7 @@ permissible and will not interfere with the Fulcrum viewer.
 
 If such files are in source, they will be in the deliverable EPUB3.
 
-EPUB Package
-------------
+## 1.5 EPUB Package
 
 The EPUB3 output contains the following folders and files.
 
@@ -383,10 +369,9 @@ The EPUB3 output contains the following folders and files.
 
 -   Embedded Fonts (Only if approved by customer)
 
-Metadata
---------
+## 1.6 Metadata
 
-### Dublin Core
+### 1.6.1 Dublin Core
 
 Dublin Core metadata is required for the following items:
 
@@ -420,8 +405,7 @@ Dublin Core metadata is required for the following items:
 <dc:date>2018-03-03</dc:date>
 ````
 
-Accessibility Metadata
-----------------------
+## 1.7 Accessibility Metadata
 
 Include the two types of accessibility metadata structure defined in the
 current EPUB environment as listed below.
@@ -433,8 +417,7 @@ the /meta folder of the EPUB.
 
 > Schema: <http://kb.daisy.org/publishing/docs/metadata/schema-org.html>
 
-HTML Meta Header
-----------------
+## 1.8 HTML Meta Header
 
 For Apex created EPUBs, the follow meta tags will be placed inside the
 \<head\> tag in all the XHTML files. The meta tags are optional for
@@ -451,7 +434,7 @@ section should be provided under name attribute. For example:
 <meta content="chapter04" name="chapter04" role="section"/>
 ````
 
-## Bookmark
+## 1.9 Bookmark
 
 Bookmark each ePUB as follows:
 
@@ -475,7 +458,7 @@ Bookmark each ePUB as follows:
 -   Appendices
 -   Indexes
 
-## Html Title
+## 1.10 Html Title
 
 HTML titles are a best practice recommendation, and, required for Apex
 EPUB deliveries. However, HTML titles are optional for third-party
@@ -502,13 +485,12 @@ should be followed.
 <title>Chapter 1 - Continued (2 of 3) --- Hobo's Guide to the Universe</title>
 ````
 
-Headings
---------
+## 1.11 Headings
 
 Apply heading tags as per the HTML element for the headings. Based on
 the heading levels, apply heading tags ranging from h1 to h6 as needed.
 
-### Numbered headings
+### 1.11.1 Numbered headings
 
 ````
 <section role="doc-part">
@@ -519,7 +501,7 @@ the heading levels, apply heading tags ranging from h1 to h6 as needed.
 <h3>Chapter 1</h3>
 ````
 
-### Separate heading and subtitle
+### 1.11.2 Separate heading and subtitle
 
 The title and subtitle are contained in separate elements, but grouped
 in a header element to better associate them. Use the role
@@ -532,7 +514,7 @@ doc-subtitle to identify the subtitle.
 </header>
 ````
 
-### Merged heading and subtitle
+### 1.11.3 Merged heading and subtitle
 
 When the subtitle is contained within the same heading element as the
 title, identify it in a span with the role of doc-subtitle.
@@ -543,8 +525,7 @@ title, identify it in a span with the role of doc-subtitle.
 </h1>
 ````
 
-Tables
-------
+## 1.12 Tables
 
 Tag tables as per the table structure. If any of the tables exceeding
 more than 5 columns are captured as image to accommodate the device
@@ -559,7 +540,7 @@ should be contained within a *thead* element and footers within a
 *tfoot* element. The rows that represent the body of the table should be
 contained within a *tbody* element.
 
-### Irregular header
+### 1.12.1 Irregular header
 
 The following table has headers that span columns and rows:
 
@@ -626,7 +607,7 @@ attribute:
 </table>
 ````
 
-### Complex headings
+### 1.12.2 Complex headings
 
 The following table shows a distance chart with the start destinations
 defined in the first row and at the end destination at the end of each
@@ -711,7 +692,7 @@ scope=\"row\" to make the end destinations the row headers:
 </table>
 ````
 
-### Layered headings
+### 1.12.3 Layered headings
 
 The following table combines headers from the top of each column and
 beginning of each row:
@@ -767,14 +748,14 @@ contain the relevant heading text:
 </table>
 ````
 
-## Lists
+## 1.13 Lists
 
 Tag list items with proper list tags. Do not use other elements such as
 \<p\>. By tagging the list items with proper list elements, the screen
 reader users can perceive meaningful information and will know that they
 are reading list items.
 
-### Unordered list
+### 1.13.1 Unordered list
 
 ````
 <ul>
@@ -793,7 +774,7 @@ are reading list items.
 
 Excerpt from: Core Concepts of Marketing --- John Burnett
 
-### Definition list
+### 1.13.2 Definition list
 
 Definition list tagging is required for Apex EPUB deliveries, but
 considered optional for third-party partners to University of Michigan.
@@ -824,7 +805,7 @@ for the provider.
 
 Excerpt from: Core Concepts of Marketing --- John Burnett
 
-## Links
+## 1.14 Links
 
 The recommended best practice is to include links as meaningful text if
 the surrounding text is inadequate to define the purpose of the link. By
@@ -832,14 +813,14 @@ providing meaningful text interpretation, the screen reader user can
 understand the purpose of the link and decide if they need to navigate
 to that particular link.
 
-### Links spec
+### 1.14.1 Links spec
 
 All the cross-references such as table of contents, notes and
 footnotes are two-way linked. Other references such as page, section,
 figure, etc., are one-way linked. The web address and email address
 links are active.
 
-### Link with full context of destination
+### 1.14.2 Link with full context of destination
 
 The user can determine the destination of the link from the text of
 the \<a\> element alone.
@@ -848,7 +829,7 @@ the \<a\> element alone.
 <p>For more information, refer to <a href="#...">Section 1.1 of Web Publications</a></p>
 ````
 
-### Link with alternate text
+### 1.14.3 Link with alternate text
 
 Adding alternate text is an optional best practice if neither of the
 above conditions are met. Use the title attribute to provide
@@ -858,7 +839,7 @@ additional context.
 <a href="#..." title="The EPUB specifications">click here</a>
 ````
 
-### Visual distinctive linking
+### 1.14.4 Visual distinctive linking
 
 **Bold Text Option:** By specifying bolder, either a medium font or a
 bold one will make links visually stand out from their surrounding
@@ -883,20 +864,20 @@ a {
   }
 ````
 
-## Images
+## 1.15 Images
 
 The images should have an alternate text for the screen reader users. By
 providing an alternate text for non-visual content, the screen reader
 users can perceive information about the image through the alternate
 text provided by us.
 
-### Significant simple image (no description required)
+### 1.15.1 Significant simple image (no description required)
 
 ````
 <img src="covers/9781449328030_lrg.jpg" alt="Accessible EPUB 3 - First Edition"/>
 ````
 
-### Extended description via hyperlink
+### 1.15.2 Extended description via hyperlink
 
 Extended description inclusion and linking via a hyperlink are
 optional unless provided in the source.
@@ -936,7 +917,7 @@ precipitation. A large body of water ...
 </aside>
 ````
 
-### Decorative image
+### 1.15.3 Decorative image
 
 An empty alt attribute is complimented by the role presentation to
 indicate that the image contains no information for users.
@@ -944,13 +925,13 @@ indicate that the image contains no information for users.
 <img src="graphics/gothic-border.png" role="presentation" alt=""/>
 ````
 
-## Code Blocks
+## 1.16 Code Blocks
 
 Representations of computer code within the text, referred to here as
 code blocks should be encoded semantically when possible. Never use an
 image to represent lines of code, inline code, or code blocks.
 
-### Inline Code
+### 1.16.1 Inline Code
 
 Code to be displayed inline with paragraph text should be indicated with
 its equivalent semantic element.
@@ -968,7 +949,7 @@ independently of one another. This means that <code>i</code> ...
 </p>
 ````
 
-### Code Blocks
+### 1.16.2 Code Blocks
 
 Code that needs its formatting preserved and should display as a block
 of text, like a blockquote, should be identified a figure and be wrapped
@@ -1000,7 +981,7 @@ end if
 </figure>
 ````
 
-### Code Blocks with Line Numbers
+### 1.16.3 Code Blocks with Line Numbers
 
 There may be instances where code blocks are long or an author refers to
 specific lines of code in the surrounding text. There also may be a
@@ -1025,7 +1006,7 @@ automatically.
 </figure>
 ````
 
-### Code Blocks with Line Numbers as Tables
+### 1.16.4 Code Blocks with Line Numbers as Tables
 
 In cases where code does not need to be copied and pasted but the
 display of line numbers is desirable, it is acceptable to encode the
@@ -1070,7 +1051,7 @@ class="page"></a>Table 1.1. Excerpt from Heartbleed patch
 </table>
 ````
 
-### Comparing Code Blocks with Line Numbers
+### 1.16.5 Comparing Code Blocks with Line Numbers
 
 In other cases, two different blocks of code may need to be compared to
 one another side-by-side, along with the display of line numbers. In
@@ -1126,8 +1107,7 @@ Ruby</th>
 </table>
 ````
 
-Footnotes and Endnotes
-----------------------
+## 1.17 Footnotes and Endnotes
 
 In general, the footnotes and endnotes are highly recommended to place
 at logical break of the book such as end of the chapter or end of the
@@ -1140,7 +1120,7 @@ Footnote and endnote tagging per the following examples is required for
 Apex EPUB deliveries, but considered optional for third-party partners
 to University of Michigan.
 
-### Footnotes in the body
+### 1.17.1 Footnotes in the body
 ````
 <p>
 In that year<a href="\#ft2f" epub:type="noteref">2</a>
@@ -1157,7 +1137,7 @@ Census, but are taken from the
 <p>...</p>
 ````
 
-### Endnote section
+### 1.17.2 Endnote section
 
 The HTML Model allows for lists to contain headings, paras, images,
 tables, etc. This means that applying list tagging can accommodate
@@ -1185,7 +1165,7 @@ Tugaloo, which ...
 </section>
 ````
 
-### Back-linking notes
+### 1.17.3 Back-linking notes
 ````
 <li id="en001" epub:type="endnote">
 <a href="\#en01-ref" title="note reference 1">1</a>
@@ -1193,9 +1173,9 @@ According to the usual nomenclature, the ...
 </li>
 ````
 
-## Content Numbering
+## 1.18 Content Numbering
 
-### Page Break Numbering
+### 1.18.1 Page Break Numbering
 
 Page numbers should follow the EPUB3 Accessibility Guidelines.
 <https://idpf.github.io/a11y-guidelines/content/xhtml/pagenum.html>
@@ -1206,7 +1186,7 @@ Page numbers should follow the EPUB3 Accessibility Guidelines.
       role="doc-pagebreak" aria-label="1">Page 1 &\#8594;</span>
 ````
 
-### Paragraph Numbering
+### 1.18.2 Paragraph Numbering
 
 Paragraph numbering requires adding a class identifier and id value to a
 \<p\>.
@@ -1220,7 +1200,7 @@ Example coding:
 <p class="numberedpara" id="para11" title="Para11"/>
 ````
 
-### Line Numbering
+### 1.18.3 Line Numbering
 
 Line numbering requires adding a class identifier and id value to a
 \<p\>.
@@ -1230,8 +1210,7 @@ Example coding:
 <p class="numberedline" id="line11" title="Line11"/>
 ````
 
-Chapter Split
--------------
+## 1.19 Chapter Split
 
 When chapters contain a large number of images and the total file size
 of the images exceeds 2 Mb, then consider splitting the chapter into a
@@ -1256,15 +1235,15 @@ allow only chapters to display.
 <h3 class="subhead" id="sub4"><em>The Mid-Republican Period: The House</em></h3>
 ````
 
-## CSS Stylesheet
+## 1.20 CSS Stylesheet
 
-### Standard CSS
+### 1.20.1 Standard CSS
 
 If possible, use following standard CSS for EPUB3 conversion. Add unique
 styles per book as needed as additional styles at the bottom of the
 standard CSS.
 
-### CSS Units
+### 1.20.2 CSS Units
 
 -   Font-size should always be defined in %
 -   Do not use fixed values (**mm, cm, in, pt** or **pc**) in CSS file.
@@ -1274,14 +1253,14 @@ standard CSS.
     - Do not capture \<i\> (capture as \<em\>)
     - Do capture \<b\> for bold text in XHTML files
 
-### Colors
+### 1.20.3 Colors
 
 The best practice is to avoid using color to differentiate the
 information of a text. For example, if the color of a text provides a
 meaning to the content, then there should be some alternate method to
 convey the information to screen reader user.
 
-### Background Images
+### 1.20.4 Background Images
 
 Setting the contrast between the background colors and images will help
 readers who have difficulty in distinguishing contrasts. Color contrast
@@ -1289,14 +1268,14 @@ of 4:5:1 is the best practice followed in the industry. Check contrast
 using the following link.
 https://webaim.org/resources/contrastchecker/.
 
-### Hidden Content
+### 1.20.5 Hidden Content
 
 There should not be any hidden content available in the EPUB files.
 
 Exception: Code long-descriptions as a separate instance in a file and
 it is permissible to have it remain hidden text.
 
-### CSS Property Reference
+### 1.20.6 CSS Property Reference
 
 EPUB 3 user agents that visually render content may provide support for
 the CSS properties listed below, but inclusion is optional. Properties
@@ -1304,7 +1283,7 @@ not listed may still be used (e.g., from evolving CSS 3 modules), but
 content authors should use due diligence and assess the impact on
 rendering and accessibility when using such properties.
 
-### CSS 2.1
+### 1.20.7 CSS 2.1
 
 Table 1. Acceptable Styles
 
@@ -1958,7 +1937,7 @@ type.</p></li>
 </tbody>
 </table>
 
-### CSS 2.1 Pseudo-Classes
+### 1.20.8 CSS 2.1 Pseudo-Classes
 
 <table border="1">
 <thead>
@@ -2019,7 +1998,7 @@ href="http://www.w3.org/TR/CSS21/selector.html#link-pseudo-classes"
 </tbody>
 </table>
 
-### CSS 2.1 Pseudo-Elements
+### 1.20.9 CSS 2.1 Pseudo-Elements
 
 <table border="1">
 <thead>
@@ -2059,15 +2038,14 @@ href="http://www.w3.org/TR/CSS21/selector.html#first-line-pseudo"
 </tbody>
 </table>
 
- Images
-------
+## 1.21 Images
 
-### Image File Types
+### 1.21.1 Image File Types
 
 Acceptable file types include JPG, PNG and SVG (as per EPUB3
 guidelines).
 
-### Recommended Criteria
+### 1.21.2 Recommended Criteria
 
 <table border="1">
 <tbody>
@@ -2125,7 +2103,7 @@ Sharper (Reduction).</p></li>
 **Note**: For EPUB source files, retain the images as per the source
 EPUB file with the aforementioned properties.
 
-### Cover Image
+### 1.21.3 Cover Image
 
 <table>
 <tbody>
@@ -2172,7 +2150,7 @@ possible.</p></td>
 </tbody>
 </table>
 
-### Image/Graphic Placement
+### 1.21.4 Image/Graphic Placement
 
 For any object rendered as an image/graphic that occurs in the midst
 of a paragraph and interrupts text, it shall be placed either at the
@@ -2183,32 +2161,32 @@ must stay within the page marker it occurs on in the source PDF. If an
 image interrupts text, and no paragraph tag that starts or ends on the
 same page, then keep the image in its original location.
 
-## Fonts
+## 1.22 Fonts
 
 If the input EPUB file contains fonts, then retain them in the output
 EPUB3 files. For web-ready PDF input files, do not embed fonts, unless
 otherwise requested by customer.
 
-## Formatting
+## 1.23 Formatting
 
 Retain as much as possible of the formatting of the source EPUB and PDF
 files in the output EPUB3 file.
 
-## Boxed Text
+## 1.24 Boxed Text
 
 Treat as text + images in reading order.
 
-## Marginalia and Sidebars
+## 1.25 Marginalia and Sidebars
 
 Treat as text + images in reading order.
 
-## Reading Order
+## 1.26 Reading Order
 
 Retain the reading order of the EPUB source files in the EPUB3 output.
 For the PDF source files, then match the source reading order in the
 EPUB3 output.
 
-## DPUB ARIA Semantics
+## 1.27 DPUB ARIA Semantics
 
 Apply DPUB ARIA semantic attributes according to the type of content.
 Refer the link for code samples: <https://www.w3.org/TR/dpub-aria-1.0/>
@@ -2433,8 +2411,7 @@ of it.</p></td>
 </tbody>
 </table>
 
-Accessibility
--------------
+## 1.28 Accessibility
 
 Apply the following points to make the output accessible (recommended
 practice).
