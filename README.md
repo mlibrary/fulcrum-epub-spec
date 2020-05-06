@@ -1,6 +1,7 @@
-**Fulcrum EPUB Specification**
+# Fulcrum EPUB Specification
 
-**Revision History**
+
+## Revision History
 
 <table>
 <thead>
@@ -82,7 +83,7 @@
 </tbody>
 </table>
 
-**Contents**
+## Contents
 
 [1.0 Target Specification -- EPUB3](#10-target-specification----epub3)
 
