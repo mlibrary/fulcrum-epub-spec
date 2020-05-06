@@ -12,24 +12,6 @@
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td>1.3</td>
-<td>April 15, 2020</td>
-<td>HELIO-2651</td>
-<td>tbelc@umich.edu</td>
-</tr>
-<tr class="even">
-<td>1.2</td>
-<td>Jan. 15, 2020</td>
-<td>HELIO-3146</td>
-<td>tbelc@umich.edu</td>
-</tr>
-<tr class="odd">
-<td>1.1</td>
-<td>May 14, 2019</td>
-<td>HELIO-2661</td>
-<td>tbelc@umich.edu</td>
-</tr>
 <tr class="even">
 <td>1.0</td>
 <td>May. 12, 2018</td>
@@ -78,6 +60,24 @@
 <td>Feb 7, 2018</td>
 <td>Removed non-spec material, added code block spec (1.16)</td>
 <td>J McGlone</td>
+</tr>
+<tr class="even">
+<td>2.2</td>
+<td>April 15, 2020</td>
+<td>HELIO-2651</td>
+<td>tbelc@umich.edu</td>
+</tr>
+<tr class="odd">
+<td>2.3</td>
+<td>Jan. 15, 2020</td>
+<td>HELIO-3146</td>
+<td>tbelc@umich.edu</td>
+</tr>
+<tr class="even">
+<td>2.4</td>
+<td>May 14, 2019</td>
+<td>HELIO-2661</td>
+<td>tbelc@umich.edu</td>
 </tr>
 </tbody>
 </table>
