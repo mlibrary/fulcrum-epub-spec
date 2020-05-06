@@ -63,8 +63,8 @@
 </tr>
 <tr class="even">
 <td>2.2</td>
-<td>April 15, 2020</td>
-<td>HELIO-2651</td>
+<td>May 14, 2019</td>
+<td>HELIO-2661</td>
 <td>tbelc@umich.edu</td>
 </tr>
 <tr class="odd">
@@ -75,8 +75,8 @@
 </tr>
 <tr class="even">
 <td>2.4</td>
-<td>May 14, 2019</td>
-<td>HELIO-2661</td>
+<td>April 15, 2020</td>
+<td>HELIO-2651</td>
 <td>tbelc@umich.edu</td>
 </tr>
 </tbody>
