@@ -149,6 +149,8 @@ sup > a {
     font-weight: bold;
 }
 
+ul.list-unstyled {list-style-type: none;}
+ol.list-unstyled {list-style-type: none;}
 .glossary {margin-left:2em;}
 .index {margin-left: 2em;}
 .letter {padding-right:2em; padding-left:2em; margin-top: 1.5em; margin-bottom: 1.5em;}
