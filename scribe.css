@@ -321,7 +321,9 @@ sup > a {
 .crtf1 {font-size:.8em; text-align:center; text-indent: 0; margin-bottom:0; margin-top:2em;}
 .crtl {font-size:.8em; text-align:left; text-indent: 0; margin-bottom:0; margin-top:0;}
 .cs {text-align:center; text-indent:0; font-size:1.2em; font-weight: bold; margin-bottom:2em;}
+span.cs {text-align:center; text-indent:0; font-size:.8em; font-weight: bold; margin-bottom:2em; display:block;}
 .ct {text-align:center; text-indent:0; font-size:1.5em; margin-top:1em; margin-bottom: 1em;}
+span.ct {text-align:center; text-indent:0; font-size:1em; margin-top:1em; margin-bottom: 1em; display: block;}
 .cta {text-align:center; text-indent:0; font-size:1.2em; font-weight: bold; margin-bottom:1em;}
 .ctbm {text-align:center; text-indent:0; font-size:1.5em; margin-top:1em; margin-bottom:2em;}
 .ctfm {text-align:center; text-indent:0; font-size:1.5em; margin-top:1em; margin-bottom:2em;}
@@ -537,7 +539,7 @@ hr.sec-break {width: 0;}
 .psec {margin-top: 2em; text-indent: 0; text-align:left;}
 .psec1 {margin-top: 1em; text-indent: 0; text-align:left;}
 .pt {font-size:1.5em; text-align:center; font-weight:bold; text-indent:0; margin-top:2.5%;}
-
+span.pt {font-size:1em; text-align:center; font-weight:bold; text-indent:0; margin-top:5.5%; display: block;}
 .qu {text-align:left; text-indent:0;}
 .quf {text-align:left; text-indent:0; margin-top: .5em;}
 .quh {font-weight:bold; margin-top:.5em; margin-bottom:.5em; text-align:left; text-indent:0;}
