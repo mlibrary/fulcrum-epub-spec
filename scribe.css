@@ -1,7 +1,7 @@
 /*
-  // Version 1.37
+  // Version 1.38
   // OEPS filename: default.css
-  // Last update: November 2 2020
+  // Last update: November 3 2020
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -757,6 +757,9 @@ span.pt {font-size:1em; text-align:center; font-weight:bold; text-indent:0; marg
 .sth2 {font-weight:bold; font-size:95%; margin-top:1%; margin-bottom:1%; text-indent:0; text-align:center;}
 .stl {text-align:left; text-indent:0; margin-bottom: 1em;}
 .staft {text-align:left; text-indent:0; margin-top: .5em; margin-bottom: .5em;}
+
+.sto {text-align:left; text-indent:0; }
+
 .sts {text-align:left; text-indent:0; margin-top: 1em; margin-bottom: 1em;}
 
 .toc > a, .toc1 > a, .toc2 > a, .toc3 > a,
