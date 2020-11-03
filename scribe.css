@@ -1,5 +1,5 @@
 /*
-  // Version 1.38
+  // Version 1.39
   // OEPS filename: default.css
   // Last update: November 3 2020
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
@@ -181,7 +181,9 @@ ol.list-unstyled {list-style-type: none;}
 .bhaft {font-size:.95em; font-weight: bold; margin-bottom:1%; text-indent:0; text-align:left;}
 .bk {margin-top:3em; text-align:center; font-size:2em; text-indent: 0; font-weight: normal; line-height: 1.25;}
 .bk1 {text-align:center; font-size:1.5em; margin-bottom:1em; text-indent: 0; font-weight: normal; font-style: italic;}
+span.bk1 {display: block; text-align:center; font-size:.8em; margin-bottom:1em; text-indent: 0; font-weight: normal; font-style: italic; margin-top: 1em;}
 .bk2 {text-align:center; font-size:.95em; margin-top:.5em; margin-bottom:.5em; font-weight: bold; text-indent: 0;}
+span.bk2 {display: block; text-align:center; font-size:.6em; margin-top:.5em; margin-bottom:.5em; font-weight: bold; text-indent: 0;}
 .bkalt {text-align:center; font-size:.95em; margin-top:.5em; font-weight:bold; text-indent: 0;}
 .bkau {text-align:center; font-size:.95em; font-weight:bold; margin-top:2em; margin-bottom:3em; text-indent: 0;}
 .bkau1 {text-align:center; font-size:.8em; margin-bottom:3%; font-weight:normal; text-indent: 0;}
