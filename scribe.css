@@ -1,7 +1,7 @@
 /*
-  // Version 1.39
+  // Version 1.40
   // OEPS filename: default.css
-  // Last update: November 3 2020
+  // Last update: November 4 2020
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -1104,6 +1104,12 @@ tbody {
     padding-bottom: 1em;
     text-align: left;
 }
+
+table > tbody > tr > th[scope="row"] {
+  font-weight: normal; 
+  background: transparent;
+}
+
 
 /* tables for poetry translations */
 table.poetry_translation {
