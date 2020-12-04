@@ -1024,6 +1024,28 @@ h1 span.page, h2 > span.page, h3 > span.page {
 .theb-red {color:red;}
 .thn {font-weight: bold;}
 .u {text-decoration: underline;}
+
+/* Added here to fix long URLs if needed */
+.url {
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+
+  /* This is the dangerous one in WebKit, as it breaks things wherever
+  word-break: break-all;
+  */
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink)
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  */
+}
+
 .url-b {font-weight: bold;}
 .url-bi {font-weight: bold; font-style: italic;}
 .url-i {font-style: italic;}
