@@ -1,5 +1,5 @@
 /*
-  // Version 1.42
+  // Version 1.43
   // OEPS filename: default.css
   // Last update: January 22 2021
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
@@ -192,19 +192,19 @@ span.bk2 {display: block; text-align:center; font-size:.6em; margin-top:.5em; ma
 .bkpub {text-align:center; font-size:.8em; margin-bottom: 0; margin-top: 7em; text-indent: 0;}
 .bkpub1 {text-align:center; font-size:.8em; margin-top:0; margin-bottom: 1em; text-indent: 0;}
 .bksect {text-align:center; font-size:.95em; margin-top:.5em; margin-bottom:.5em; font-weight: bold; text-indent: 0;}
-.bl {text-indent: -1em; text-align:justify;}
-.bl1 {text-align:justify; margin-left: 2em; text-indent: -1em;}
-.bl1f {text-align:justify; margin-left: 2em; text-indent: -1em; margin-top: 1em;}
-.bl1l {text-align:justify; margin-left: 2em; text-indent: -1em; margin-bottom: .75em;}
-.bl1p {text-align:justify; margin-left: 2em; text-indent: 0;}
-.bl1pl {text-align:justify; margin-left: 2em; text-indent: 0; margin-bottom: .5em;}
-.bl1s {text-align:justify; margin-left: 2em; text-indent: -1em; margin-top: .75em; margin-bottom: .75em;}
-.blf {text-indent: -1em; text-align:justify; margin-top: .75em;}
-.blh {text-indent: -1em; text-align:justify; margin-top: .75em; font-weight: bold;}
-.bll {text-indent: -1em; text-align:justify; margin-bottom: .75em;}
-.blp {text-indent: 0; text-align:justify;}
-.blpl {text-indent: 0; text-align:justify; margin-bottom: .5em;}
-.bls {text-indent: -1em; text-align:justify; margin-top: .75em; margin-bottom: .75em;}
+.bl { text-align:justify;}
+.bl1 {text-align:justify; margin-left: 2em;}
+.bl1f {text-align:justify; margin-left: 2em; margin-top: 1em;}
+.bl1l {text-align:justify; margin-left: 2em; margin-bottom: .75em;}
+.bl1p {text-align:justify; margin-left: 2em;}
+.bl1pl {text-align:justify; margin-left: 2em; margin-bottom: .5em;}
+.bl1s {text-align:justify; margin-left: 2em; margin-top: .75em; margin-bottom: .75em;}
+.blf { text-align:justify; margin-top: .75em;}
+.blh { text-align:justify; margin-top: .75em; font-weight: bold;}
+.bll { text-align:justify; margin-bottom: .75em;}
+.blp {text-align:justify;}
+.blpl {text-align:justify; margin-bottom: .5em;}
+.bls {text-align:justify; margin-top: .75em; margin-bottom: .75em;}
 .bq {margin-right: -1.5em; margin-left:-1.5em; text-indent: .5em; text-align:justify; margin-top: 0; margin-bottom: 0;}
 .bq1 {text-indent: -1em; margin-left: 10%; margin-top: -0.1em; margin-bottom: -0.1em; text-align:justify;}
 .bq1f {text-indent: -1em; margin-left: 10%; margin-top: .3em; margin-bottom: -0.1em; text-align:justify;}
