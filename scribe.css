@@ -1,7 +1,7 @@
 /*
-  // Version 1.41
+  // Version 1.42
   // OEPS filename: default.css
-  // Last update: December 4 2020
+  // Last update: January 22 2021
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -325,7 +325,7 @@ span.bk2 {display: block; text-align:center; font-size:.6em; margin-top:.5em; ma
 .crtf1 {font-size:.8em; text-align:center; text-indent: 0; margin-bottom:0; margin-top:2em;}
 .crtl {font-size:.8em; text-align:left; text-indent: 0; margin-bottom:0; margin-top:0;}
 .cs {text-align:center; text-indent:0; font-size:1.2em; font-weight: bold; margin-bottom:2em;}
-span.cs {text-align:center; text-indent:0; font-size:.8em; font-weight: bold; margin-bottom:2em; display:block;}
+span.cs {text-align:center; text-indent:0; font-size:.8em; font-weight: bold; margin-bottom:2em; margin-top: 1em; display:block;}
 .ct {text-align:center; text-indent:0; font-size:1.5em; margin-top:1em; margin-bottom: 1em;}
 span.ct {text-align:center; text-indent:0; font-size:1em; margin-top:1em; margin-bottom: 1em; display: block;}
 .cta {text-align:center; text-indent:0; font-size:1.2em; font-weight: bold; margin-bottom:1em;}
@@ -1130,6 +1130,8 @@ tbody {
 table > tbody > tr > th[scope="row"] {
   font-weight: normal; 
   background: transparent;
+  border-bottom: 1px solid #ddd;
+  vertical-align: unset;
 }
 
 
