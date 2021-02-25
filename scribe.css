@@ -1,7 +1,7 @@
 /*
-  // Version 1.43
+  // Version 1.44
   // OEPS filename: default.css
-  // Last update: January 22 2021
+  // Last update: February 25 2021
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -400,13 +400,13 @@ section[role="doc-endnotes"] ol {list-style: none;}
 .exnlp {text-indent: -1em; text-align:justify;}
 .exnls {text-indent: -1em; text-align:justify; margin-top: .5em; margin-bottom: .5em;}
 .exs {text-indent: 0; text-align:justify; margin-top: .5em; margin-bottom: .5em;}
-.exul {text-indent: -1em; text-align:justify;}
-.exul1 {text-indent: -1em; text-align:justify; margin-left: 1em;}
+.exul {text-indent: 0; text-align:justify;}
+.exul1 {text-indent: 0; text-align:justify; margin-left: 1em;}
 .exul1f {text-indent: -1em; text-align:justify; margin-left: 1em; margin-top: .5em;}
 .exul1l {text-indent: -1em; text-align:justify; margin-left: 1em; margin-bottom: .5em;}
 .exul1p {text-indent: -1em; text-align:justify; margin-left: 1em;}
 .exul1s {text-indent: -1em; text-align:justify; margin-left: 1em; margin-top: .5em;}
-.exulf {text-indent: -1em; text-align:justify; margin-top: .5em;}
+.exulf {text-indent: 0; text-align:justify; margin-top: .5em;}
 .exull {text-indent: -1em; text-align:justify; margin-bottom: .5em;}
 .exulp {text-indent: -1em; text-align:justify;}
 .exuls {text-indent: -1em; text-align:justify; margin-top: .5em; margin-bottom: .5em;}
@@ -796,7 +796,7 @@ span.pt {font-size:1em; text-align:center; font-weight:bold; text-indent:0; marg
 .tocpt {text-align:left; text-indent: 0; font-size:110%; font-weight: bold; margin-top: 2em; margin-bottom: 1em;}
 .tocut {text-align:left; text-indent: 0; font-size:.95em; font-weight: bold; margin-top: 1em; margin-bottom: 1em;}
 
-.ul {text-indent: -1em; text-align:justify; margin-top: 0; margin-bottom: 0;}
+.ul {text-indent: 0; text-align:justify; margin-top: 0; margin-bottom: 0;}
 .ul1 {text-indent: -1em; margin-left: 1em; text-align:justify;}
 .ul1f {text-indent: -1em; margin-left: 1em; text-align:justify;}
 .ul1l {text-indent: -1em; margin-left: 1em; text-align:justify;}
