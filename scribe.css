@@ -1,7 +1,7 @@
 /*
-  // Version 1.44
+  // Version 1.45
   // OEPS filename: default.css
-  // Last update: February 25 2021
+  // Last update: March 10 2021
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -373,7 +373,7 @@ section[role="doc-endnotes"] ol {list-style: none;}
 .eps {text-indent: 0; text-align:justify; margin-top: .75em; margin-bottom: .75em; font-size:.8em;}
 .epsl {text-align:left; font-size:.8em; text-indent: 0;}
 .epsl1 {text-align:left; font-size:.8em; text-indent: 0;}
-.epslf {text-align:left; font-size:.8em; text-indent: 0;}
+.epslf {text-align:left; font-size:.8em; text-indent: 0; margin-top:2.5em;}
 .epsll  {text-align:left; font-size:.8em; text-indent: 0;}
 .epsls {text-align:left; font-style:italic; font-size:.8em; text-indent: 0;}
 .ept {text-align:right; margin-right: .5em; margin-top:.5em; margin-bottom:.5em; font-size:.8em; text-indent: 0;}
@@ -796,12 +796,12 @@ span.pt {font-size:1em; text-align:center; font-weight:bold; text-indent:0; marg
 .tocpt {text-align:left; text-indent: 0; font-size:110%; font-weight: bold; margin-top: 2em; margin-bottom: 1em;}
 .tocut {text-align:left; text-indent: 0; font-size:.95em; font-weight: bold; margin-top: 1em; margin-bottom: 1em;}
 
-.ul {text-indent: 0; text-align:justify; margin-top: 0; margin-bottom: 0;}
-.ul1 {text-indent: -1em; margin-left: 1em; text-align:justify;}
-.ul1f {text-indent: -1em; margin-left: 1em; text-align:justify;}
-.ul1l {text-indent: -1em; margin-left: 1em; text-align:justify;}
-.ul1p {margin-left: 1em; text-align:justify;}
-.ul1pl {margin-left: 1em; text-align:justify; margin-bottom: .5em;}
+.ul {text-indent: 0; text-align:justify; margin-top: 0; margin-bottom: 0; list-style-type:none;}
+.ul1 {text-indent: -1em; margin-left: 1em; text-align:justify; list-style-type:none;}
+.ul1f {text-indent: -1em; margin-left: 1em; text-align:justify; list-style-type:none;}
+.ul1l {text-indent: -1em; margin-left: 1em; text-align:justify; list-style-type:none;}
+.ul1p {margin-left: 1em; text-align:justify; list-style-type:none; }
+.ul1pl {margin-left: 1em; text-align:justify; margin-bottom: .5em; list-style-type:none;}
 .ul1s {text-indent: -1em; margin-left: 1em; text-align:justify;}
 .ul2 {text-indent: -1em; margin-left: 2em; text-align:justify;}
 .ul2f {text-indent: -1em; margin-left: 2em; text-align:justify; margin-top: .5em;}
@@ -822,10 +822,10 @@ span.pt {font-size:1em; text-align:center; font-weight:bold; text-indent:0; marg
 .ul5f {text-indent: -1em; margin-left: 5em; text-align:justify; margin-top: .5em;}
 .ul5l {text-indent: -1em; margin-left: 5em; text-align:justify; margin-bottom: .5em;}
 .ul5p {margin-left: 5em; text-align:justify;}
-.ul5s {text-indent: -1em; margin-left: 5em; text-align:justify; margin-top: .5em; margin-bottom: .5em;}
+.ul5s {text-indent: -1em; margin-left: 5em; text-align:justify; margin-top: .5em; margin-bottom: .5em; list-style-type:none; }
 .ulf {margin-top: 1em; margin-bottom: 0; text-indent: -1em; text-align:justify;}
 .ulh {font-style:italic; margin-top:2%; margin-bottom:1%; text-align:justify; text-indent: -1em;}
-.ull {margin-bottom: 1em; text-indent: -1em; text-align:justify;}
+.ull {margin-bottom: 1em; text-indent: -1em; text-align:justify; list-style-type:none;}
 .ull2 {text-indent: 0; text-align:center;}
 .ulp {text-align:justify;}
 .ulpl {text-align:justify; margin-bottom: .5em;}
