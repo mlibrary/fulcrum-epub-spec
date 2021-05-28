@@ -1,7 +1,7 @@
 /*
-  // Version 1.47
+  // Version 1.46
   // OEPS filename: default.css
-  // Last update: May 27 2021
+  // Last update: April 16 2021
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -702,7 +702,7 @@ span.pt {font-size:1em; text-align:center; font-weight:bold; text-indent:0; marg
 .sbuls {text-indent: -1em; margin-left: 3em; margin-right: 2em; font-size:.8em;}
 .sec {text-align:center; margin-top: 1em; margin-bottom: 1em; text-indent: 0;}
 .ser {font-size: 80%; margin-bottom: 0; text-align:justify; text-indent: 0; font-style: italic;}
-.ser1 {font-size: 90%; margin-top: 0; margin-bottom: 0; text-align:justify; text-indent: 1em;}
+.ser1 {font-size: 80%; margin-top: 0; margin-bottom: 0; text-align:justify; text-indent: 1em;}
 .ser2 {font-size: 80%; margin-top: 0; margin-bottom: 0; text-align:justify; text-indent: 2em;}
 .seraft {font-size: 80%; margin-top: 0; text-align:justify; text-indent: 0;}
 .serah {margin-top: .75em; margin-bottom: .5em; text-align:justify; text-indent: 0; font-weight: bold;}
@@ -796,7 +796,7 @@ span.pt {font-size:1em; text-align:center; font-weight:bold; text-indent:0; marg
 .tocpt {text-align:left; text-indent: 0; font-size:110%; font-weight: bold; margin-top: 2em; margin-bottom: 1em;}
 .tocut {text-align:left; text-indent: 0; font-size:.95em; font-weight: bold; margin-top: 1em; margin-bottom: 1em;}
 
-.ul {text-indent: -1em; text-align:justify; margin-top: 0; margin-bottom: 0; list-style-type:none;}
+.ul {text-indent: 0; text-align:justify; margin-top: 0; margin-bottom: 0; list-style-type:none;}
 .ul1 {text-indent: -1em; margin-left: 1em; text-align:justify; list-style-type:none;}
 .ul1f {text-indent: -1em; margin-left: 1em; text-align:justify; list-style-type:none; }
 .ul1l {text-indent: -1em; margin-left: 1em; text-align:justify; list-style-type:none; }
