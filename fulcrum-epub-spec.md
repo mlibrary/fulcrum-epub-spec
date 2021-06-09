@@ -79,6 +79,12 @@
 <td>Removed non-spec material, added code block spec (1.16)</td>
 <td>J McGlone</td>
 </tr>
+<tr class="even">
+<td>2.2</td>
+<td>June 9, 2021</td>
+<td>Clarified use of page numbers and paragraph numbering</td>
+<td>J McGlone</td>
+</tr>
 </tbody>
 </table>
 
