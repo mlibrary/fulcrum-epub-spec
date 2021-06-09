@@ -1185,14 +1185,15 @@ Page numbers should follow the EPUB3 Accessibility Guidelines.
 <span id="p1" class="page" epub:type="pagebreak"
       role="doc-pagebreak" aria-label="1">Page 1 &\#8594;</span>
 ````
+Note: Page numbers should only be applied for titles that have a print equivalent. For titles that are digital-only and do not have a print equivalent, paragraph numbers should be applied.
 
 ### 1.18.2 Paragraph Numbering
 
 Paragraph numbering requires adding a class identifier and id value to a
-\<p\>.
+\<p\>. Paragraph numbers should only be applied to elements that are true paragraphs, not elements that use the paragraph element for styling.
 
-Note: Paragraph numbering is optional, but recommended when present in
-the source document.
+Note: Paragraph numbering is optional, but required when present in
+the source document or when there is no print equivalent and the title is digital-only.
 
 Example coding:
 
