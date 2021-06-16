@@ -1,7 +1,7 @@
 /*
-  // Version 1.48
+  // Version 1.50
   // OEPS filename: default.css
-  // Last update: May 30 2021
+  // Last update: June 16 2021
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -746,9 +746,9 @@ span.pt {font-size:1em; text-align:center; font-weight:bold; text-indent:0; marg
 .slf { margin-top: 1.5em; text-align:left; text-indent: -1em; margin-bottom: 0;}
 .slh {text-indent: -1em; font-style:italic; margin-top: 1em; margin-bottom: 0.5em; font-weight: bold;}
 .slh2 {margin-left: 1em; margin-bottom: -5em; font-size:.95em; text-indent: 0; font-style:italic; margin-top: 3em; margin-bottom: 0.5em; font-weight: bold;}
-.sli {font-size: 80%; text-align:justify; text-indent: -1em;}
-.slif {font-size: 80%; text-align:justify; text-indent: -1em; margin-top: 1em;}
-.slil {font-size: 80%; text-align:justify; text-indent: -1em; margin-bottom: 1em;}
+.sli {text-align:left; text-indent: 1em; margin-bottom: 0:}
+.slif {text-align:left; text-indent: 1em; margin-top: 1em; margin-bottom: 0;}
+.slil {text-align:left; text-indent: 1em; margin-bottom: 1em;}
 .sll { text-align:justify; text-indent: -1em; margin-top: 0; }
 .sls { margin-top: 1.5em; text-align:justify; text-indent: -1em;}
 .slt {text-indent: 0; text-align: right; margin-top: 0; margin-bottom: 0;}
@@ -866,6 +866,7 @@ span.pt {font-size:1em; text-align:center; font-weight:bold; text-indent:0; marg
 /*Character Styles*/
 .abbr {}
 .ac {text-transform: uppercase; font-size: 80%;}
+.aubion {font-weight: bold;}
 .b {font-weight: bold;}
 .bi {font-weight: bold; font-style: italic;}
 .bu {font-weight: bold; text-decoration: underline;}
