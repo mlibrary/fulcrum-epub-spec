@@ -1,7 +1,7 @@
 /*
-  // Version 1.51
+  // Version 1.52
   // OEPS filename: default.css
-  // Last update: June 29 2021
+  // Last update: August 1 2021
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -400,14 +400,14 @@ section[role="doc-endnotes"] ol {list-style: none;}
 .exnlp {text-indent: -1em; text-align:justify;}
 .exnls {text-indent: -1em; text-align:justify; margin-top: .5em; margin-bottom: .5em;}
 .exs {text-indent: 0; text-align:justify; margin-top: .5em; margin-bottom: .5em;}
-.exul {text-indent: 0; text-align:justify;}
+.exul {text-indent: -1em; margin-left: 2em; text-align:left;}
 .exul1 {text-indent: 0; text-align:justify; margin-left: 1em;}
 .exul1f {text-indent: -1em; text-align:justify; margin-left: 1em; margin-top: .5em;}
 .exul1l {text-indent: -1em; text-align:justify; margin-left: 1em; margin-bottom: .5em;}
 .exul1p {text-indent: -1em; text-align:justify; margin-left: 1em;}
 .exul1s {text-indent: -1em; text-align:justify; margin-left: 1em; margin-top: .5em;}
-.exulf {text-indent: 0; text-align:justify; margin-top: .5em;}
-.exull {text-indent: -1em; text-align:justify; margin-bottom: .5em;}
+.exulf {text-indent: -1em; margin-left: 2em; text-align:left; margin-top: .5em;}
+.exull {text-indent: -1em; margin-left: 2em; text-align:left; margin-bottom: .5em;}
 .exulp {text-indent: -1em; text-align:justify;}
 .exuls {text-indent: -1em; text-align:justify; margin-top: .5em; margin-bottom: .5em;}
 
