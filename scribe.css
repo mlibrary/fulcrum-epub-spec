@@ -1,7 +1,7 @@
 /*
-  // Version 1.53
+  // Version 1.54
   // OEPS filename: default.css
-  // Last update: August 4 2021
+  // Last update: August 31 2021
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -511,6 +511,7 @@ hr.sec-break {width: 0;}
 .ntnl1f {font-size:.8em; text-indent: -1.25em; text-align:justify; margin-top: .5em; margin-left: 1em;}
 .ntnl1s {font-size:.8em; text-indent: -1.25em; text-align:justify; margin-top: .5em; margin-left: 1em; margin-bottom: .5em;}
 .ntnl1l {font-size:.8em; text-indent: -1.25em; text-align:justify; margin-bottom: .5em; margin-left: 1em;}
+.ntsls {font-size:.8em; text-indent: -1.25em; text-align:justify; margin-top: .5em; margin-bottom: .5em;}
 .ntsl {font-size:.8em; text-indent: -1.25em; text-align:justify;}
 .ntslf {font-size:.8em; text-indent: -1.25em; text-align:justify; margin-top: .5em;}
 .ntsll {font-size:.8em; text-indent: -1.25em; text-align:justify; margin-bottom: .5em;}
