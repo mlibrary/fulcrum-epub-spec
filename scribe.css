@@ -1,7 +1,7 @@
 /*
-  // Version 1.54
+  // Version 1.55
   // OEPS filename: default.css
-  // Last update: August 31 2021
+  // Last update: September 13 2021
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -166,6 +166,7 @@ ol.list-unstyled {list-style-type: none;}
 .vol {}
 .written {margin-bottom:1.25em; margin-top:1.25em; margin-left: 2em; margin-right: 2em;}
 
+.absto {margin-top: 1em; text-indent: 0; text-align:center; font-style: italic;}
 .ah {font-weight:bold; font-size:1.2em; margin-top:3%; margin-bottom:1%; text-indent:0; text-align:center;}
 .ahaft {font-weight:bold; font-size:1.2em; margin-top:4em; margin-bottom:2%; text-indent:0; text-align:center;}
 .ans {text-align:left; text-indent:0;}
@@ -436,7 +437,7 @@ a.fn:hover, a.fn:active, a.fn:focus {text-decoration: underline;}
 .hb {text-align:center; margin-top: 1em; margin-bottom: 1em; text-indent: 0;}
 .hd {font-weight:bold; font-size:1.2em; margin-top:2em; margin-bottom:.5em; text-indent:0; text-align:center;}
 .hdn {font-weight:bold; margin-top:1em; margin-bottom:.5em; text-indent:0; text-align:center;}
-hr.sec-break {width: 0;}
+hr.sec-break {position: absolute !important; clip: rect(1px,1px,1px,1px) !important; clip: rect(1px,1px,1px,1px) !important; height: 1px !important; width: 1px !important; overflow: hidden !important; padding: 0 !important; margin: 0 !important; }
 
 .in {text-indent: -1em; font-size:.8em; text-align: left;}
 .in1 {margin-left: 1em; text-indent: -1em; font-size:.8em; text-align: left;}
