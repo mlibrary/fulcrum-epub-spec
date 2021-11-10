@@ -167,7 +167,7 @@
 
 [1.15.4 Extended description via hyperlink](#1154-extended-description-via-hyperlink)
 
-[1.15.5 Additional Resource Reference](#1155-additional-resource-reference)
+[1.15.5 Fulcrum Resource References](#1155-fulcrum-resource-references)
 
 [1.16 Code Blocks](#116-code-blocks)
 
