@@ -86,6 +86,12 @@
 <td>Clarify use of page numbering and paragraph numbering</td>
 <td>J McGlone</td>
 </tr>
+<tr class="even">
+<td>2.6</td>
+<td>November 10, 2021</td>
+<td>FULCRUMOPS-33</td>
+<td>tbelc@umich.edu</td>
+</tr>
 </tbody>
 </table>
 
@@ -155,9 +161,13 @@
 
 [1.15.1 Significant simple image (no description required)](#1151-significant-simple-image-no-description-required)
 
-[1.15.2 Extended description via hyperlink](#1152-extended-description-via-hyperlink)
+[1.15.2 Decorative image](#1152-decorative-image)
 
-[1.15.3 Decorative image](#1153-decorative-image)
+[1.15.3 Figures](#1153-figures)
+
+[1.15.4 Extended description via hyperlink](#1154-extended-description-via-hyperlink)
+
+[1.15.5 Additional Resource Reference](#1155-additional-resource-reference)
 
 [1.16 Code Blocks](#116-code-blocks)
 
@@ -873,7 +883,11 @@ a {
 
 ## 1.15 Images
 
-The images should have an alternate text for the screen reader users. By
+The name assigned to an image file contained within the EPUB should not contain spaces.
+The underscore character may be used.
+
+Images should have an alternate text (**img/@alt** attribute) for the 
+screen reader users. By
 providing an alternate text for non-visual content, the screen reader
 users can perceive information about the image through the alternate
 text provided by us.
@@ -883,12 +897,75 @@ text provided by us.
 ````
 <img src="covers/9781449328030_lrg.jpg" alt="Accessible EPUB 3 - First Edition"/>
 ````
+### 1.15.2 Decorative image
 
-### 1.15.2 Extended description via hyperlink
+An empty **alt** attribute is complimented by the **role** presentation to
+indicate that the image contains no information for users.
+````
+<img src="graphics/gothic-border.png" role="presentation" alt=""/>
+````
+
+### 1.15.3 Figures
+
+For a group that consists of an image and an associated caption, the **figure** and
+**figcaption** elements should be used. One or more **img** elements may exist within
+the **figure** element, but only one **figcaption** should exist. 
+Below is an example:
+
+````
+<figure role="group">
+    <img src="chart1.png" 
+         alt="Bar chart showing monthly and total visitors for 
+            the first quarter 2014 for sites 1 to 3"/>
+    <img src="chart2.png" 
+        alt="Bar chart showing monthly and total visitors for 
+            the first quarter 2014 for sites 4 to 6"/>
+    <figcaption>
+    Example.com Site visitors Jan to March 2014 text description of the bar chart
+    </figcaption>
+</figure>
+````
+
+**Note:** the **img** element should be a direct child of the **figure** element and not
+wrapped within another container such as a **p** or a **div**.
+
+If multiple images and captions are to be grouped together, then nested **figure**
+elements are to be used. Below is an example:
+
+````
+<figure role="group" aria-labelledby="fig1">
+    <figure role="group" aria-labelledby="fig11">
+        <img src="castle-etching.jpg"
+	        alt="The castle has one tower, and a tall wall around it.">
+        <figcaption id="fig11">
+        Charcoal on  wood. Anonymous, circa 1423.
+        </figcaption>
+    </figure>
+    <figure role="group" aria-labelledby="fig12">
+        <img src="castle-painting.jpg"
+	        alt="The castle now has two towers and two walls.">
+        <figcaption id="fig12">
+        Oil-based paint on canvas. Eloisa Faulkner, 1756.
+        </figcaption>
+    </figure>
+    <figure role="group" aria-labelledby="fig13">
+        <img src="castle-fluro.jpg"
+	        alt="The castle lies in ruins, the original tower all that remains in one piece.">
+        <figcaption id="fig13">
+        Film photograph. <span lang="fr">Séraphin Médéric Mieusement</span>, 1936.
+        </figcaption>
+    </figure>
+    <figcaption id="fig1">
+    The castle through the ages: 1423, 1756, and 1966 respectively.
+    </figcaption>
+</figure>
+````
+
+### 1.15.4 Extended description via hyperlink
 
 Extended description inclusion and linking via a hyperlink are
 optional unless provided in the source.
->
+
 The following example uses simple hyperlinks to link to a note at the
 end of the chapter.
 
@@ -902,35 +979,76 @@ but some reading systems have issues with such links.
 
 ````
 <figure id="fig-01">
-<img src="graphics/water-cycle.jpg"
-    alt="The hydrologic cycle, showing the
-    circular nature of the process as water
-    evaporates from a body of water and
-    eventually returns to it"/>
-<figcaption>
-The hydrologic cycle. <a role="doc-noteref" href="#desc-01">Description</a>
-</figcaption>
+    <img src="graphics/water-cycle.jpg"
+        alt="The hydrologic cycle, showing the
+        circular nature of the process as water
+        evaporates from a body of water and
+        eventually returns to it"/>
+    <figcaption>
+    The hydrologic cycle. <a role="doc-noteref" href="#desc-01">Description</a>
+    </figcaption>
 </figure>
 ...
 <h2>Image Descriptions</h2>
 <aside role="doc-footnote" id="desc-01">
-<p>
-<a role="doc-backlink" href="#fig-01">Figure 1.</a>
- --- The diagram shows
-the processes of evaporation, condensation,
-evapotranspiration, water storage in ice and snow, and
-precipitation. A large body of water ...
-</p>
+    <p>
+        <a role="doc-backlink" href="#fig-01">Figure 1.</a>
+        --- The diagram shows
+        the processes of evaporation, condensation,
+        evapotranspiration, water storage in ice and snow, and
+        precipitation. A large body of water ...
+    </p>
 </aside>
 ````
 
-### 1.15.3 Decorative image
+### 1.15.5 Fulcrum Resource References
 
-An empty alt attribute is complimented by the role presentation to
-indicate that the image contains no information for users.
+Once an EPUB is ingested in the Fulcrum platform, images referenced 
+within EPUB content may be used to reference resources ingested in the
+platform. The **img** element may be replaced with markup that displays
+a resource such as a higher resolution image, audio, or video. The 
+basename of the path (minus the extension) specified in the 
+**img/@src** attribute should match the basename of the resource. 
+For example:
 ````
-<img src="graphics/gothic-border.png" role="presentation" alt=""/>
+<figure role="group">
+    <img src="images/movie_trailer.jpg" 
+         alt="Static image representing the movie trailer"/>
+    <figcaption>
+    Trailer for the movie.
+    </figcaption>
+</figure>
 ````
+The path *images/movie_trailer.jpg* could match a video resource ingested 
+in the Fulcrum that has the file name *movie_trailer.mp4*.
+
+For the case where the **img/@src** value matches an ingested resource,
+but this instance should not be replaced, then
+the **img/@data-fulcrum-no-embed** attribute can be added to 
+the **img** element:
+````
+<figure role="group">
+    <img src="images/movie_trailer.jpg" 
+         data-fulcrum-no-embed="true"
+         alt="Static image representing the movie trailer"/>
+    <figcaption>
+    Trailer for the movie.
+    </figcaption>
+</figure>
+````
+To reference a Fulcrum resource within EPUB content at a location
+where no **img** element exists, the following markup may be used:
+````
+<figure style="display:none" data-fulcrum-embed-filename="Audio01.mp3">
+    <figcaption>Additional Audio Resource</figcaption>
+</figure>
+````
+The value of the **figure/@data-fulcrum-embed-filename** attribute
+contains the Fulcrum resource file name. Both the basename and the 
+extension should match.
+
+The **figcaption** element is optional, but can be used to provide a caption 
+for the resource once it is displayed.
 
 ## 1.16 Code Blocks
 
@@ -1305,9 +1423,11 @@ Table 1. Acceptable Styles
 </thead>
 <tbody>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/colors.html#propdef-background">background</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/colors.html#propdef-background">background</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>The background property is a shorthand for defining one or
 more properties. Refer to each individual background-* property for
@@ -1316,23 +1436,27 @@ largely unsupported at this time outside of fixed layouts.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/colors.html#propdef-background-attachment"
->background-attachment</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/colors.html#propdef-background-attachment">background-attachment</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/colors.html#propdef-background-color"
->background-color</a></p></td>
+<td style="vertical-align:top"><p><a href="http://www.w3.org/TR/CSS21/colors.html#propdef-background-color">background-color</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Ensure sufficient contrast with text color.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/colors.html#propdef-background-image"
->background-image</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/colors.html#propdef-background-image">background-image</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Ensure sufficient contrast with content color (text and graphic).</p
 ></li>
@@ -1341,28 +1465,39 @@ overlaid text difficult.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/colors.html#propdef-background-position"
->background-position</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/colors.html#propdef-background-position">background-position</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/colors.html#propdef-background-repeat"
->background-repeat</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/colors.html#propdef-background-repeat">background-repeat</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-border">border</a
-></p><p><a href="http://www.w3.org/TR/CSS21/box.html#propdef-border-top"
->border-top</a></p><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-border-right">border-right</a
-></p><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-border-bottom">border-bottom</a
-></p><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-border-left">border-left</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-border">border</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-border-top">border-top</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-border-right">border-right</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-border-bottom">border-bottom</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-border-left">border-left</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>These border properties are shorthands for defining one or
 more properties. Refer to each individual border-* property for issues.</p
@@ -1370,75 +1505,103 @@ more properties. Refer to each individual border-* property for issues.</p
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/tables.html#propdef-border-collapse"
->border-collapse</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/tables.html#propdef-border-collapse">border-collapse</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-border-color">border-color</a
-></p><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-border-top-color"
->border-top-color</a></p><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-border-right-color"
->border-right-color</a></p><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-border-bottom-color"
->border-bottom-color</a></p><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-border-left-color"
->border-left-color</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-border-color">border-color</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-border-top-color">border-top-color</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-border-right-color">border-right-color</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-border-bottom-color">border-bottom-color</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-border-left-color">border-left-color</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>An element's border color must never be the sole means of conveying
-information about the nature of its content. See the <a
-href="http://kb.daisy.org/publishing/docs/css/color.html">Color info
+information about the nature of its content. See the <a href="http://kb.daisy.org/publishing/docs/css/color.html">Color info
 page</a>.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/tables.html#propdef-border-spacing"
->border-spacing</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/tables.html#propdef-border-spacing">border-spacing</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-border-style">border-style</a
-></p><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-border-top-style"
->border-top-style</a></p><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-border-right-style"
->border-right-style</a></p><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-border-bottom-style"
->border-bottom-style</a></p><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-border-left-style"
->border-left-style</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-border-style">border-style</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-border-top-style">border-top-style</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-border-right-style">border-right-style</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-border-bottom-style">border-bottom-style</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-border-left-style">border-left-style</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-border-width">border-width</a
-></p><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-border-top-width"
->border-top-width</a></p><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-border-right-width"
->border-right-width</a></p><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-border-bottom-width"
->border-bottom-width</a></p><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-border-left-width"
->border-left-width</a></p></td>
-<td style="vertical-align:top"><ul>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-border-width">border-width</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-border-top-width">border-top-width</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-border-right-width">border-right-width</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-border-bottom-width">border-bottom-width</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-border-left-width">border-left-width</a>
+</p>
+</td>
+<td style="vertical-align:top">
+<ul>
 <li><p>When using color to convey meaning, ensure borders are thick
 enough that visual users can discern the color.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/visuren.html#propdef-bottom">bottom</a
-></p><p><a href="http://www.w3.org/TR/CSS21/visuren.html#propdef-left"
->left</a></p><p><a
-href="http://www.w3.org/TR/CSS21/visuren.html#propdef-right">right</a
-></p><p><a href="http://www.w3.org/TR/CSS21/visuren.html#propdef-top"
->top</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/visuren.html#propdef-bottom">bottom</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/visuren.html#propdef-left">left</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/visuren.html#propdef-right">right</a></p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/visuren.html#propdef-top">top</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>User agent support for absolute and fixed positioning is not
 guaranteed.</p></li>
@@ -1448,49 +1611,61 @@ problematic for users with low vision and/or using zooming software.</p
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/tables.html#propdef-caption-side"
->caption-side</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/tables.html#propdef-caption-side">caption-side</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/visuren.html#propdef-clear">clear</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/visuren.html#propdef-clear">clear</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/colors.html#propdef-color">color</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/colors.html#propdef-color">color</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
-<li><p>See the <a
-href="http://kb.daisy.org/publishing/docs/css/color.html">Color info
+<li><p>See the <a href="http://kb.daisy.org/publishing/docs/css/color.html">Color info
 page</a> for the range of considerations when coloring text and graphical
 content.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/generate.html#propdef-counter-increment"
->counter-increment</a></p><p><a
-href="http://www.w3.org/TR/CSS21/generate.html#propdef-counter-reset"
->counter-reset</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/generate.html#propdef-counter-increment">counter-increment</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/generate.html#propdef-counter-reset">counter-reset</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/ui.html#propdef-cursor">cursor</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/ui.html#propdef-cursor">cursor</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Avoid changing the cursor such that clickable elements are
 no longer distinguishable.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/visuren.html#propdef-display">display</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/visuren.html#propdef-display">display</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Setting the display property to the value none removes the
 element from rendering both visually and to assistive technologies.
@@ -1499,9 +1674,11 @@ should be rendered by ATs.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/tables.html#propdef-empty-cells"
->empty-cells</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/tables.html#propdef-empty-cells">empty-cells</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Setting the empty-cells property is not required for HTML5
 tables, as borders are rendered (do not insert placeholder text such
@@ -1512,16 +1689,16 @@ around empty cells.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/visuren.html#propdef-float">float</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/visuren.html#propdef-float">float</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Elements should not be floated in a way that makes their discoverability
-problematic for users with low vision and/or using zooming software.</p
-></li>
+problematic for users with low vision and/or using zooming software.</p></li>
 <li><p>Ensure sufficient margins exist around floated content so that
-it is clearly distinguishable from the content that flows around it.</p
-></li>
+it is clearly distinguishable from the content that flows around it.</p></li>
 <li><p>When floating primary content to the right, ensure that it
 is not positioned in the markup to accommodate the float (i.e., it
 occurs at the logical reading point so that it makes sense in non-visual
@@ -1529,18 +1706,22 @@ playback contexts).</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/fonts.html#propdef-font">font</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/fonts.html#propdef-font">font</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>The font property is a shorthand for defining one or more properties.
 Refer to each individual font-* property for issues.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/fonts.html#propdef-font-family">font-family</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/fonts.html#propdef-font-family">font-family</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Avoid fonts that do not provide sufficient character differentiation,
 such as sans-serif fonts that represent capital I, lower-case L and
@@ -1556,9 +1737,11 @@ characters.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/fonts.html#propdef-font-size">font-size</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/fonts.html#propdef-font-size">font-size</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Use relative sizes such as percentages and ems to facilitate
 scaling.</p></li>
@@ -1568,9 +1751,11 @@ sizes).</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/fonts.html#propdef-font-style">font-style</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/fonts.html#propdef-font-style">font-style</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Use CSS to apply italics only for decorative purposes (similar
 to using the i element). Use em tags if the words are to be stressed.</p
@@ -1580,15 +1765,19 @@ can be harder to read than roman face.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/fonts.html#propdef-font-variant"
->font-variant</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/fonts.html#propdef-font-variant">font-variant</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/fonts.html#propdef-font-weight">font-weight</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/fonts.html#propdef-font-weight">font-weight</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Use CSS to apply bolding only for decorative purposes (similar
 to using the b element). Use strong tags if the words are to be stressed.</p
@@ -1598,9 +1787,11 @@ be harder to read than roman face.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/visudet.html#propdef-height">height</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/visudet.html#propdef-height">height</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Assistive technologies typically ignore content that has 0
 height and/or width set on its containing element, so do not use this
@@ -1609,9 +1800,11 @@ property to hide content that is only intended for non-visual playback.</p
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/text.html#propdef-letter-spacing"
->letter-spacing</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/text.html#propdef-letter-spacing">letter-spacing</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>The letter-spacing property can be used to increase the kerning
 between letters to improve the readability of tightly constructed
@@ -1623,9 +1816,11 @@ necessary.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/visudet.html#propdef-line-height"
->line-height</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/visudet.html#propdef-line-height">line-height</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Use caution when changing line heights. Slight increases in
 the line height can improve overall readability, but too much space
@@ -1635,9 +1830,11 @@ to distinguish paragraphs).</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/generate.html#propdef-list-style"
->list-style</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/generate.html#propdef-list-style">list-style</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>The list-style property is a shorthand for defining one or
 more properties. Refer to each individual list-style-* property for
@@ -1645,9 +1842,11 @@ issues.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/generate.html#propdef-list-style-image"
->list-style-image</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/generate.html#propdef-list-style-image">list-style-image</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Avoid using images to convey the meaning of a list. If the
 image is important to comprehension of the items, ensure that a semantic
@@ -1657,15 +1856,19 @@ a caption.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/generate.html#propdef-list-style-position"
->list-style-position</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/generate.html#propdef-list-style-position">list-style-position</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/generate.html#propdef-list-style-type"
->list-style-type</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/generate.html#propdef-list-style-type">list-style-type</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Do not change the nature of a list using the list-style-type
 property (e.g., to not use the property to give an unordered list
@@ -1673,34 +1876,48 @@ the appearance of ordering).</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/visudet.html#propdef-max-height"
->max-height</a></p><p><a
-href="http://www.w3.org/TR/CSS21/visudet.html#propdef-max-width">max-width</a
-></p><p><a
-href="http://www.w3.org/TR/CSS21/visudet.html#propdef-min-height"
->min-height</a></p><p><a
-href="http://www.w3.org/TR/CSS21/visudet.html#propdef-min-width">min-width</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/visudet.html#propdef-max-height">max-height</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/visudet.html#propdef-max-width">max-width</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/visudet.html#propdef-min-height">min-height</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/visudet.html#propdef-min-width">min-width</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/page.html#propdef-orphans">orphans</a
-></p><p><a href="http://www.w3.org/TR/CSS21/page.html#propdef-widows"
->widows</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/page.html#propdef-orphans">orphans</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/page.html#propdef-widows">widows</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/ui.html#propdef-outline">outline</a
-></p><p><a
-href="http://www.w3.org/TR/CSS21/ui.html#propdef-outline-color">outline-color</a
-></p><p><a
-href="http://www.w3.org/TR/CSS21/ui.html#propdef-outline-style">outline-style</a
-></p><p><a
-href="http://www.w3.org/TR/CSS21/ui.html#propdef-outline-width">outline-width</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/ui.html#propdef-outline">outline</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/ui.html#propdef-outline-color">outline-color</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/ui.html#propdef-outline-style">outline-style</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/ui.html#propdef-outline-width">outline-width</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Outlines surround borders and serve a similar function. The
 issues with each are the same. See the corresponding border properties
@@ -1711,42 +1928,56 @@ contrast is maintained between them if they both visually convey information.</p
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/visufx.html#propdef-overflow">overflow</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/visufx.html#propdef-overflow">overflow</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Avoid using the hidden value, as content may not be visible,
 especially when zoomed.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-padding">padding</a
-></p><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-padding-top">padding-top</a
-></p><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-padding-right">padding-right</a
-></p><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-padding-bottom"
->padding-bottom</a></p><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-padding-left">padding-left</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-padding">padding</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-padding-top">padding-top</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-padding-right">padding-right</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-padding-bottom">padding-bottom</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-padding-left">padding-left</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/page.html#propdef-page-break-after"
->page-break-after</a></p><p><a
-href="http://www.w3.org/TR/CSS21/page.html#propdef-page-break-before"
->page-break-before</a></p><p><a
-href="http://www.w3.org/TR/CSS21/page.html#propdef-page-break-inside"
->page-break-inside</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/page.html#propdef-page-break-after">page-break-after</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/page.html#propdef-page-break-before">page-break-before</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/page.html#propdef-page-break-inside">page-break-inside</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/visuren.html#propdef-position">position</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/visuren.html#propdef-position">position</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Absolute positioning should not be used to re-order content
 differently than it is laid out in the markup.</p></li>
@@ -1754,45 +1985,53 @@ differently than it is laid out in the markup.</p></li>
 makes their discoverability problematic for users with low vision
 and/or using zooming software.</p></li>
 <li><p>Note that the fixed value is not included in the EPUB 3 Style
-Sheets profile and its use is not recommended (see the <a
-href="http://idpf.org/epub3/latest/contentdocs#sec-css-oeb-head-foot"
->oeb-page-head and oeb-page-foot</a> custom properties for including
+Sheets profile and its use is not recommended (see the <a href="http://idpf.org/epub3/latest/contentdocs#sec-css-oeb-head-foot">oeb-page-head and oeb-page-foot</a> custom properties for including
 static headers and footers).</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/generate.html#propdef-quotes">quotes</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/generate.html#propdef-quotes">quotes</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/tables.html#propdef-table-layout"
->table-layout</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/tables.html#propdef-table-layout">table-layout</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/text.html#propdef-text-align">text-align</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/text.html#propdef-text-align">text-align</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Avoid justifying text, as the uneven spacing that occurs between
 words can reduce the readability for some people.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/text.html#propdef-text-decoration"
->text-decoration</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/text.html#propdef-text-decoration">text-decoration</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Use the del element to semantically mark deleted text.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/text.html#propdef-text-indent">text-indent</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/text.html#propdef-text-indent">text-indent</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>A sometimes used trick to hide text for assistive technologies
 is to use a large negative value, but like negative margins this technique
@@ -1801,30 +2040,38 @@ user's preferred text direction.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/text.html#propdef-text-transform"
->text-transform</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/text.html#propdef-text-transform">text-transform</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Avoid lengthy decorative use of capitalization as it can make
 words difficult to distinguish and read.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/visudet.html#propdef-vertical-align"
->vertical-align</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/visudet.html#propdef-vertical-align">vertical-align</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/text.html#propdef-white-space">white-space</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/text.html#propdef-white-space">white-space</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/visudet.html#propdef-width">width</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/visudet.html#propdef-width">width</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Assistive technologies typically ignore content that has 0
 width and/or height set on its containing element, so do not use this
@@ -1833,9 +2080,11 @@ property to hide content that is only intended for non-visual playback.</p
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/text.html#propdef-word-spacing">word-spacing</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/text.html#propdef-word-spacing">word-spacing</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Increasing word spacing can help improve readability of tightly
 constructed fonts.</p></li>
@@ -1844,9 +2093,11 @@ to increase the space between words.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/visuren.html#propdef-z-index">z-index</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/visuren.html#propdef-z-index">z-index</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 </tbody>
@@ -1863,9 +2114,11 @@ Table 2. Not Recommended Classes
 </thead>
 <tbody>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/visufx.html#propdef-clip">clip</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/visufx.html#propdef-clip">clip</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Although clipping content to 1 pixel is sometimes used on the
 Web to hide content, support for the property and its reliance on
@@ -1874,9 +2127,11 @@ absolute positioning makes the practice not recommended in EPUBs.</p
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/generate.html#propdef-content">content</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/generate.html#propdef-content">content</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Any content inserted using this property should be purely presentational,
 as it typically won't be available to assistive technologies.</p></li>
@@ -1886,26 +2141,28 @@ as it typically won't be available to assistive technologies.</p></li>
 <td style="vertical-align:top"><p>direction</p></td>
 <td style="vertical-align:top"><ul>
 <li><p>The direction property is not supported in EPUB 3. HTML5 markup,
-such as the <a
-href="http://www.w3.org/TR/html/text-level -semantics.html#the-bdi-element"
->bdi</a> and <a
-href="http://www.w3.org/TR/html/text-level -semantics.html#the-bdo-element"
->bdo</a> elements and <a
-href="http://www.w3.org/TR/html/dom.html#the-dir-attribute">dir</a
-> attribute, should be used to express directionality.</p></li>
+such as the <a href="http://www.w3.org/TR/html/text-level -semantics.html#the-bdi-element">bdi</a> and <a href="http://www.w3.org/TR/html/text-level -semantics.html#the-bdo-element"
+>bdo</a> elements and <a href="http://www.w3.org/TR/html/dom.html#the-dir-attribute">dir</a> attribute, should be used to express directionality.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-margin">margin</a
-></p><p><a href="http://www.w3.org/TR/CSS21/box.html#propdef-margin-top"
->margin-top</a></p><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-margin-right">margin-right</a
-></p><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-margin-bottom">margin-bottom</a
-></p><p><a
-href="http://www.w3.org/TR/CSS21/box.html#propdef-margin-left">margin-left</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-margin">margin</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-margin-top">margin-top</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-margin-right">margin-right</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-margin-bottom">margin-bottom</a>
+</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/box.html#propdef-margin-left">margin-left</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Note that user agents typically restrict the ability to modify
 body margins.</p></li>
@@ -1917,9 +2174,11 @@ that reason, as well.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/visufx.html#propdef-visibility">visibility</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/visufx.html#propdef-visibility">visibility</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Hidden content is not available to assistive technologies,
 so do not use this property to hide content from visual rendering
@@ -1934,12 +2193,9 @@ that is intended to be read out.</p></li>
 >speak-punctuation</p><p>speech-rate</p><p>stress</p><p>voice-family</p
 ><p>volume</p></td>
 <td style="vertical-align:top"><ul>
-<li><p>Properties from the <a
-href="http://www.w3.org/TR/CSS21/aural.html">CSS 2.1 Aural style sheets
+<li><p>Properties from the <a href="http://www.w3.org/TR/CSS21/aural.html">CSS 2.1 Aural style sheets
 informative  appendix</a> should not be used in EPUB 3. The 'aural'
-media type was deprecated by the same appendix, and the <a
-href="http://kb.daisy.org/publishing/docs/css/reference.html#css3speech"
->CSS 3 Speech module</a> defines the properties for the new 'speech'
+media type was deprecated by the same appendix, and the <a href="http://kb.daisy.org/publishing/docs/css/reference.html#css3speech">CSS 3 Speech module</a> defines the properties for the new 'speech'
 type.</p></li>
 </ul></td>
 </tr>
@@ -1957,47 +2213,60 @@ type.</p></li>
 </thead>
 <tbody>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/selector.html#dynamic-pseudo-classes"
->:active</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/selector.html#dynamic-pseudo-classes">:active</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/selector.html#first-child">:first-child</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/selector.html#first-child">:first-child</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/selector.html#dynamic-pseudo-classes"
->:focus</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/selector.html#dynamic-pseudo-classes">:focus</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/selector.html#dynamic-pseudo-classes"
->:hover</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/selector.html#dynamic-pseudo-classes">:hover</a>
+</p>
+</td>
 <td style="vertical-align:top"><p>The :hover pseudo-selector should
 never be used, as it is not device independent and may not be activatable
 by many users as ebook users typically do not have mice.</p></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/selector.html#lang">:lang</a></p
-></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/selector.html#lang">:lang</a>
+</p></td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/selector.html#link-pseudo-classes"
->:link</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/selector.html#link-pseudo-classes">:link</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/selector.html#link-pseudo-classes"
->:visited</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/selector.html#link-pseudo-classes">:visited</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
@@ -2018,11 +2287,15 @@ href="http://www.w3.org/TR/CSS21/selector.html#link-pseudo-classes"
 </thead>
 <tbody>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/selector.html#before-and-after">:before</a
-></p><p>and</p><p><a
-href="http://www.w3.org/TR/CSS21/selector.html#before-and-after">:after</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/selector.html#before-and-after">:before</a>
+</p>
+<p>and</p>
+<p>
+<a href="http://www.w3.org/TR/CSS21/selector.html#before-and-after">:after</a>
+</p>
+</td>
 <td style="vertical-align:top"><ul>
 <li><p>Not all assistive technologies announce text injected using
 the :before and :after pseudo-elements.</p></li>
@@ -2033,15 +2306,19 @@ text.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/selector.html#first-letter">:first-letter</a
-></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/selector.html#first-letter">:first-letter</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 <tr>
-<td style="vertical-align:top"><p><a
-href="http://www.w3.org/TR/CSS21/selector.html#first-line-pseudo"
->:first-line</a></p></td>
+<td style="vertical-align:top">
+<p>
+<a href="http://www.w3.org/TR/CSS21/selector.html#first-line-pseudo">:first-line</a>
+</p>
+</td>
 <td style="vertical-align:top"></td>
 </tr>
 </tbody>
