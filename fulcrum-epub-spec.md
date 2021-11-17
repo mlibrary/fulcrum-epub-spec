@@ -909,7 +909,8 @@ indicate that the image contains no information for users.
 
 For a group that consists of an image and an associated caption, the **figure** and
 **figcaption** elements should be used. One or more **img** elements may exist within
-the **figure** element, but only one **figcaption** should exist. 
+the **figure** element, but only one **figcaption** element should exist. 
+The **figcaption** element should exist after its associated **img** element(s).
 Below is an example:
 
 ````
@@ -1003,7 +1004,7 @@ but some reading systems have issues with such links.
 
 ### 1.15.5 Fulcrum Resource References
 
-Once an EPUB is ingested in the Fulcrum platform, images referenced 
+Once an EPUB is ingested in the **Fulcrum** platform, images referenced 
 within EPUB content may be used to reference resources ingested in the
 platform. The **img** element may be replaced with markup that displays
 a resource such as a higher resolution image, audio, or video. The 
@@ -1020,7 +1021,7 @@ For example:
 </figure>
 ````
 The path *images/movie_trailer.jpg* could match a video resource ingested 
-in the Fulcrum that has the file name *movie_trailer.mp4*.
+in the **Fulcrum** platform that has the file name *movie_trailer.mp4*.
 
 For the case where the **img/@src** value matches an ingested resource,
 but this instance should not be replaced, then
@@ -1036,7 +1037,7 @@ the **img** element:
     </figcaption>
 </figure>
 ````
-To reference a Fulcrum resource within EPUB content at a location
+To reference a **Fulcrum** resource within EPUB content at a location
 where no **img** element exists, the following markup may be used:
 ````
 <figure style="display:none" data-fulcrum-embed-filename="Audio01.mp3">
@@ -1044,7 +1045,7 @@ where no **img** element exists, the following markup may be used:
 </figure>
 ````
 The value of the **figure/@data-fulcrum-embed-filename** attribute
-contains the Fulcrum resource file name. Both the basename and the 
+contains the **Fulcrum** resource file name. Both the basename and the 
 extension should match.
 
 The **figcaption** element is optional, but can be used to provide a caption 
