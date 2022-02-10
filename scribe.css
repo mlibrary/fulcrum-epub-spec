@@ -1,7 +1,7 @@
 /*
-  // Version 1.56
+  // Version 1.57
   // OEPS filename: default.css
-  // Last update: October 25 2021
+  // Last update: Feb 20 2022
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -1275,6 +1275,11 @@ table.code > tbody > tr > td > pre {
     margin: 0px; padding: 0px;
 }
 
+.modal__content ul li span.lang {
+  display: inline-block;
+  padding: 0;
+  border: none;
+}
 
 /*Accessibility*/
 .hidden { position: absolute !important; clip: rect(1px,1px,1px,1px) !important; clip: rect(1px,1px,1px,1px) !important; height: 1px !important; width: 1px !important; overflow: hidden !important; padding: 0 !important; margin: 0 !important; }
