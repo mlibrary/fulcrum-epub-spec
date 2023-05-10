@@ -1025,12 +1025,12 @@ in the **Fulcrum** platform that has the file name *movie_trailer.mp4*.
 
 For the case where the **img/@src** value matches an ingested resource,
 but this instance should not be replaced, then
-the **img/@data-fulcrum-no-embed** attribute can be added to 
+the **img/@data-fulcrum-embed** attribute can be added to 
 the **img** element:
 ````
 <figure role="group">
     <img src="images/movie_trailer.jpg" 
-         data-fulcrum-no-embed="true"
+         data-fulcrum-embed="false"
          alt="Static image representing the movie trailer"/>
     <figcaption>
     Trailer for the movie.
