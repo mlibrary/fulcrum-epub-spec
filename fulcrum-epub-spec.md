@@ -92,6 +92,12 @@
 <td>FULCRUMOPS-33</td>
 <td>tbelc@umich.edu</td>
 </tr>
+<tr class="odd">
+<td>3.0</td>
+<td>April 2024</td>
+<td>FULCRUMOPS-234 - indicate what is recommended vs. required and for whom; updates to extended description best practices; additional updates to match accessibility requirements</td>
+<td>J McGlone and T Belch</td>
+</tr>
 </tbody>
 </table>
 
@@ -103,7 +109,7 @@
 
 [1.2 Element Specification](#12-element-specification)
 
-[1.2.1 Standard Functionality Levels (ePub 3) for PDF source](#121-standard-functionality-levels-epub-3-for-pdf-source)
+[1.2.1 Standard Functionality Levels (EPUB 3) for PDF source](#121-standard-functionality-levels-epub-3-for-pdf-source)
 
 [1.3 File Name](#13-file-name)
 
@@ -246,34 +252,35 @@
 # 1.0 Target Specification -- EPUB3
 
 ## 1.1 EPUB Version
+EPUB version 3.2 is the recommended technical specification for EPUB
+created for submission to Fulcrum. EPUB 3.0+ will function correctly in the Fulcrum Reader.
 
-EPUB version 3.0.1 is the recommended technical specification for EPUB
-created for submission to Fulcrum. Please note this document does not
-repeat conformance requirements contained in the official specification.
-However, recommended features regarding file and directory structure,
-naming conventions, treatments for images, treatments for metadata, and
-other such file preparation details are included.
+EPUB conforming to a specification less than EPUB 3.0 will not function as expected in the Fulcrum Reader and should be converted to EPUB 3.0+ before submission to Fulcrum whenever possible.
 
-The full EPUB 3.0.1 specification is located here:
-[[http://idpf.org/epub/301](http://idpf.org/epub/301).
+Please note the Fulcrum EPUB Specification does not repeat conformance requirements contained in the official EPUB specification. However, requirements and techniques regarding file and directory structure, naming conventions, treatments for images, time-based media, navigation, metadata, HTML and other such details are included in this specification.
 
--   International Digital Publishing Form (IDPF) guidelines for
-    reflowable digital books and publications.
+Wherever possible, the Fulcrum EPUB Specification follows the recommendations and techniques in the [DAISY Accessible Publishing Knowledge Base](http://kb.daisy.org/publishing/docs/) but offers scholarly monograph specific examples or techniques Fulcrum prefers.
 
--   ePub validated against ePubCheck version 4.0.2
-    (<http://code.google.com/p/epubcheck/>)
+The full EPUB 3.2 specification is located here: https://www.w3.org/publishing/epub32/
+
+-   W3C guidelines for reflowable digital books and publications.
+
+-   EPUB validated against [EPUBCheck version 4.2.6](https://github.com/w3c/epubcheck/releases/tag/v4.2.6)
 
 -   XHTML files compliant with XHTML 1.1 DTD
 
 -   XHTML files validated with CSE HTML validator version 10.0
 
-## 1.2 Element Specification
+### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
 
-The following matrix details recommendations how to convert different
-elements. The treatments are optional for third-party partners to
-University of Michigan.
 
-### 1.2.1 Standard Functionality Levels (ePub 3) for PDF source
+## 1.2 Element Specification for Reformatting
+The following matrix details recommendations for converting different elements from PDF to EPUB 3.
+
+### 1.2.1 Standard Functionality Levels (EPUB 3) for PDF source
 
 | **Element**                   | **Conversion**                           |
 | ----------------------------- | ---------------------------------------- |
@@ -302,26 +309,25 @@ University of Michigan.
 | Glossary/Appendix             | Text                                     |
 | Index                         | Text with links                          |
 
-**<span class="underline">Note</span>:** If the input is ePub, then output should be in
-the same format.
+**<span class="underline">Note</span>:** If the input is EPUB, then output should be in the same format.
+
+### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
 
 ## 1.3 File Name
+The EPUB3 output file name will be the 13-digit ISBN number of the same input file name.
 
-The EPUB3 output file name will be the 13-digit ISBN number of the same
-input file name for Apex Production.
+The use of the 13-digit ISBN number of the source file is optional for third-party partners to Fulcrum. However, file naming conventions must be consistent across titles submitted to Fulcrum.
 
-The use of the 13-digit ISBN number of the source file is optional for
-third-party partners to University of Michigan. However, file naming
-conventions must be consistent across titles submitted to the
-university.
+### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
 
 ## 1.4 Folder Structure
-
-The following folder structure is required for Apex deliverables to the
-University of Michigan. The folder structure below is optional for
-third-party partners to University of Michigan. However, folder
-structure conventions must be consistent across titles submitted to the
-university.
+The following folder structure is required for vendor deliverables to Michigan Publishing. The folder structure below is optional for third-party partners to Fulcrum. However, folder structure conventions must be consistent across titles submitted to Fulcrum.
 
 The EPUB should conform to the following directory structure and naming
 convention.
@@ -344,8 +350,7 @@ convention.
 <b>mimetype</b>
 </pre>
 
-Where,
-
+Where:
 
 <pre>
 <b><i>xx</i></b> = A sequential numeric book part identifier beginning with 00 and incrementing by 1 (e.g., 00, 01, 02, 03, and so on)
@@ -358,53 +363,49 @@ Where,
 <b><i>stylesheet</i></b> = A human readable CSS stylesheet name.
 </pre>
 
+### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
+
 ### 1.4.1 Optional File Inclusions
 
-Additional inclusions supporting alternative EPUB Reader systems, such
-as ibooks and the com.apple.ibooks.display-options.xml file, is
-permissible and will not interfere with the Fulcrum viewer.
+Additional inclusions supporting EPUB reading systems, such as iBooks and the com.apple.ibooks.display-options.xml file, is permissible and will not interfere with the Fulcrum Reader.
 
-If such files are in source, they will be in the deliverable EPUB3.
+If such files are in the source file provided for conversion, they will be in the deliverable EPUB3.
 
 ## 1.5 EPUB Package
-
 The EPUB3 output contains the following folders and files.
 
 -   XHTML files
-
 -   Image files
-
 -   toc.ncx
-
+-   toc.xhtml (contains `epub:type="landmarks"` and  `epub:type="page-list"`)
 -   mimetype
-
 -   container.xml
-
 -   content.opf
-
 -   Stylesheet (CSS)
+-   Embedded Fonts (only if approved)
 
--   Embedded Fonts (Only if approved by customer)
+### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
 
 ## 1.6 Metadata
 
 ### 1.6.1 Dublin Core
-
 Dublin Core metadata is required for the following items:
 
 -   Title
-
 -   Creator
-
 -   Language
-
 -   Rights
-
 -   Publisher
-
 -   Identifier
-
--   Source (Required when the EPUB is a derivative of a print source.)
+-   Source
+	- Required when the EPUB is a derivative of a print source, see additional fields also needed in example below.
+- Date
 
 **Example code:**
 
@@ -422,140 +423,254 @@ Dublin Core metadata is required for the following items:
 <dc:date>2018-03-03</dc:date>
 ````
 
-## 1.7 Accessibility Metadata
+### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | Yes |
 
-Include the two types of accessibility metadata structure defined in the
-current EPUB environment as listed below.
+## 1.7 Accessibility Metadata
+Include the two types of accessibility metadata -- schema.org and ONIX -- defined in the current EPUB environment.
+
+### 1.7.1 Schema.org Accessibility Metadata
+> Schema: <http://kb.daisy.org/publishing/docs/metadata/schema-org.html>
+
+EPUB must contain the following schema properties:
+
+- `accessibilityFeature`
+- `accessibilityHazard`
+- `accessibilitySummary`
+- `accessMode`
+- `accessModeSufficient`
+
+EPUB that include accessibility conformance and certification information must also contain:
+
+```
+<link href="http://www.idpf.org/epub/a11y/accessibility-20170105.html#wcag-aa" rel="dcterms:conformsTo"/>
+
+<meta property="a11y:certifiedBy">[Certifier Name]</meta>
+
+<meta property="a11y:certifierCredential">[URL to Certifier Credential]</meta>
+```
+
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No, but strongly recommended |
+
+### 1.7.2 ONIX Accessibility Metadata
 
 > ONIX: <http://kb.daisy.org/publishing/docs/metadata/onix.html>
 
-Use ONIX only when creating a separate ONIX metadata XML to place in
-the /meta folder of the EPUB.
+Use ONIX only when creating a separate ONIX metadata XML to place in the /meta folder of the EPUB.
 
-> Schema: <http://kb.daisy.org/publishing/docs/metadata/schema-org.html>
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| No | No |
 
-## 1.8 HTML Meta Header
+## 1.8 Navigation
+### 1.8.1 Table of Contents
+In the `nav epub:type="contents"`, typically in the `toc.xhtml` file, include the following EPUB sections as follows (if section is applicable):
 
-For Apex created EPUBs, the follow meta tags will be placed inside the
-\<head\> tag in all the XHTML files. The meta tags are optional for
-third-party partners to University of Michigan.
+-  Cover
+-  Title
+    -   Note: If there are multiple title pages, label the contents "Title Page" and "Original Title Page".
+-  Half Title
+-  Copyright
+    -   Note: If there are multiple copyright pages (e.g., the Routledge Revivals imprint which contains the original copyright page usually from the 1800s), the contents are to be labeled "Copyright Page" and "Original Copyright Page".
+-  Dedication
+-  Table of Contents page
+    -  Note to Production: If the Table of Contents is missing for a title, raise a JIRA ticket to see if the client can resupply the file. If not, construct a Table of Contents page fom the Chapter Titles.
+-  All Lists of Tables, Figures, Illustrations, Maps, etc.  
+-  All book sections listed in the Table of Contents
+-  Appendices
+-  Bibliographies
+-  Endnotes
+-  Indexes
+
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No, but strongly recommended |
+
+### 1.8.2 Landmarks
+In the  `nav epub:type="landmarks"`, typically in the `toc.xhtml` file, include the following EPUB sections as follows (if section is applicable):
+
+-  Table of Contents page
+-  All lists of Tables, Figures, Illustrations, Maps, etc.
+-  Start of content (typically the first major section after the front matter)  
+-  Appendices
+-  Bibliographies
+-  Endnotes
+-  Indexes
+
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No, but strongly recommended |
+
+### 1.8.3 Page List
+If a print equivalent exists and page breaks are indicated within EPUB, include a page list in the `nav epub:type="page-list"`, typically in the `toc.xhtml` file, that includes a listing of all pages and links to those pages. See the [DAISY Accessible Publishing Knowledge Base for examples](https://kb.daisy.org/publishing/docs/navigation/pagelist.html).
+
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No, but strongly recommended |
+
+## 1.9 HTML Meta Header
+The following `<meta>` elements should placed inside the `<head>` element in all the XHTML files. The `viewport` tag scales the page to the device size (`initial-scale=1.0`) but allows the user to zoom the page up to 5x its initial size (`maximum-scale=5.0`). They are optional for Fulcrum partners.
+
+**Example Code:**
 
 ````
 <meta name="viewport" content="initial-scale=1.0,maximum-scale=5.0"/>
-<meta content=" " name=" " role="section"/>
-````
-The chapter id should be provided as value for content attribute and the type of the
-section should be provided under name attribute. For example:
-````
-<meta content="dedication" name="dedication" role="section"/>
-<meta content="chapter04" name="chapter04" role="section"/>
 ````
 
-## 1.9 Bookmark
+### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No, but strongly recommended |
 
-Bookmark each ePUB as follows:
 
--   Cover
--   Title
-    -   Note: If there are multiple title pages, label the bookmarks
-        "Title Page" and "Original Title Page".
--   Half Title
--   Copyright
-    -   Note: If there are multiple copyright pages (e.g., the Routledge
-        Revivals imprint which contains the original copyright page
-        usually from the 1800s), the bookmarks are to be labeled
-        "Copyright Page" and "Original Copyright Page".
--   Dedication
--   Table of Contents
-    -   Note to Production: If the Table of Contents is missing for a
-        title, raise a JIRA ticket to see if the client can resupply the
-        file. If not, construct the bookmarks from the Chapter Titles.
--   All book sections listed in the Table of Contents
--   All Lists of Tables, Figures, Illustrations, Maps, etc.
--   Appendices
--   Indexes
+## 1.10 Language
+The primary language of the publication and shifts in primary language in body text should be set to ensure that assistive technologies correctly interpret and render the text.
 
-## 1.10 Html Title
+The primary language should be placed in `lang` and `xml:lang`  attributes inside the `<html>` element in all the XHTML files. 
 
-HTML titles are a best practice recommendation, and, required for Apex
-EPUB deliveries. However, HTML titles are optional for third-party
-partners to University of Michigan.
+**Example Code:**
+````
+<html ... lang="en" xml:lang="en">
+````
 
-Assigning meaningful titles is a recommended best practice for \<title\>
-elements in the EPUB. Such titles help all users to find and navigate
-through the documents, and, are essential for screen reader users.
+Shifts in primary language in the body text, footnotes, or references should override the set language by wrapping the content in `<span>` element with  `lang` and `xml:lang` attributes.
 
-Example 1 --- One chapter/part per HTML
+```
+<html ... lang="en" xml:lang="en">
+	...
+	<body>
+		...
+		<section>
+		<p>Newspapers in the People’s Republic were to 
+		function as communication channels for transmitting 
+		the central Party leaders’ positions and policies 
+		out to the nation’s provinces and counties, and 
+		relaying the conditions and experiences of the local 
+		masses and ground level (<span lang="zh-Hans" 
+		xml:lang="zh-Hans"><i>jiceng</i></span>) cadres back 
+		up to the central Party (A. P. L. Liu 1971; Schurmann 
+		1966).</p>
+		...
+		</section>
+		...
+	</body>
+</html>
+```
+
+Language attribute values must be valid. The [W3C provides guidance on selecting valid langauge tags](https://www.w3.org/International/questions/qa-choosing-language-tags).
+
+### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
+
+## 1.11 HTML Title
+Assigning meaningful titles is a recommended best practice for \<title\> elements in the EPUB. Such titles help all users to find and navigate through the documents, and, are essential for screen reader users.
+
+**Example 1. One chapter/part per HTML**
 
 ````
 <html ...>
-<title>Chapter 1 --- Hobo's Guide to the Universe</title>
+<title>Chapter 1. Democratic Communications Infrastructure, Discourse, Policy, and Advocacy</title>
 ````
 
-Example 2 --- Multiple HTML files for one chapter/part
+**Example 2. Multiple HTML files for one chapter/part**
 
-If a document is split into multiple HTML files, the following method
-should be followed.
+If a chapter or part is split into multiple HTML files, the following method should be followed.
 
 ````
 <html ...>
-<title>Chapter 1 - Continued (2 of 3) --- Hobo's Guide to the Universe</title>
+<title>Chapter 1. Continued (2 of 3). Democratic Communications Infrastructure, Discourse, Policy, and Advocacy</title>
 ````
 
-## 1.11 Headings
+### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | Yes |
 
-Apply heading tags as per the HTML element for the headings. Based on
-the heading levels, apply heading tags ranging from h1 to h6 as needed.
+## 1.12 Headings
+
+Apply heading tags as per the HTML element for the headings. Based on the heading levels, apply heading tags ranging from h1 to h6 as needed. Do not skip heading levels.
 
 ### 1.11.1 Numbered headings
+Heading numbers should decrease by one for each subsection. Never skip a heading number.
 
 ````
-<section role="doc-part">
-<h1>Book One: 1805</h1>
-<section role="doc-part">
-<h2>Part 1</h2>
 <section role="doc-chapter">
-<h3>Chapter 1</h3>
+	<h1>Chapter 1 Democratic Communications Infrastructure, Discourse, Policy, and Advocacy</h1>
+	...
+	<section>
+		<h2>The Discourse of “Net Neutrality”</h2>
+		...
+		<section>
+		<h3>On "Net Neutrality"</h3>
+		...
+		</section>
+		...
+	</section>
+	...
+</section>
 ````
+
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | Yes |
 
 ### 1.11.2 Separate heading and subtitle
 
-The title and subtitle are contained in separate elements, but grouped
-in a header element to better associate them. Use the role
-doc-subtitle to identify the subtitle.
+The title and subtitle are contained in separate elements, but grouped in a header element to better associate them. Use the role `doc-subtitle` to identify the subtitle.
+
 ````
 <section role="doc-chapter">
-<header>
-<h1>ORIGIN OF THE WORLD.---FIRST DYNASTY.</h1>
-<p role="doc-subtitle">URANUS AND GÆA. (Cœlus and Terra.)</p>
+	<header>
+		<h1>ORIGIN OF THE WORLD.---FIRST DYNASTY.</h1>
+		<p role="doc-subtitle">URANUS AND GÆA. (Cœlus and Terra.)</p>
 </header>
 ````
 
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| No | No |
+
 ### 1.11.3 Merged heading and subtitle
 
-When the subtitle is contained within the same heading element as the
-title, identify it in a span with the role of doc-subtitle.
+When the subtitle is contained within the same heading element as the title, identify it in a span with the role of doc-subtitle.
+
 ````
 <section role="doc-chapter">
-<h1>ORIGIN OF THE WORLD.---FIRST DYNASTY.
-<span role="doc-subtitle">URANUS AND GÆA. (Cœlus and Terra.)</span>
-</h1>
+	<h1>Chapter 1  
+        <span role="doc-subtitle">Democratic Communications Infrastructure, Discourse, Policy, and Advocacy</span>
+	</h1>
 ````
 
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| No | No |
+
 ## 1.12 Tables
+Ensure all tabular data is marked up using `table` tags, that titles are provided in a `<caption>` element, and that header cells are identified in the `scope` attribute. Headers should be contained within a `thead` element and footers within a `tfoot` element. The rows that represent the body of the table should be contained within a `tbody` element.
 
-Tag tables as per the table structure. If any of the tables exceeding
-more than 5 columns are captured as image to accommodate the device
-restriction \[Insert Cross-reference for Image treatment of tables\],
-then the table should be coded with proper table tagging and referred to
-the particular table image through aria-label attribute. This will help
-the screen reader users to perceive the full table information as an
-alternative to the image.
+### 1.12.1 Large tables
+If a table exceeds more than 5 columns and could be compromised in its presentation on a Reading System, it is acceptable to present the table as an image. However, in such cases you must also provide a link to an XHTML file outside of the linear flow of the EPUB that contains the HTML version of the large table. Users with text-to-speech playback available will be able to navigate the markup regardless of the rendering quality. 
 
-Tables that have a title should use the *caption* element. Headers
-should be contained within a *thead* element and footers within a
-*tfoot* element. The rows that represent the body of the table should be
-contained within a *tbody* element.
+**TODO: Provide Example**
+
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
 
 ### 1.12.1 Irregular header
 
@@ -624,95 +739,101 @@ attribute:
 </table>
 ````
 
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
+
 ### 1.12.2 Complex headings
 
-The following table shows a distance chart with the start destinations
-defined in the first row and at the end destination at the end of each
-subsequent row:
+The following table shows a distance chart with the start destinations defined in the first row and at the end destination at the end of each subsequent row. 
 
-<table border="1">
-<thead>
-<tr>
-<th scope="col">Vancouver</th>
-<th scope="col">Calgary</th>
-<th scope="col">Saskaton</th>
-<th scope="col">Winnipeg</th>
-<th scope="col">Toronto</th>
-<th scope="col">Montreal</th>
-<th scope="col">St. John's</th>
-<td></td>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="center">7323</td>
-<td class="center">6334</td>
-<td class="center">5838</td>
-<td class="center">5010</td>
-<td class="center">3141</td>
-<td class="center">2602</td>
-<td class="center"></td>
-<th scope="row">St. John's</th>
-</tr>
-<tr>
-<td class="center">4271</td>
-<td class="center">3743</td>
-<td class="center">3232</td>
-<td class="center">2408</td>
-<td class="center">539</td>
-<td class="center"></td>
-<td class="center">2602</td>
-<th scope="row">Montreal</th>
-</tr>
-</tbody>
+In this case, because the header is at the end of the row setting a scope of "`row`" does not apply it back to the cells already encountered. The `headers` attribute must be applied to each cell.
+
+<table>
+   <tr>
+      <th id="van">Vancouver</th>
+      <th id="cal">Calgary</th>
+      <th id="sask">Saskatoon</th>
+      <th id="win">Winnipeg</th>
+      <th id="tor">Toronto</th>
+      <th id="mon">Montreal</th>
+      <th id="stj">St. John's</th>
+      <th></th>
+   </tr>
+   <tr>
+      <td headers="van stj-dest">7323</td>
+      <td headers="cal stj-dest">6334</td>
+      <td headers="sask stj-dest">5838</td>
+      <td headers="win stj-dest">5010</td>
+      <td headers="tor stj-dest">3141</td>
+      <td headers="mon stj-dest">2602</td>
+      <td headers="stj stj-dest">0</td>
+      <th id="stj-dest">St. John's</th>
+   </tr>
+   
+   <tr>
+      <td headers="van mon-dest">4271</td>
+      <td headers="cal mon-dest">3743</td>
+      <td headers="sask mon-dest">3232</td>
+      <td headers="win mon-dest">2408</td>
+      <td headers="tor mon-dest">539</td>
+      <td headers="mon mon-dest">0</td>
+      <td headers="stj mon-dest">2602</td>
+      <th id="mon-dest">Montreal</th>
+   </tr>
+   …
 </table>
 
-Use scope=\"col\" to make the start destinations the column headers and
-scope=\"row\" to make the end destinations the row headers:
+Use `scope="col"` to make the start destinations the column headers and
+`scope="row"` to make the end destinations the row headers:
 
 ````
-<table border="1">
-<thead>
-<tr>
-<th scope="col">Vancouver</th>
-<th scope="col">Calgary</th>
-<th scope="col">Saskaton</th>
-<th scope="col">Winnipeg</th>
-<th scope="col">Toronto</th>
-<th scope="col">Montreal</th>
-<th scope="col">St. John's</th>
-<td></td>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="center">7323</td>
-<td class="center">6334</td>
-<td class="center">5838</td>
-<td class="center">5010</td>
-<td class="center">3141</td>
-<td class="center">2602</td>
-<td class="center"></td>
-<th scope="row">St. John's</th>
-</tr>
-<tr>
-<td class="center">4271</td>
-<td class="center">3743</td>
-<td class="center">3232</td>
-<td class="center">2408</td>
-<td class="center">539</td>
-<td class="center"></td>
-<td class="center">2602</td>
-<th scope="row">Montreal</th>
-</tr>
-</tbody>
+<table>
+   <tr>
+      <th id="van">Vancouver</th>
+      <th id="cal">Calgary</th>
+      <th id="sask">Saskatoon</th>
+      <th id="win">Winnipeg</th>
+      <th id="tor">Toronto</th>
+      <th id="mon">Montreal</th>
+      <th id="stj">St. John's</th>
+      <th></th>
+   </tr>
+   <tr>
+      <td headers="van stj-dest">7323</td>
+      <td headers="cal stj-dest">6334</td>
+      <td headers="sask stj-dest">5838</td>
+      <td headers="win stj-dest">5010</td>
+      <td headers="tor stj-dest">3141</td>
+      <td headers="mon stj-dest">2602</td>
+      <td headers="stj stj-dest">0</td>
+      <th id="stj-dest">St. John's</th>
+   </tr>
+   
+   <tr>
+      <td headers="van mon-dest">4271</td>
+      <td headers="cal mon-dest">3743</td>
+      <td headers="sask mon-dest">3232</td>
+      <td headers="win mon-dest">2408</td>
+      <td headers="tor mon-dest">539</td>
+      <td headers="mon mon-dest">0</td>
+      <td headers="stj mon-dest">2602</td>
+      <th id="mon-dest">Montreal</th>
+   </tr>
+   …
 </table>
+
 ````
+
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
 
 ### 1.12.3 Layered headings
 
-The following table combines headers from the top of each column and
-beginning of each row:
+The following table combines headers from the top of each column and beginning of each row:
 
 <table border="1">
 <caption>Table IX.4 Income Distribution Among Families 1929-1997</caption>
@@ -737,8 +858,7 @@ beginning of each row:
 </tbody>
 </table>
 
-The headers attribute is used to provide the IDs of the cells that
-contain the relevant heading text:
+The `headers` attribute is used to provide the IDs of the cells that contain the relevant heading text:
 
 ````
 <table border="1">
@@ -764,32 +884,39 @@ contain the relevant heading text:
 </tbody>
 </table>
 ````
+
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
 
 ## 1.13 Lists
 
-Tag list items with proper list tags. Do not use other elements such as
-\<p\>. By tagging the list items with proper list elements, the screen
-reader users can perceive meaningful information and will know that they
-are reading list items.
+Tag list items with proper list tags. Do not use other elements such as `<p>`. By tagging the list items with proper list elements, the screen reader users can perceive meaningful information and will know that they are reading list items.
 
 ### 1.13.1 Unordered list
 
 ````
 <ul>
-<li>Credit, consumer, 164</li>
-<li>Cross-functional contact, 10-11</li>
-<li>Culture
-<ul>
-<li>buyer behavior and, 85</li>
-<li>defined, 85, 98, 118</li>
+	<li>Credit, consumer, 164</li>
+	<li>Cross-functional contact, 10-11</li>
+	<li>Culture
+	<ul>
+		<li>buyer behavior and, 85</li>
+		<li>defined, 85, 98, 118</li>
 ...
-</ul>
-</li>
+	</ul>
+	</li>
 ...
 </ul>
 ````
 
-Excerpt from: Core Concepts of Marketing --- John Burnett
+Excerpt from: *Core Concepts of Marketing* --- John Burnett
+
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
 
 ### 1.13.2 Definition list
 
@@ -820,47 +947,56 @@ for the provider.
 </dl>
 ````
 
-Excerpt from: Core Concepts of Marketing --- John Burnett
+Excerpt from: *Core Concepts of Marketing* --- John Burnett
+
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
 
 ## 1.14 Links
 
-The recommended best practice is to include links as meaningful text if
-the surrounding text is inadequate to define the purpose of the link. By
-providing meaningful text interpretation, the screen reader user can
-understand the purpose of the link and decide if they need to navigate
+The recommended best practice is to include links as meaningful text if the surrounding text is inadequate to define the purpose of the link. By providing meaningful text interpretation, the screen reader user can understand the purpose of the link and decide if they need to navigate
 to that particular link.
 
 ### 1.14.1 Links spec
 
-All the cross-references such as table of contents, notes and
-footnotes are two-way linked. Other references such as page, section,
-figure, etc., are one-way linked. The web address and email address
-links are active.
+All the cross-references such as table of contents, notes and footnotes are two-way linked. Other references such as page, section, figure, etc., are one-way linked. The web address and email address links are active.
+
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
 
 ### 1.14.2 Link with full context of destination
 
-The user can determine the destination of the link from the text of
-the \<a\> element alone.
+The user can determine the destination of the link from the text of the \<a\> element alone.
 
 ````
 <p>For more information, refer to <a href="#...">Section 1.1 of Web Publications</a></p>
 ````
 
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| No | No |
+
 ### 1.14.3 Link with alternate text
 
-Adding alternate text is an optional best practice if neither of the
-above conditions are met. Use the title attribute to provide
-additional context.
+Adding alternate text is an optional best practice if neither of the above conditions are met. Use the title attribute to provide additional context.
 
 ````
 <a href="#..." title="The EPUB specifications">click here</a>
 ````
 
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| No | No |
+
 ### 1.14.4 Visual distinctive linking
 
-**Bold Text Option:** By specifying bolder, either a medium font or a
-bold one will make links visually stand out from their surrounding
-text.
+**Bold Text Option:** By specifying bolder, either a medium font or a bold one will make links visually stand out from their surrounding text.
 
 ````
 a {
@@ -870,8 +1006,7 @@ a {
   }
 ````
 
-**Dotted Border Option:** A dotted border is placed under all links to
-highlight them instead of a line.
+**Dotted Border Option:** A dotted border is placed under all links to highlight them instead of a line.
 
 ````
 a {
@@ -881,37 +1016,42 @@ a {
   }
 ````
 
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| No | No |
+
 ## 1.15 Images
 
 The name assigned to an image file contained within the EPUB should not contain spaces.
-The underscore character may be used.
+The underscore or dash characters should be used in place of spaces.
 
-Images should have an alternate text (**img/@alt** attribute) for the 
-screen reader users. By
-providing an alternate text for non-visual content, the screen reader
-users can perceive information about the image through the alternate
-text provided by us.
+Images should have an alternate text (**img/@alt** attribute) for screen reader users. By providing an alternate text for non-visual content, the screen reader users can perceive information about the image through the alternate text provided by us.
 
-### 1.15.1 Significant simple image (no description required)
+### 1.15.1 Significant simple image
 
 ````
 <img src="covers/9781449328030_lrg.jpg" alt="Accessible EPUB 3 - First Edition"/>
 ````
+
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No, but strongly recommended |
+
 ### 1.15.2 Decorative image
 
-An empty **alt** attribute is complimented by the **role** presentation to
-indicate that the image contains no information for users.
+An empty **alt** attribute is complimented by the **role** presentation to indicate that the image contains no information for users.
+
 ````
 <img src="graphics/gothic-border.png" role="presentation" alt=""/>
 ````
 
 ### 1.15.3 Figures
 
-For a group that consists of an image and an associated caption, the **figure** and
-**figcaption** elements should be used. One or more **img** elements may exist within
-the **figure** element, but only one **figcaption** element should exist. 
-The **figcaption** element should exist after its associated **img** element(s).
-Below is an example:
+For a group that consists of an image and an associated caption, the **figure** and **figcaption** elements should be used. One or more **img** elements may exist within the **figure** element, but only one **figcaption** element should exist. The **figcaption** element should exist after its associated **img** element(s).
+
+Below is an example of two images with a single caption:
 
 ````
 <figure role="group">
@@ -927,11 +1067,11 @@ Below is an example:
 </figure>
 ````
 
-**Note:** the **img** element should be a direct child of the **figure** element and not
-wrapped within another container such as a **p** or a **div**.
+**Note:** the **img** element should be a direct child of the **figure** element and not wrapped within another container such as a **p** or a **div**.
 
-If multiple images and captions are to be grouped together, then nested **figure**
-elements are to be used. Below is an example:
+If multiple images and captions are to be grouped together, then nested **figure** elements are to be used. 
+
+Below is an example:
 
 ````
 <figure role="group" aria-labelledby="fig1">
@@ -962,54 +1102,94 @@ elements are to be used. Below is an example:
 </figure>
 ````
 
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
+
 ### 1.15.4 Extended description via hyperlink
 
-Extended description inclusion and linking via a hyperlink are
-optional unless provided in the source.
+Extended description inclusion and linking via a hyperlink should be provided for complex images such as charts, graphs, maps, and images with text. Linking via a hyperlink is optional unless the description is provided in the source.
 
-The following example uses simple hyperlinks to link to a note at the
-end of the chapter.
+The following example uses a simple text hyperlink below the image to link to a separate file containing only one extended description, and provides a text hyperlink to return back to original reading position.
 
-The descriptions could also be located in a separate file, but this
-might have a performance impact for users (i.e., it will require the
-reading system to unload and reload each document each time the user
-follows a link).
+Other techniques such as including the description in a note at the end of the chapter or including the description below the image and minimize/hiding the description with a link, however there may be issues with both cases depending on reading system support.
 
-An image could also be used to minimize the appearance of the link,
-but some reading systems have issues with such links.
+See the [DAISY Consortium's Best Practices for Authoring Extended Descriptions](https://daisy.github.io/transitiontoepub/best-practices/extended-desc/ExtendedDescriptionsBestPractices.html) for additional details.
 
-````
-<figure id="fig-01">
-    <img src="graphics/water-cycle.jpg"
-        alt="The hydrologic cycle, showing the
-        circular nature of the process as water
-        evaporates from a body of water and
-        eventually returns to it"/>
-    <figcaption>
-    The hydrologic cycle. <a role="doc-noteref" href="#desc-01">Description</a>
-    </figcaption>
+Below is an example of an image with hyperlink pointing to the extended description. The following example uses figure and figcaption elements, but the technique can also be used without these elements.
+
+```
+<figure id="image3">
+    <img src="../Images/chart-ebcaadfb.png" alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3"/>
+    <figcaption>Example.com Site visitors Jan to March 2014</figcaption>
 </figure>
-...
-<h2>Image Descriptions</h2>
-<aside role="doc-footnote" id="desc-01">
-    <p>
-        <a role="doc-backlink" href="#fig-01">Figure 1.</a>
-        --- The diagram shows
-        the processes of evaporation, condensation,
-        evapotranspiration, water storage in ice and snow, and
-        precipitation. A large body of water ...
-    </p>
-</aside>
-````
+<a id="image3-link" href="./endOfBookDescriptionsSingle.xhtml#image3-extended-desc">Follow for extended description</a>
+```
+
+Extended description is contained within a separate XHTML file contained outside of the linear flow of the EPUB. It also shows a smaller image for convenience of the users.
+
+```
+<div id="image3-extended-desc" class="endDesc" aria-labelledby="barchart-desc">
+    <h5 id="barchart-desc">Description of Bar Chart</h5>
+    <img src="../Images/chart-ebcaadfb.png" alt="" role="presentation"/>
+    <div>
+        <h6>Overview</h6>
+        <p>The chart shows the website hits for the first quarter of 2014. It shows that Site 1 has more visitors than either
+            of the other sites, but the number of visitors is decreasing. Site 2 has a fairly constant number of visitors,
+            while for Site 3 page hits are increasing month on month.</p>
+        <h6>Data</h6>
+                <table>
+                    <tr>
+                        <th scope="col">Period</th>
+                        <th scope="col">Site 1</th>
+                        <th scope="col">Site 2</th>
+                        <th scope="col">Site 3</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Jan</th>
+                        <td>135</td>
+                        <td>112</td>
+                        <td>92</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Feb</th>
+                        <td>117</td>
+                        <td>114</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Mar</th>
+                        <td>96</td>
+                        <td>111</td>
+                        <td>126</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Qtr Total</th>
+                        <td>348</td>
+                        <td>337</td>
+                        <td>308</td>
+                    </tr>
+                </table>
+        <h6>Presentation</h6>
+        <p>The bar chart represents both the number of visitors per month for each website, and the total number of visitors per website for the entire quarter. Website visitors for each month are represented using columns lined up horizontally, with heights indicating the number of visitors. A fourth column is provided for each website with the accumulated site visitors for the quarter.</p>
+        <p>
+        <a id="Image3DetailsBackLink" href="./testDetailsEndOfBookSingle.xhtml#image3-link">Navigate back to bar chart image.</a>
+        </p>
+    </div>
+  </div>
+```
+
+
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
 
 ### 1.15.5 Fulcrum Resource References
 
-Once an EPUB is ingested in the **Fulcrum** platform, images referenced 
-within EPUB content may be used to reference resources ingested in the
-platform. The **img** element may be replaced with markup that displays
-a resource such as a higher resolution image, audio, or video. The 
-basename of the path (minus the extension) specified in the 
-**img/@src** attribute should match the basename of the resource. 
+Once an EPUB is ingested in the **Fulcrum** platform, images referenced within EPUB content may be used to reference resources ingested in the platform. The **img** element may be replaced with markup that displays a resource such as a higher resolution image, audio, or video. The basename of the path (minus the extension) specified in the **img/@src** attribute should match the basename of the resource. 
+
 For example:
 ````
 <figure role="group">
@@ -1025,12 +1205,12 @@ in the **Fulcrum** platform that has the file name *movie_trailer.mp4*.
 
 For the case where the **img/@src** value matches an ingested resource,
 but this instance should not be replaced, then
-the **img/@data-fulcrum-no-embed** attribute can be added to 
+the **img/@data-fulcrum-embed** attribute can be added to 
 the **img** element:
 ````
 <figure role="group">
     <img src="images/movie_trailer.jpg" 
-         data-fulcrum-no-embed="true"
+         data-fulcrum-embed="false"
          alt="Static image representing the movie trailer"/>
     <figcaption>
     Trailer for the movie.
@@ -1051,16 +1231,19 @@ extension should match.
 The **figcaption** element is optional, but can be used to provide a caption 
 for the resource once it is displayed.
 
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| No | No |
+
 ## 1.16 Code Blocks
 
-Representations of computer code within the text, referred to here as
-code blocks should be encoded semantically when possible. Never use an
-image to represent lines of code, inline code, or code blocks.
+Representations of computer code within the text, referred to here as code blocks, should be encoded semantically when possible. Never use an image to represent lines of code, inline code, or code blocks.
 
 ### 1.16.1 Inline Code
 
-Code to be displayed inline with paragraph text should be indicated with
-its equivalent semantic element.
+Code to be displayed inline with paragraph text should be indicated with its equivalent semantic element.
+
 ````
 <p>In table 2.2, the FizzBuzz algorithm ... is described as a
 <i>loop</i> because it continues to compute results so long as the
@@ -1075,14 +1258,15 @@ independently of one another. This means that <code>i</code> ...
 </p>
 ````
 
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
+
 ### 1.16.2 Code Blocks
 
-Code that needs its formatting preserved and should display as a block
-of text, like a blockquote, should be identified a figure and be wrapped
-with elements to preserve formatting of the code. Note the application
-of the CSS class code on the figure element. Rules defined in the
-associate spec CSS file help ensure formatting is preserved and line
-breaks occur when lines of code are excessively long.
+Code that needs its formatting preserved and should display as a block of text, like a blockquote, should be identified a figure and be wrapped with elements to preserve formatting of the code. Note the application of the CSS class code on the figure element. Rules defined in the associate spec CSS file (see [fulcrum.css](https://github.com/mlibrary/fulcrum-epub-spec/blob/master/fulcrum.css)) help ensure formatting is preserved and line breaks occur when lines of code are excessively long.
+
 ````
 <figure class="code">
 <pre>
@@ -1107,15 +1291,16 @@ end if
 </figure>
 ````
 
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
+
 ### 1.16.3 Code Blocks with Line Numbers
 
-There may be instances where code blocks are long or an author refers to
-specific lines of code in the surrounding text. There also may be a
-desire to allow readers to copy and paste code blocks without line
-numbers included in the copied text. To do so one will need to divert
-from semantic encoding, and use CSS-only to include line numbers. Apply
-a CSS attribute which utilizes CSS line counting to provide line numbers
-automatically.
+There may be instances where code blocks are long or an author refers to specific lines of code in the surrounding text. There also may be a desire to allow readers to copy and paste code blocks without line numbers included in the copied text. To do so one will need to divert
+from semantic encoding, and use CSS-only to include line numbers. Apply a CSS attribute which utilizes CSS line counting to provide line numbers automatically.
+
 ````
 <figure class="code-linenumbers">
 <figcaption>
@@ -1132,13 +1317,15 @@ automatically.
 </figure>
 ````
 
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
+
 ### 1.16.4 Code Blocks with Line Numbers as Tables
 
-In cases where code does not need to be copied and pasted but the
-display of line numbers is desirable, it is acceptable to encode the
-block of code as a table. For historical references to code this may be
-the most desirable, where excerpts of code are only needed to be
-displayed and line numbers start not a 1, but 3977, for example.
+In cases where code does not need to be copied and pasted but the display of line numbers is desirable, it is acceptable to encode the block of code as a table. For historical references to code this may be the most desirable, where excerpts of code are only needed to be displayed and line numbers start not a 1, but 3977, for example.
+
 ````
 <table class="code">
 <thead>
@@ -1177,13 +1364,15 @@ class="page"></a>Table 1.1. Excerpt from Heartbleed patch
 </table>
 ````
 
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
+
 ### 1.16.5 Comparing Code Blocks with Line Numbers
 
-In other cases, two different blocks of code may need to be compared to
-one another side-by-side, along with the display of line numbers. In
-this case the code blocks should be encoded in a table, and follow the
-general pattern in 1.16.4. Note that in this case an additional CSS
-attribute is applied to the table element.
+In other cases, two different blocks of code may need to be compared to one another side-by-side, along with the display of line numbers. In this case the code blocks should be encoded in a table, and follow the general pattern in 1.16.4. Note that in this case an additional CSS attribute is applied to the table element.
+
 ````
 <table class="code compare">
 <thead>
@@ -1233,26 +1422,29 @@ Ruby</th>
 </table>
 ````
 
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
+
 ## 1.17 Footnotes and Endnotes
 
-In general, the footnotes and endnotes are highly recommended to place
-at logical break of the book such as end of the chapter or end of the
-book, which will help the screen reader users to read the primary text.
-Also, the two-way link provided for the footnotes and endnotes reference
-numbers in between the primary text will help the screen reader users to
-navigate if they require.
+In general, the footnotes and endnotes are highly recommended to place at logical break of the book such as end of the chapter or end of the book, which will help the screen reader users to read the primary text.
 
-Footnote and endnote tagging per the following examples is required for
-Apex EPUB deliveries, but considered optional for third-party partners
-to University of Michigan.
+Footnote and endnotes should be double-linked, allowing readers to navigate to a footnote or endnote section and back to the primary text.
+
+### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
 
 ### 1.17.1 Footnotes in the body
 ````
 <p>
-In that year<a href="\#ft2f" epub:type="noteref">2</a>
+In that year<a href="\#ft2f" role="doc-noteref" epub:type="noteref">2</a>
 there were 67 mills engaged in the manufacture of cotton goods ...
 </p>
-<aside id="ft2f" epub:type="footnote">
+<aside id="ft2f" role="doc-footnote" epub:type="footnote">
 <p>
 2 The manufacturing statistics for 1900 which
 follow are not those given in the Twelfth
@@ -1263,64 +1455,84 @@ Census, but are taken from the
 <p>...</p>
 ````
 
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
+
 ### 1.17.2 Endnote section
 
-The HTML Model allows for lists to contain headings, paras, images,
-tables, etc. This means that applying list tagging can accommodate
-Endnote structures following \<ol\>.
+The HTML Model allows for lists to contain headings, paragraphs, images, tables, etc. This means that applying list tagging can accommodate Endnote structures following \<ol\>.
 
-If it is necessary to match the presentation of the text for editorial
-reasons, then it is suggested to use an unordered list tagging so that
-each endnote item is encapsulated as a list item.
+If it is necessary to match the presentation of the text for editorial reasons, then it is suggested to use an unordered list tagging so that each endnote item is encapsulated as a list item.
 
-A cluster of paras with \<p class="xxxxx"\> tagging does not afford the
-same flexibility as list encoding, nor provide precision for isolating
-start and end of notes.
+A cluster of paras with \<p class="xxxxx"\> tagging does not afford the same flexibility as list encoding, nor provide precision for isolating start and end of notes.
+
+Note that `doc-endnote` role is used to identify the section containing the endnotes, and no role is required on the specific endnote when using an ordered list to organize endnotes.
+
 ````
-<section epub:type="endnotes">
-<h2>End Notes</h2>
-<ol>
-<li id="en001" epub:type="endnote">
-According to the usual nomenclature, the
+<section epub:type="endnotes" role="doc-endnotes">
+	<h2>End Notes</h2>
+	<ol>
+		<li id="en001">According to the usual nomenclature, the
 branch flowing S.W. is called the Chattooga;
 this unites with the Tallulah to form the
 Tugaloo, which ...
-</li>
-...
-</ol>
+		</li>
+		...
+	</ol>
 </section>
 ````
 
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
+
 ### 1.17.3 Back-linking notes
+Providing links back to the primary text from the endnote or footnote section help readers navigate to and from notes. 
+
+In this example a class `none` is applied to the `<ol>` to prevent automatic numbering, and the `doc-backlink` anchor is applied to a the number in the note.
+
 ````
-<li id="en001" epub:type="endnote">
-<a href="\#en01-ref" title="note reference 1">1</a>
-According to the usual nomenclature, the ...
-</li>
+<ol class="none">  
+	<li><p epub:type="footnote" role="doc-footnote" id="p_3"><a role="doc-backlink" href="07_Preface.xhtml#not_1" id="pre_fn1">1</a>. Karla Jay, <i>Tales of a Lavender Menace: A Memoir of Liberation</i> (New York: Basic Books, 2000), 143.</p></li>
+	...
+</ol>
 ````
+
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
 
 ## 1.18 Content Numbering
+Page numbers should be applied for titles that have a print equivalent. For titles that are digital-only and do not have a print equivalent, paragraph numbers should be applied.
 
 ### 1.18.1 Page Break Numbering
+It is the Fulcrum practice to display page numbers in the flow of text. Other publishers may choose to visually hide the page numbers within the flow of text.
 
-Page numbers should follow the EPUB3 Accessibility Guidelines.
-<https://idpf.github.io/a11y-guidelines/content/xhtml/pagenum.html>
-
-**Example coding:**
+**Example coding that displays page numbers:**
 ````
-<span id="p1" class="page" epub:type="pagebreak"
-      role="doc-pagebreak" aria-label="1">Page 1 &\#8594;</span>
+<span id="p1" class="page" role="doc-pagebreak">Page 1 &\#8594;</span>
+````
+In the above example, the `aria-label` is omitted to prevent assistive technologies from reading the page number twice.
+
+**Example coding that visually hides page numbers:**
+````
+<span id="p1" class="page" role="doc-pagebreak" aria-label="1"></span>
 ````
 
-Note: Page numbers should only be applied for titles that have a print equivalent. For titles that are digital-only and do not have a print equivalent, paragraph numbers should be applied.
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No, but strongly recommended |
+
 
 ### 1.18.2 Paragraph Numbering
 
 Paragraph numbering requires adding a class identifier and id value to a
 \<p\>. Paragraph numbers should only be applied to elements that are true paragraphs, not elements that use the paragraph element for styling.
-
-Note: Paragraph numbering is optional, but required when present in
-the source document or when there is no print equivalent and the title is digital-only.
 
 Example coding:
 
@@ -1328,10 +1540,14 @@ Example coding:
 <p class="numberedpara" id="para11" title="Para11"/>
 ````
 
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No, but strongly recommended |
+
 ### 1.18.3 Line Numbering
 
-Line numbering requires adding a class identifier and id value to a
-\<p\>.
+Line numbering, such as in poems or code blocks, requires adding a class identifier and id value to a \<p\>.
 
 Example coding:
 ````
