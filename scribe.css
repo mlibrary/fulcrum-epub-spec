@@ -1,7 +1,7 @@
 /*
-  // Version 1.59
+  // Version 1.60
   // OEPS filename: default.css
-  // Last update: Nov 20 2023
+  // Last update: April 25 2024
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -1284,3 +1284,9 @@ table.code > tbody > tr > td > pre {
 
 /*Accessibility*/
 .hidden { position: absolute !important; clip: rect(1px,1px,1px,1px) !important; clip: rect(1px,1px,1px,1px) !important; height: 1px !important; width: 1px !important; overflow: hidden !important; padding: 0 !important; margin: 0 !important; }
+
+h1.chtitlel{margin: 2em 0em 1em 0em;text-align: left;text-indent: 0em;font-size: 160%;}
+.imgl{margin: 1em 0em 0em 0em;text-align: left;}
+.image-right_back{text-align:right;margin: 0em 0em 1em 0em;padding:0em;}
+.cc-license { height: 20px; width: auto;}
+.img-width { width: 100%; }
