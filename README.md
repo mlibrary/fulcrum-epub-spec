@@ -155,7 +155,9 @@
 
 [1.14.3 Link with alternate text](#1143-link-with-alternate-text)
 
-[1.14.4 Visual distinctive linking](#1144-visual-distinctive-linking)
+[1.14.4 Link format for DOIs](#1144-link-format-for-dois)
+
+[1.14.5 Visual distinctive linking](#1145-visual-distinctive-linking)
 
 [1.15 Images](#115-images)
 
@@ -849,14 +851,21 @@ the \<a\> element alone.
 ### 1.14.3 Link with alternate text
 
 Adding alternate text is an optional best practice if neither of the
-above conditions are met. Use the title attribute to provide
+above conditions are met. Use the aria-label attribute to provide
 additional context.
 
 ````
-<a href="#..." title="The EPUB specifications">click here</a>
+<a href="#..." aria-label="The EPUB specifications">click here</a>
 ````
 
-### 1.14.4 Visual distinctive linking
+### 1.14.4 Link format for DOIs
+When using DOIs in any section of the EPUB, the title of the publication should be included in an `aria-label` attribute. See the [CrossRef Accessibility Guidelines](https://www.crossref.org/blog/accessibility-for-crossref-doi-links-call-for-comments-on-proposed-new-guidelines/) for more details.
+
+````
+<a href="https://doi.org/10.5555/12345678" aria-label="DOI for Toward a Unified Theory of High-Energy Metaphysics: Silly String Theory">https://doi.org/10.5555/12345678</a>
+````
+
+### 1.14.5 Visual distinctive linking
 
 **Bold Text Option:** By specifying bolder, either a medium font or a
 bold one will make links visually stand out from their surrounding
