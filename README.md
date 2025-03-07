@@ -94,7 +94,7 @@
 </tr>
 <tr class="odd">
 <td>3.0</td>
-<td>April 2024</td>
+<td>March 2025</td>
 <td>FULCRUMOPS-234 - indicate what is recommended vs. required and for whom; updates to extended description best practices; additional updates to match accessibility requirements</td>
 <td>J McGlone and T Belch</td>
 </tr>
@@ -103,151 +103,151 @@
 
 ## Contents
 
-[1.0 Target Specification -- EPUB3](#10-target-specification----epub3)
+- [1.0 Target Specification -- EPUB3](#10-target-specification----epub3)
 
-[1.1 EPUB Version](#11-epub-version)
+- [1.1 EPUB Version](#11-epub-version)
 
-[1.2 Element Specification](#12-element-specification)
+- [1.2 Element Specification](#12-element-specification)
 
-[1.2.1 Standard Functionality Levels (EPUB 3) for PDF source](#121-standard-functionality-levels-epub-3-for-pdf-source)
+	- [1.2.1 Standard Functionality Levels (EPUB 3) for PDF source](#121-standard-functionality-levels-epub-3-for-pdf-source)
 
-[1.3 File Name](#13-file-name)
+- [1.3 File Name](#13-file-name)
 
-[1.4 Folder Structure](#14-folder-structure)
+- [1.4 Folder Structure](#14-folder-structure)
 
-[1.4.1 Optional File Inclusions](#141-optional-file-inclusions)
+	- [1.4.1 Optional File Inclusions](#141-optional-file-inclusions)
 
-[1.5 EPUB Package](#15-epub-package)
+- [1.5 EPUB Package](#15-epub-package)
 
-[1.6 Metadata](#16-metadata)
+- [1.6 Metadata](#16-metadata)
 
-[1.6.1 Dublin Core](#161-dublin-core)
+	- [1.6.1 Dublin Core](#161-dublin-core)
 
-[1.7 Accessibility Metadata](#17-accessibility-metadata)
+- [1.7 Accessibility Metadata](#17-accessibility-metadata)
 
-[1.8 HTML Meta Header](#18-html-meta-header)
+- [1.8 HTML Meta Header](#18-html-meta-header)
 
-[1.9 Bookmark](#19-bookmark)
+- [1.9 Bookmark](#19-bookmark)
 
-[1.10 Html Title](#110-html-title)
+- [1.10 Html Title](#110-html-title)
 
-[1.11 Headings](#111-headings)
+- [1.11 Headings](#111-headings)
 
-[1.11.1 Numbered headings](#1111-numbered-headings)
+	- [1.11.1 Numbered headings](#1111-numbered-headings)
 
-[1.11.2 Separate heading and subtitle](#1112-separate-heading-and-subtitle)
+	- [1.11.2 Separate heading and subtitle](#1112-separate-heading-and-subtitle)
 
-[1.11.3 Merged heading and subtitle](#1113-merged-heading-and-subtitle)
+	- [1.11.3 Merged heading and subtitle](#1113-merged-heading-and-subtitle)
 
-[1.12 Tables](#112-tables)
+- [1.12 Tables](#112-tables)
 
-[1.12.1 Irregular header](#1121-irregular-header)
+	- [1.12.1 Irregular header](#1121-irregular-header)
 
-[1.12.2 Complex headings](#1122-complex-headings)
+	- [1.12.2 Complex headings](#1122-complex-headings)
 
-[1.12.3 Layered headings](#1123-layered-headings)
+	- [1.12.3 Layered headings](#1123-layered-headings)
 
-[1.13 Lists](#113-lists)
+- [1.13 Lists](#113-lists)
 
-[1.13.1 Unordered list](#1131-unordered-list)
+	- [1.13.1 Unordered list](#1131-unordered-list)
 
-[1.13.2 Definition list](#1132-definition-list)
+	- [1.13.2 Definition list](#1132-definition-list)
 
-[1.14 Links](#114-links)
+- [1.14 Links](#114-links)
 
-[1.14.1 Links spec](#1141-links-spec)
+	- [1.14.1 Links spec](#1141-links-spec)
 
-[1.14.2 Link with full context of destination](#1142-link-with-full-context-of-destination)
+	- [1.14.2 Link with full context of destination](#1142-link-with-full-context-of-destination)
 
-[1.14.3 Link with alternate text](#1143-link-with-alternate-text)
+	- [1.14.3 Link with alternate text](#1143-link-with-alternate-text)
 
-[1.14.4 Visual distinctive linking](#1144-visual-distinctive-linking)
+	- [1.14.4 Visual distinctive linking](#1144-visual-distinctive-linking)
 
-[1.15 Images](#115-images)
+- [1.15 Images](#115-images)
 
-[1.15.1 Significant simple image (no description required)](#1151-significant-simple-image-no-description-required)
+	- [1.15.1 Significant simple image (no description required)](#1151-significant-simple-image-no-description-required)
 
-[1.15.2 Decorative image](#1152-decorative-image)
+	- [1.15.2 Decorative image](#1152-decorative-image)
 
-[1.15.3 Figures](#1153-figures)
+	- [1.15.3 Figures](#1153-figures)
 
-[1.15.4 Extended description via hyperlink](#1154-extended-description-via-hyperlink)
+	- [1.15.4 Extended description via hyperlink](#1154-extended-description-via-hyperlink)
 
-[1.15.5 Fulcrum Resource References](#1155-fulcrum-resource-references)
+	- [1.15.5 Fulcrum Resource References](#1155-fulcrum-resource-references)
 
-[1.16 Code Blocks](#116-code-blocks)
+- [1.16 Code Blocks](#116-code-blocks)
 
-[1.16.1 Inline Code](#1161-inline-code)
+	- [1.16.1 Inline Code](#1161-inline-code)
 
-[1.16.2 Code Blocks](#1162-code-blocks)
+	- [1.16.2 Code Blocks](#1162-code-blocks)
 
-[1.16.3 Code Blocks with Line Numbers](#1163-code-blocks-with-line-numbers)
+	- [1.16.3 Code Blocks with Line Numbers](#1163-code-blocks-with-line-numbers)
 
-[1.16.4 Code Blocks with Line Numbers as Tables](#1164-code-blocks-with-line-numbers-as-tables)
+	- [1.16.4 Code Blocks with Line Numbers as Tables](#1164-code-blocks-with-line-numbers-as-tables)
 
-[1.16.5 Comparing Code Blocks with Line Numbers](#1165-comparing-code-blocks-with-line-numbers)
+	- [1.16.5 Comparing Code Blocks with Line Numbers](#1165-comparing-code-blocks-with-line-numbers)
 
-[1.17 Footnotes and Endnotes](#117-footnotes-and-endnotes)
+- [1.17 Footnotes and Endnotes](#117-footnotes-and-endnotes)
 
-[1.17.1 Footnotes in the body](#1171-footnotes-in-the-body)
+	- [1.17.1 Footnotes in the body](#1171-footnotes-in-the-body)
 
-[1.17.2 Endnote section](#1172-endnote-section)
+	- [1.17.2 Endnote section](#1172-endnote-section)
 
-[1.17.3 Back-linking notes](#1173-back-linking-notes)
+	- [1.17.3 Back-linking notes](#1173-back-linking-notes)
 
-[1.18 Content Numbering](#118-content-numbering)
+- [1.18 Content Numbering](#118-content-numbering)
 
-[1.18.1 Page Break Numbering](#1181-page-break-numbering)
+	- [1.18.1 Page Break Numbering](#1181-page-break-numbering)
 
-[1.18.2 Paragraph Numbering](#1182-paragraph-numbering)
+	- [1.18.2 Paragraph Numbering](#1182-paragraph-numbering)
 
-[1.18.3 Line Numbering](#1183-line-numbering)
+	- [1.18.3 Line Numbering](#1183-line-numbering)
 
-[1.19 Chapter Split](#119-chapter-split)
+- [1.19 Chapter Split](#119-chapter-split)
 
-[1.20 CSS Stylesheet](#120-css-stylesheet)
+- [1.20 CSS Stylesheet](#120-css-stylesheet)
 
-[1.20.1 Standard CSS](#1201-standard-css)
+	- [1.20.1 Standard CSS](#1201-standard-css)
 
-[1.20.2 CSS Units](#1202-css-units)
+	- [1.20.2 CSS Units](#1202-css-units)
 
-[1.20.3 Colors](#1203-colors)
+	- [1.20.3 Colors](#1203-colors)
 
-[1.20.4 Background Images](#1204-background-images)
+	- [1.20.4 Background Images](#1204-background-images)
 
-[1.20.5 Hidden Content](#1205-hidden-content)
+	- [1.20.5 Hidden Content](#1205-hidden-content)
 
-[1.20.6 CSS Property Reference](#1206-css-property-reference)
+	- [1.20.6 CSS Property Reference](#1206-css-property-reference)
 
-[1.20.7 CSS 2.1](#1207-css-21)
+	- [1.20.7 CSS 2.1](#1207-css-21)
 
-[1.20.8 CSS 2.1 Pseudo-Classes](#1208-css-21-pseudo-classes)
+	- [1.20.8 CSS 2.1 Pseudo-Classes](#1208-css-21-pseudo-classes)
 
-[1.20.9 CSS 2.1 Pseudo-Elements](#1209-css-21-pseudo-elements)
+	- [1.20.9 CSS 2.1 Pseudo-Elements](#1209-css-21-pseudo-elements)
 
-[1.21 Images](#121-images)
+- [1.21 Images](#121-images)
 
-[1.21.1 Image File Types](#1211-image-file-types)
+	- [1.21.1 Image File Types](#1211-image-file-types)
 
-[1.21.2 Recommended Criteria](#1212-recommended-criteria)
+	- [1.21.2 Recommended Criteria](#1212-recommended-criteria)
 
-[1.21.3 Cover Image](#1213-cover-image)
+	- [1.21.3 Cover Image](#1213-cover-image)
 
-[1.21.4 Image/Graphic Placement](#1214-imagegraphic-placement)
+	- [1.21.4 Image/Graphic Placement](#1214-imagegraphic-placement)
 
-[1.22 Fonts](#122-fonts)
+- [1.22 Fonts](#122-fonts)
 
-[1.23 Formatting](#123-formatting)
+- [1.23 Formatting](#123-formatting)
 
-[1.24 Boxed Text](#124-boxed-text)
+- [1.24 Boxed Text](#124-boxed-text)
 
-[1.25 Marginalia and Sidebars](#125-marginalia-and-sidebars)
+- [1.25 Marginalia and Sidebars](#125-marginalia-and-sidebars)
 
-[1.26 Reading Order](#126-reading-order)
+- [1.26 Reading Order](#126-reading-order)
 
-[1.27 DPUB ARIA Semantics](#127-dpub-aria-semantics)
+- [1.27 DPUB ARIA Semantics](#127-dpub-aria-semantics)
 
-[1.28 Accessibility](#128-accessibility)
+- [1.28 Accessibility](#128-accessibility)
 
 # 1.0 Target Specification -- EPUB3
 
@@ -261,7 +261,7 @@ Please note the Fulcrum EPUB Specification does not repeat conformance requireme
 
 Wherever possible, the Fulcrum EPUB Specification follows the recommendations and techniques in the [DAISY Accessible Publishing Knowledge Base](http://kb.daisy.org/publishing/docs/) but offers scholarly monograph specific examples or techniques Fulcrum prefers.
 
-The full EPUB 3.2 specification is located here: https://www.w3.org/publishing/epub32/
+The full EPUB 3.2 specification is located at: https://www.w3.org/publishing/epub32/
 
 -   W3C guidelines for reflowable digital books and publications.
 
@@ -365,8 +365,8 @@ Where:
 
 ### Required For
 | U-M Vendor | Fulcrum Partner |
-| ----------------- | ------------|
-| Yes | No |
+| ---------- | --------------- |
+| Yes        | No              |
 
 ### 1.4.1 Optional File Inclusions
 
@@ -384,7 +384,7 @@ The EPUB3 output contains the following folders and files.
 -   mimetype
 -   container.xml
 -   content.opf
--   Stylesheet (CSS)
+-   Stylesheets (CSS)
 -   Embedded Fonts (only if approved)
 
 ### Required For
