@@ -1,7 +1,7 @@
 /*
-  // Version 1.61
+  // Version 1.62
   // OEPS filename: default.css
-  // Last update: May 15 2024
+  // Last update: Mar 7 2025
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes.
 */
@@ -316,6 +316,7 @@ span.bk2 {display: block; text-align:center; font-size:.6em; margin-top:.5em; ma
 .cll {margin-bottom: 1em; margin-right: 2em; margin-left:2em; text-indent: 0; text-align:justify;}
 .cls {margin-top: 1em; margin-bottom: 1em; margin-right: 2em; margin-left:2em; text-indent: 0; text-align:justify;}
 .cn {font-size:1.5em; text-align:center; text-indent:0; font-weight: bold; margin-top:1%;}
+span.cn {font-size:100%; text-align:center; text-indent:0; font-weight: bold; margin-top:1%; display:block;}
 .comp {text-indent:0; margin-top:1em;}
 .crt {font-size:.8em; text-align:left; text-indent: 0; margin-bottom:0; margin-top:0;}
 .crt1 {font-size:.8em; text-align:left; margin-top:0; margin-bottom:0; margin-left:2em;}
@@ -326,9 +327,9 @@ span.bk2 {display: block; text-align:center; font-size:.6em; margin-top:.5em; ma
 .crtf1 {font-size:.8em; text-align:center; text-indent: 0; margin-bottom:0; margin-top:2em;}
 .crtl {font-size:.8em; text-align:left; text-indent: 0; margin-bottom:0; margin-top:0;}
 .cs {text-align:center; text-indent:0; font-size:1.2em; font-weight: bold; margin-bottom:2em;}
-span.cs {text-align:center; text-indent:0; font-size:.8em; font-weight: bold; margin-bottom:2em; margin-top: 1em; display:block;}
+span.cs {text-align:center; text-indent:0; font-size:100%; font-weight: bold; margin-bottom:2em; margin-top: 1em; display:block;}
 .ct {text-align:center; text-indent:0; font-size:1.5em; margin-top:1em; margin-bottom: 1em;}
-span.ct {text-align:center; text-indent:0; font-size:1em; margin-top:1em; margin-bottom: 1em; display: block;}
+span.ct {text-align:center; text-indent:0; font-size:100%; margin-top:1em; margin-bottom: 1em; display: block; line-height:1.1em;}
 .cta {text-align:center; text-indent:0; font-size:1.2em; font-weight: bold; margin-bottom:1em;}
 .ctbm {text-align:center; text-indent:0; font-size:1.5em; margin-top:1em; margin-bottom:2em;}
 .ctfm {text-align:center; text-indent:0; font-size:1.5em; margin-top:1em; margin-bottom:2em;}
@@ -540,12 +541,13 @@ hr.sec-break {position: absolute !important; clip: rect(1px,1px,1px,1px) !import
 .pcust3 {}
 .pf {margin-top: 4em; text-align:left; text-indent: 0;}
 .pn {font-size:2em; text-align:center; text-indent:0; margin-top:10%;}
+span.pn {font-size:140%; text-align:center; text-indent:0; margin-top:10%; display:block;}
 .pnum {}
 .ps {font-size:.95em; text-align:center; text-indent:0; margin-top:2.5%; margin-bottom: 2.5%;}
 .psec {margin-top: 2em; text-indent: 0; text-align:left;}
 .psec1 {margin-top: 1em; text-indent: 0; text-align:left;}
 .pt {font-size:1.5em; text-align:center; font-weight:bold; text-indent:0; margin-top:1em; margin-bottom: 1em; }
-span.pt {font-size:1em; text-align:center; font-weight:bold; text-indent:0; margin-top:1em; margin-bottom: 1em; display: block;}
+span.pt {font-size:100%; text-align:center; font-weight:bold; text-indent:0; margin-top:1em; margin-bottom: 1em; display: block; line-height:1.1em;}
 .qu {text-align:left; text-indent:0;}
 .quf {text-align:left; text-indent:0; margin-top: .5em;}
 .quh {font-weight:bold; margin-top:.5em; margin-bottom:.5em; text-align:left; text-indent:0;}
@@ -707,7 +709,8 @@ span.pt {font-size:1em; text-align:center; font-weight:bold; text-indent:0; marg
 .ser1 {font-size: 90%; margin-top: 0; margin-bottom: 0; text-align:justify; text-indent: 1em;}
 .ser2 {font-size: 80%; margin-top: 0; margin-bottom: 0; text-align:justify; text-indent: 2em;}
 .seraft {font-size: 80%; margin-top: 0; text-align:justify; text-indent: 0;}
-.serah {margin-top: .75em; margin-bottom: .5em; text-align:justify; text-indent: 0; font-weight: bold;}
+.serah {margin-top: .75em; margin-bottom: .5em; text-align:left; text-indent: 0; font-weight: bold;}
+h2.serah {font-size: 1em; margin-top: .75em; margin-bottom: .5em; text-align:left; text-indent: 0; font-weight: bold;}
 .serahaft {margin-top: 0; margin-bottom: .75em; text-align:justify; text-indent: 0; font-weight: bold;}
 .serau {font-size: 80%; margin-top: 0; margin-bottom: .5em; text-align:justify; text-indent: 1em;}
 .serbh {font-size: 80%; margin-top: .75em; margin-bottom: .75em; text-align:justify; text-indent: 0; font-weight: bold;}
@@ -1130,7 +1133,8 @@ tbody {
     text-align: left;
 }
 
-table > tbody > tr > th[scope="row"] {
+table > tbody > tr > th[scope="row"],
+table > tbody > tr > th[scope="rowgroup"]{
   font-weight: normal; 
   background: transparent;
   border-bottom: 1px solid #ddd;
