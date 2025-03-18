@@ -11,9 +11,9 @@ If you have questions, feedback, or find errors or issues with this specificatio
 
 - [1.1 EPUB Version](#11-epub-version)
 
-- [1.2 Element Specification](#12-element-specification)
+- [1.2 Element Specification for Reformatting](#12-element-specification-for-reformatting)
 
-	- [1.2.1 Standard Functionality Levels (EPUB 3) for PDF source](#121-standard-functionality-levels-epub-3-for-pdf-source)
+	- [1.2.1 Standard Functionality Levels for PDF source](#121-standard-functionality-levels-for-pdf-source)
 
 - [1.3 File Name](#13-file-name)
 
@@ -23,137 +23,157 @@ If you have questions, feedback, or find errors or issues with this specificatio
 
 - [1.5 EPUB Package](#15-epub-package)
 
-- [1.6 Metadata](#16-metadata)
+- [1.6 General Metadata](#16-general-metadata)
 
 	- [1.6.1 Dublin Core](#161-dublin-core)
 
 - [1.7 Accessibility Metadata](#17-accessibility-metadata)
+  
+	- [1.7.1 Schema.org Accessibility Metadata](#171-schemaorg-accessibility-metadata)
+	  
+	- [1.7.2 ONIX Accessibility Metadata](#172-onix-accessibility-metadata)
 
-- [1.8 HTML Meta Header](#18-html-meta-header)
+- [1.8 Navigation](#18-navigation)
+  
+	- [1.8.1 Table of Contents](#181-table-of-contents)
+	  
+	- [1.8.2 Landmarks](#182-landmarks)
+	
+	- [1.8.3 Page List](#183-page-list) 
+  
+- [1.9 HTML Meta Header](#19-html-meta-header)
+  
+- [1.10 Language](#110-language)
 
-- [1.9 Bookmark](#19-bookmark)
+- [1.11 HTML Title](#111-html-title)
 
-- [1.10 Html Title](#110-html-title)
+- [1.12 Headings](#112-headings)
 
-- [1.11 Headings](#111-headings)
+	- [1.12.1 Numbered headings](#1121-numbered-headings)
 
-	- [1.11.1 Numbered headings](#1111-numbered-headings)
+	- [1.12.2 Separate heading and subtitle](#1122-separate-heading-and-subtitle)
 
-	- [1.11.2 Separate heading and subtitle](#1112-separate-heading-and-subtitle)
+	- [1.12.3 Merged heading and subtitle](#1123-merged-heading-and-subtitle)
 
-	- [1.11.3 Merged heading and subtitle](#1113-merged-heading-and-subtitle)
+- [1.13 Tables](#113-tables)
 
-- [1.12 Tables](#112-tables)
+	- [1.13.1 Column heads and row heads](#1131-column-heads-and-row-heads)
+	  
+	- [1.13.2 Large tables](#1132-large-tables)
+	  
+	- [1.13.3 Irregular header](#1133-irregular-header)
 
-	- [1.12.1 Irregular header](#1121-irregular-header)
+	- [1.13.4 Complex headings](#1134-complex-headings)
 
-	- [1.12.2 Complex headings](#1122-complex-headings)
+	- [1.13.5 Layered headings](#1135-layered-headings)
 
-	- [1.12.3 Layered headings](#1123-layered-headings)
+- [1.14 Lists](#114-lists)
 
-- [1.13 Lists](#113-lists)
+	- [1.14.1 Unordered list](#1141-unordered-list)
 
-	- [1.13.1 Unordered list](#1131-unordered-list)
+	- [1.14.2 Definition list](#1142-definition-list)
+	  
+- [1.15 Epigraphs, Dialogue, Poetry](#115-epigraphs-dialogue-poetry)
 
-	- [1.13.2 Definition list](#1132-definition-list)
+- [1.16 Links](#116-links)
 
-- [1.14 Links](#114-links)
+	- [1.16.1 Guidelines for links](#1161-guidelines-for-links)
 
-	- [1.14.1 Links spec](#1141-links-spec)
+	- [1.16.2 Link with full context of destination](#1162-link-with-full-context-of-destination)
 
-	- [1.14.2 Link with full context of destination](#1142-link-with-full-context-of-destination)
+	- [1.16.3 Link with alternate text](#1163-link-with-alternate-text)
+	  
+	- [1.16.4 Link format for DOIs](#1164-link-format-for-dois)
 
-	- [1.14.3 Link with alternate text](#1143-link-with-alternate-text)
+	- [1.16.5 Visual distinctive linking](#1165-visual-distinctive-linking)
 
-	- [1.14.4 Visual distinctive linking](#1144-visual-distinctive-linking)
+- [1.17 Images and Media](#117-images-and-media)
 
-- [1.15 Images](#115-images)
+	- [1.17.1 Acceptable image and media file types](#1171-acceptable-image-and-media-file-types)
+	  
+	- [1.17.2 Recommended image criteria](#1172-recommended-image-criteria)
+	  
+	- [1.17.3 Significant simple image](#1173-significant-simple-image)
 
-	- [1.15.1 Significant simple image (no description required)](#1151-significant-simple-image-no-description-required)
+	- [1.17.4 Decorative image](#1174-decorative-image)
+	  
+	- [1.17.5 Cover image](#1175-cover-image)
 
-	- [1.15.2 Decorative image](#1152-decorative-image)
+	- [1.17.6 Figures](#1176-figures)
 
-	- [1.15.3 Figures](#1153-figures)
+	- [1.17.7 Extended description via hyperlink](#1177-extended-description-via-hyperlink)
 
-	- [1.15.4 Extended description via hyperlink](#1154-extended-description-via-hyperlink)
+	- [1.17.8 Fulcrum Resource References](#1178-fulcrum-resource-references)
+	  
+	- [1.17.9 Figure, image, and media placement](#1179-figure-image-media-placement)
 
-	- [1.15.5 Fulcrum Resource References](#1155-fulcrum-resource-references)
+- [1.18 Code Blocks](#118-code-blocks)
 
-- [1.16 Code Blocks](#116-code-blocks)
+	- [1.18.1 Inline Code](#1181-inline-code)
 
-	- [1.16.1 Inline Code](#1161-inline-code)
+	- [1.18.2 Code Blocks](#1182-code-blocks)
 
-	- [1.16.2 Code Blocks](#1162-code-blocks)
+	- [1.18.3 Code Blocks with Line Numbers](#1183-code-blocks-with-line-numbers)
 
-	- [1.16.3 Code Blocks with Line Numbers](#1163-code-blocks-with-line-numbers)
+	- [1.18.4 Code Blocks with Line Numbers as Tables](#1184-code-blocks-with-line-numbers-as-tables)
 
-	- [1.16.4 Code Blocks with Line Numbers as Tables](#1164-code-blocks-with-line-numbers-as-tables)
+	- [1.18.5 Comparing Code Blocks with Line Numbers](#1185-comparing-code-blocks-with-line-numbers)
 
-	- [1.16.5 Comparing Code Blocks with Line Numbers](#1165-comparing-code-blocks-with-line-numbers)
+- [1.19 Footnotes and Endnotes](#119-footnotes-and-endnotes)
 
-- [1.17 Footnotes and Endnotes](#117-footnotes-and-endnotes)
+	- [1.19.1 Footnotes in the body](#1191-footnotes-in-the-body)
 
-	- [1.17.1 Footnotes in the body](#1171-footnotes-in-the-body)
+	- [1.19.2 Endnote section](#1192-endnote-section)
 
-	- [1.17.2 Endnote section](#1172-endnote-section)
+	- [1.19.3 Back-linking notes](#1193-back-linking-notes)
 
-	- [1.17.3 Back-linking notes](#1173-back-linking-notes)
+- [1.20 Bibliographies](#120-bibliographies)
+  
+- [1.21 Indexes](#121-indexes)
+  
+- [1.22 Content Numbering](#122-content-numbering)
 
-- [1.18 Content Numbering](#118-content-numbering)
+	- [1.22.1 Page Break Numbering](#1221-page-break-numbering)
 
-	- [1.18.1 Page Break Numbering](#1181-page-break-numbering)
+	- [1.22.2 Paragraph Numbering](#1222-paragraph-numbering)
 
-	- [1.18.2 Paragraph Numbering](#1182-paragraph-numbering)
+	- [1.22.3 Line Numbering](#1223-line-numbering)
+  
+- [1.23 Chapters split into multiple XHTML files](#122-chapter-split)
 
-	- [1.18.3 Line Numbering](#1183-line-numbering)
+- [1.24 CSS Stylesheet](#124-css-stylesheet)
 
-- [1.19 Chapter Split](#119-chapter-split)
+	- [1.24.1 Standard CSS Stylesheets](#1241-standard-css-stylesheets)
 
-- [1.20 CSS Stylesheet](#120-css-stylesheet)
+	- [1.24.2 CSS Units](#1242-css-units)
 
-	- [1.20.1 Standard CSS](#1201-standard-css)
+	- [1.24.3 Colors](#1243-colors)
 
-	- [1.20.2 CSS Units](#1202-css-units)
+	- [1.24.4 Background Images](#1244-background-images)
 
-	- [1.20.3 Colors](#1203-colors)
+	- [1.24.5 Hidden Content](#1245-hidden-content)
 
-	- [1.20.4 Background Images](#1204-background-images)
+	- [1.24.6 CSS Property Reference](#1246-css-property-reference)
 
-	- [1.20.5 Hidden Content](#1205-hidden-content)
+	- [1.24.7 CSS 2.1 Pseudo-Classes](#1247-css-21-pseudo-classes)
 
-	- [1.20.6 CSS Property Reference](#1206-css-property-reference)
+	- [1.24.8 CSS 2.1 Pseudo-Elements](#1248-css-21-pseudo-elements)
 
-	- [1.20.7 CSS 2.1](#1207-css-21)
+- [1.25 Fonts](#125-fonts)
 
-	- [1.20.8 CSS 2.1 Pseudo-Classes](#1208-css-21-pseudo-classes)
+- [1.26 Formatting](#126-formatting)
 
-	- [1.20.9 CSS 2.1 Pseudo-Elements](#1209-css-21-pseudo-elements)
+- [1.27 Boxed Text](#127-boxed-text)
 
-- [1.21 Images](#121-images)
+- [1.28 Marginalia and Sidebars](#128-marginalia-and-sidebars)
 
-	- [1.21.1 Image File Types](#1211-image-file-types)
+- [1.29 Reading Order](#129-reading-order)
 
-	- [1.21.2 Recommended Criteria](#1212-recommended-criteria)
+- [1.30 DPUB ARIA Semantics](#130-dpub-aria-semantics)
 
-	- [1.21.3 Cover Image](#1213-cover-image)
+- [1.31 Accessibility](#131-accessibility)
 
-	- [1.21.4 Image/Graphic Placement](#1214-imagegraphic-placement)
-
-- [1.22 Fonts](#122-fonts)
-
-- [1.23 Formatting](#123-formatting)
-
-- [1.24 Boxed Text](#124-boxed-text)
-
-- [1.25 Marginalia and Sidebars](#125-marginalia-and-sidebars)
-
-- [1.26 Reading Order](#126-reading-order)
-
-- [1.27 DPUB ARIA Semantics](#127-dpub-aria-semantics)
-
-- [1.28 Accessibility](#128-accessibility)
-
-- Revision History
+- [Revision History](#revision-history)
 
 # 1.0 Target Specification -- EPUB3
 
@@ -166,14 +186,14 @@ EPUB conforming to a specification less than EPUB 3.0 will not function as expec
 - XHTML files should be compliant with HTML5.
 
 ### Required For
-| U-M Vendor | Fulcrum Partner |
-| ---------- | --------------- |
-| Yes        | Yes             |
+| U-M Vendor        | Fulcrum Partner   |
+| ----------------- | ----------------- |
+| Must be EPUB 3.0+ | Must be EPUB 3.0+ |
 
 ## 1.2 Element Specification for Reformatting
 The following matrix details recommendations for converting different elements from PDF to EPUB 3.
 
-### 1.2.1 Standard Functionality Levels (EPUB 3) for PDF source
+### 1.2.1 Standard Functionality Levels for PDF source
 When converting backlist titles from PDF to EPUB3, use the following table a guide for conversion.
 
 | **Element**                   | **Conversion**                           |
@@ -287,6 +307,19 @@ The EPUB3 output contains the following folders and files.
 
 ## 1.6 General Metadata
 
+If the EPUB is a derivative of a print source, include the `pageBreakSource` metadata:
+
+```
+<meta property="pageBreakSource">urn:isbn:9780472132034</meta>
+```
+
+**NOTE**: if the EPUB must pass EPUBCheck less than 5.0, use the encoding practice specified below in 1.6.1 Dublin Core: Source instead.
+
+### Required For
+| U-M Vendor | Fulcrum Partner |
+| ---------- | --------------- |
+| Yes        | Yes             |
+
 ### 1.6.1 Dublin Core
 Dublin Core metadata is required for the following items:
 
@@ -297,7 +330,7 @@ Dublin Core metadata is required for the following items:
 -   Publisher
 -   Identifier
 -   Source
-	- Required when the EPUB is a derivative of a print source, see additional fields also needed in example below.
+	- Note: Only required when the EPUB is a derivative of a print source AND the EPUB must be validated against a version of EPUBCheck less than version 5. See additional fields also needed in example below.
 - Date
 
 **Example code:**
@@ -311,11 +344,12 @@ Dublin Core metadata is required for the following items:
 <dc:rights>© University of Michigan Press</dc:rights>
 <dc:publisher>University of Michigan Press</dc:publisher>
 <dc:identifier id="BookID">9780472999002</dc:identifier>
-<dc:sourceid="src-id">urn:isbn:9780472999999</dc:source>
+<dc:source id="src-id">urn:isbn:9780472999999</dc:source>
 <meta refines="#src-id" property="dcterms:issued">2000-01-01</meta>
 <dc:date>2018-03-03</dc:date>
 ````
 
+**NOTE**: The `dc:source` element and related `meta refines="#src-id"` are only to be included if the publisher requires EPUB to pass EPUBCheck version < 5.0.
 ### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
@@ -433,11 +467,14 @@ The primary language of the publication and shifts in primary language in body t
 The primary language should be placed in `lang` and `xml:lang`  attributes inside the `<html>` element in all the XHTML files. 
 
 **Example Code:**
+
 ````
 <html ... lang="en" xml:lang="en">
 ````
 
 Shifts in primary language in the body text, footnotes, or references should override the set language by wrapping the content in `<span>` element with  `lang` and `xml:lang` attributes.
+
+**Example Code:**
 
 ```
 <html ... lang="en" xml:lang="en">
@@ -535,7 +572,7 @@ The title and subtitle are contained in separate elements, but grouped in a head
 </section>
 ````
 
-NOTE: current best practice recommends wrapping the heading element in `hgroup` instead of `header`, but due to limitations in U-M's ebook distribution and EPUBCheck validation, `header` should be used instead until further notice.
+**NOTE**: current best practice recommends wrapping the heading element in `hgroup` instead of `header`, but due to limitations in U-M's ebook distribution and EPUBCheck validation, `header` should be used instead until further notice.
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ---------- | --------------- |
@@ -560,7 +597,39 @@ When the subtitle is contained within the same heading element as the title, ide
 ## 1.13 Tables
 Ensure all tabular data is marked up using `table` tags, that titles are provided in a `<caption>` element, and that header cells are identified in the `scope` attribute. Headers should be contained within a `thead` element and footers within a `tfoot` element. The rows that represent the body of the table should be contained within a `tbody` element.
 
-### 1.13.1 Large tables
+### 1.13.1 Column heads and row heads
+Column heads and row heads must be defined as headers with appropriate scope attributes. The `scope` attribute should contain a `col`, `colgroup`, `row`, or `rowgroup` value wherever required.
+
+```
+<table>
+	<thead>
+	<tr>
+		<td></td>
+		<th scope="col" class="tch">Emigration tax revenue<a id="tn2r" class="tnref" href="Kreutzmuller_Dispossession-0012.xhtml#tn2">a</a></th>
+		<th scope="col" class="tch">Implied capital</th>
+		<th scope="col" class="tch">Estimated transfer quota</th>
+		<th scope="col" class="tch">Taxed / Immobilized</th>
+		<th scope="col" class="tch">Implicit emigration tax rate</th>
+		<th scope="col" class="tch">For comparison: Bajohr (2003)</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<th scope="row"><p class="td">1933</p></th>
+		<td><p class="td">17.602</p></td>
+		<td><p class="td">70.408</p></td>
+		<td><p class="td">50%</p></td>
+		<td><p class="td">44.005</p></td>
+		<td><p class="td">62.5%</p></td>
+		<td><p class="td">20%</p></td>
+	</tr>
+	...
+	</tbody>
+</table>
+```
+
+
+### 1.13.2 Large tables
 If a table exceeds more than 8 columns or its layout could be compromised in its presentation on a Reading System, it is acceptable to present the table as an image. However, in such cases you must also provide a link to an XHTML file outside of the linear flow of the EPUB that contains the HTML version of the large table. Users with text-to-speech playback available will be able to navigate the markup regardless of the rendering quality. 
 
 See the technique in section 1.15.4 for providing an extended description of an image as guidance for including images of tables.
@@ -570,7 +639,7 @@ See the technique in section 1.15.4 for providing an extended description of an 
 | ----------------- | ------------|
 | Yes | No |
 
-### 1.13.1 Irregular header
+### 1.13.3 Irregular header
 
 The following table has headers that span columns and rows:
 
@@ -642,7 +711,7 @@ attribute:
 | ----------------- | ------------|
 | Yes | No |
 
-### 1.13.2 Complex headings
+### 1.13.4 Complex headings
 
 The following table shows a distance chart with the start destinations defined in the first row and at the end destination at the end of each subsequent row. 
 
@@ -729,7 +798,7 @@ Use `scope="col"` to make the start destinations the column headers and
 | ----------------- | ------------|
 | Yes | No |
 
-### 1.13.3 Layered headings
+### 1.13.5 Layered headings
 
 The following table combines headers from the top of each column and beginning of each row:
 
@@ -790,7 +859,7 @@ The `headers` attribute is used to provide the IDs of the cells that contain the
 
 ## 1.14 Lists
 
-Tag list items with proper list tags. Do not use other elements such as `<p>`. By tagging the list items with proper list elements, the screen reader users can perceive meaningful information and will know that they are reading list items.
+Tag list items with proper list tags to ensure semantic encoding. Do not use other elements such as `<p>` or bullet characters to denote a list item. By tagging the list items with proper list elements, the screen reader users can perceive meaningful information and will know that they are reading list items.
 
 ### 1.14.1 Unordered list
 
@@ -849,12 +918,38 @@ Excerpt from: *Core Concepts of Marketing* --- John Burnett
 | ----------------- | ------------|
 | Yes | No |
 
-## 1.15 Links
+
+## 1.15 Epigraphs, Dialogue, Poetry
+
+When these elements are styled as quotes, they should be implemented with the use of the `blockquote` element.
+
+```
+<blockquote class="senseline">  
+    <p class="slf">In the dry season, someone must be the first drop of rain.</p>  
+    <p class="sll">Let it be me. Let it begin with me.</p>  
+</blockquote>
+```
+
+Special attention should be paid to epigraphs that have attribution or bylines. These need `blockquote` and to be wrapped in `figure` element.
+
+```
+<figure>  
+	<blockquote role="doc-epigraph" class="epigraph">  
+       <p class="eps"><span lang="kyh" xml:lang="kyh">“kúna vúra kúkuum ôok tá ni’uum, pananífyiivshas nimúsarukti, kári vúra pakáruk váhi ni’aapúnmiikti.”</span></p>  
+    </blockquote>  
+    <figcaption>  
+       <p class="ept">—William Bright, Speech to Karuk Tribal Council, 2004</p>  
+    </figcaption>  
+</figure>
+```
+## 1.16 Links
 
 The recommended best practice is to include links as meaningful text if the surrounding text is inadequate to define the purpose of the link. By providing meaningful text interpretation, the screen reader user can understand the purpose of the link and decide if they need to navigate
-to that particular link.
+to that particular link. 
 
-### 1.15.1 Links spec
+Overuse of links, while may seemingly helpful, can create complex navigational experiences for assistive technology readers. Always ensure that links are useful and not adding additional complexity when deciding to include. As such, it is best to avoid back linking chapter titles to the TOC page whenever possible.
+
+### 1.16.1 Guidelines for links
 
 All the cross-references such as notes and footnotes are two-way linked. Other references such as page, section, figure, etc., are one-way linked. The web address and email address links are active.
 
@@ -863,7 +958,7 @@ All the cross-references such as notes and footnotes are two-way linked. Other r
 | ----------------- | ------------|
 | Yes | No |
 
-### 1.15.2 Link with full context of destination
+### 1.16.2 Link with full context of destination
 
 The user can determine the destination of the link from the text of the \<a\> element alone.
 
@@ -876,7 +971,7 @@ The user can determine the destination of the link from the text of the \<a\> el
 | ----------------- | ------------|
 | No | No |
 
-### 1.15.3 Link with alternate text
+### 1.16.3 Link with alternate text
 
 Adding alternate text is an optional best practice if neither of the above conditions are met. Use the title attribute to provide additional context.
 
@@ -889,7 +984,7 @@ Adding alternate text is an optional best practice if neither of the above condi
 | ---------- | --------------- |
 | No         | No              |
 
-### 1.15.4 Link format for DOIs
+### 1.16.4 Link format for DOIs
 When using DOIs in any section of the EPUB, the title of the publication should be included in an `aria-label` attribute. See the [CrossRef Accessibility Guidelines](https://www.crossref.org/blog/accessibility-for-crossref-doi-links-call-for-comments-on-proposed-new-guidelines/) for more details.
 
 
@@ -902,7 +997,7 @@ When using DOIs in any section of the EPUB, the title of the publication should 
 | U-M Vendor | Fulcrum Partner |
 | ---------- | --------------- |
 | Yes        | No              |
-### 1.15.5 Visual distinctive linking
+### 1.16.5 Visual distinctive linking
 
 **Bold Text Option:** By specifying bolder, either a medium font or a bold one will make links visually stand out from their surrounding text.
 
@@ -929,14 +1024,87 @@ a {
 | ----------------- | ------------|
 | No | No |
 
-## 1.16 Images and Media
+## 1.17 Images and Media
 
 The name assigned to an image file contained within the EPUB should not contain spaces.
 The underscore or dash characters should be used in place of spaces.
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ---------- | --------------- |
+| Yes        | Yes             |
 
-Images should have an alternate text (**img/@alt** attribute) for screen reader users. By providing an alternate text for non-visual content, the screen reader users can perceive information about the image through the alternate text provided by us.
+### 1.17.1 Acceptable Image and Media File Types
 
-### 1.16.1 Significant simple image
+Acceptable file types for images include JPG, PNG and SVG.
+
+Acceptable file types for video include MPEG-4 (.mp4, .m4v), Quicktime (.mov), and AVI (.avi) formats.
+
+Acceptable file types for audio include WAV and MPEG 3 (.mp3).
+
+### 1.17.2 Recommended Image Criteria
+
+<table border="1">
+<tbody>
+<tr>
+<td style="vertical-align:top"><p>Resolution</p></td>
+<td style="vertical-align:top"><p>Minimum 72 dpi</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top"><p>Compression</p></td>
+<td style="vertical-align:top"><p>JPG Medium</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top"><p>Color space</p></td>
+<td style="vertical-align:top"><p>24-bit color (RGB) or Grayscale</p
+></td>
+</tr>
+<tr>
+<td style="vertical-align:top"><p>Format</p></td>
+<td style="vertical-align:top"><p>JPG for grayscale and color pictures
+and photographs.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top"><p>Reading orientation</p></td>
+<td style="vertical-align:top"><p>Position per reading order. Rotated
+landscape images in print versions are rotated for presentation in
+the EPUB.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top"><p>Size</p></td>
+<td style="vertical-align:top"><p>Reference <a href="https://github.com/mlibrary/fulcrum-epub-spec/blob/master/fulcrum.css">Fulcrum Generic EPUB CSS</a></p></td>
+</tr>
+<tr>
+<td style="vertical-align:top"><p>Presentation</p></td>
+<td style="vertical-align:top"><p>Maximum File Size should not exceed
+1 Mb. Reprocess images greater than 1Mb in size by applying higher
+compression (not to exceed JPG Medium) or resampling to reduce the
+DPI.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top"><p>Exception note</p></td>
+<td style="vertical-align:top"><ol>
+<li><p>If a file is less than 1Mb and jpg, use jpg as is.</p></li>
+<li><p>If a file is equal to or greater than 1Mb in size apply the
+following treatment in Photoshop CC</p><ol>
+<li><p>Image Size > Adjust dpi to 96 dpi with Resample set to Bicubic
+Sharper (Reduction).</p></li>
+<li><p>Save As JPEG, Quality Setting to 8 (High), Optimized.</p></li>
+<li><p>The above can be batch processed.</p></li>
+</ol></li>
+</ol></td>
+</tr>
+</tbody>
+</table>
+
+**Note**: For EPUB source files, retain the images as per the source EPUB file with the aforementioned properties.
+#### Required For
+| U-M Vendor | Fulcrum Partner              |
+| ---------- | ---------------------------- |
+| Yes        | No, but strongly recommended |
+
+
+### 1.17.3 Significant simple image
+Images should have an alternate text (`img/@alt` attribute) for screen reader users. By providing an alternate text for non-visual content, the screen reader users can perceive information about the image through the alternate text provided by us.
 
 ````
 <img src="covers/9781449328030_lrg.jpg" alt="Accessible EPUB 3 - First Edition"/>
@@ -947,17 +1115,69 @@ Images should have an alternate text (**img/@alt** attribute) for screen reader 
 | ----------------- | ------------|
 | Yes | No, but strongly recommended |
 
-### 1.16.2 Decorative image
+### 1.17.4 Decorative image
 
-An empty **alt** attribute is complimented by the **role** presentation to indicate that the image contains no information for users.
+An empty `alt` attribute is complimented by the `role` presentation to indicate that the image contains no information for users.
 
 ````
 <img src="graphics/gothic-border.png" role="presentation" alt=""/>
 ````
 
-### 1.16.3 Figures
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No, but strongly recommended |
 
-For a group that consists of an image and an associated caption, the **figure** and **figcaption** elements should be used. One or more **img** elements may exist within the **figure** element, but only one **figcaption** element should exist. The **figcaption** element should exist after its associated **img** element(s).
+### 1.17.5 Cover Image
+
+<table>
+<tbody>
+<tr>
+<td style="vertical-align:top"><p><b>1.17.5.1</b></p></td>
+<td style="vertical-align:top"><p>The cover must consist of an XHTML file containing nothing but an image. The image must be styled to take up the entire height of the screen. This can be achieved using the CSS below (just an example) or follow sample CSS if available:</p
+><pre>img.cover {
+    height: 100%;
+}</pre></td>
+</tr>
+<tr>
+<td style="vertical-align:top"><p><b>1.17.5.2</b></p></td>
+<td style="vertical-align:top"><p>Declare the cover in metadata (OPF) (mandatory).</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top"><p><b>1.17.5.3</b></p></td>
+<td style="vertical-align:top"><p>Capture cover related metadata as follows in .opf file:</p><pre>&lt;meta name="cover" content="cover-image" />&lt;item id="cover-image" href="images/cover.jpg" media-type="image/jpeg"/></pre></td>
+</tr>
+<tr>
+<td style="vertical-align:top"><p><b>1.17.5.4</b></p></td>
+<td style="vertical-align:top"><p>Minimum width of the cover should be more than 600 px and minimum height of the cover should be 800 px captured proportionately.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top"><p><b>1.17.5.5</b></p></td>
+<td style="vertical-align:top"><p>If the cover size of the source EPUB file is too small, then retain the cover per the source EPUB cover. Do not increase the size of the source EPUB cover.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top"><p><b>1.17.5.6</b></p></td>
+<td style="vertical-align:top"><p>The cover image needs to fit the page when viewed in the Fulcrum Reading System to cover as much white space as possible.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top"><p><b>1.17.5.7</b></p></td>
+<td style="vertical-align:top"><p>Never exclude the cover XHTML page from the linear flow of the EPUB. In the .opf file, it should be encoded as part of the flow:</p> <pre>&lt;spine toc="ncx"> 
+ &lt;itemref idref="cover" linear="yes"/>
+  ...
+&lt;/spine></pre> 
+
+<p>If the cover XHTML file is defined outside of the linear flow, the EPUB will not work in the Fulcrum Reading System.</p></td>
+</tr>
+</tbody>
+</table>
+#### Required For
+| U-M Vendor | Fulcrum Partner              |
+| ---------- | ---------------------------- |
+| Yes        | No, but strongly recommended |
+
+### 1.17.6 Figures
+
+For a group that consists of an image and an associated caption, the `figure` and `figcaption` elements should be used. One or more `img` elements may exist within the `figure` element, but only one `figcaption` element should exist. The `figcaption` element should exist after its associated `img` element(s).
 
 Below is an example of two images with a single caption:
 
@@ -975,11 +1195,11 @@ Below is an example of two images with a single caption:
 </figure>
 ````
 
-**Note:** the **img** element should be a direct child of the **figure** element and not wrapped within another container such as a **p** or a **div**.
+**NOTE:** the `img` element should be a direct child of the `figure` element and not wrapped within another container such as a `p` or a `div`.
 
-If multiple images and captions are to be grouped together, then nested **figure** elements are to be used. 
+If multiple images and captions are to be grouped together, then nested `figure` elements are to be used. 
 
-Below is an example:
+**Code example:**
 
 ````
 <figure role="group" aria-labelledby="fig1">
@@ -1015,7 +1235,7 @@ Below is an example:
 | ----------------- | ------------|
 | Yes | No |
 
-### 1.16.4 Extended description via hyperlink
+### 1.17.7 Extended description via hyperlink
 
 Extended description inclusion and linking via a hyperlink should be provided for complex images such as charts, graphs, maps, and images with text. Linking via a hyperlink is optional unless the description is provided in the source.
 
@@ -1094,11 +1314,11 @@ Extended description is contained within a separate XHTML file contained outside
 | ----------------- | ------------|
 | Yes | No |
 
-### 1.16.5 Fulcrum Resource References
+### 1.17.8 Fulcrum Resource References
 
-Once an EPUB is ingested in the **Fulcrum** platform, images, audio, or video referenced within EPUB content may be used to reference resources ingested in the platform. The **img** element may be replaced with markup that displays a resource such as a higher resolution image, audio, or video. The basename of the path (minus the extension) specified in the **img/@src** attribute should match the basename of the resource. 
+Once an EPUB is ingested in the Fulcrum platform, images, audio, or video referenced within EPUB content may be used to reference resources ingested in the platform. The `img` element may be replaced with markup that displays a resource such as a higher resolution image, audio, or video. The basename of the path (minus the extension) specified in the `img/@src` attribute value should match the basename of the resource. 
 
-For example:
+**Code example:**
 ````
 <figure role="group">
     <img src="images/movie_trailer.jpg" 
@@ -1108,9 +1328,9 @@ For example:
     </figcaption>
 </figure>
 ````
-The path *images/movie_trailer.jpg* could match a video resource ingested  in the **Fulcrum** platform that has the file name *movie_trailer.mp4*.
+The path `images/movie_trailer.jpg`could match a video resource ingested in the Fulcrum platform that has the file name `movie_trailer.mp4`.
 
-For the case where the **img/@src** value matches an ingested resource, but this instance should not be replaced, then the **img/@data-fulcrum-embed** attribute can be added to the **img** element:
+For the case where the `img/@src` value matches an ingested resource, but this instance should not be replaced, then the `img/@data-fulcrum-embed` attribute can be added to the `img` element:
 
 ````
 <figure role="group">
@@ -1123,18 +1343,18 @@ For the case where the **img/@src** value matches an ingested resource, but this
 </figure>
 ````
 
-To reference a **Fulcrum** resource within EPUB content at a location where no **img** element exists, the following markup may be used:
+To reference a Fulcrum resource within EPUB content at a location where no `img` element exists, the following markup may be used:
 
 ````
 <figure style="display:none" data-fulcrum-embed-filename="Audio01.mp3">
     <figcaption>Additional Audio Resource</figcaption>
 </figure>
 ````
-The value of the **figure/@data-fulcrum-embed-filename** attribute contains the **Fulcrum** resource file name. Both the basename and the extension should match.
+The value of the `figure/@data-fulcrum-embed-filename` attribute contains the Fulcrum resource file name. Both the basename and the extension should match.
 
-The **figcaption** element is optional, but can be used to provide a caption for the resource once it is displayed.
+The `figcaption` element is optional, but can be used to provide a caption for the resource once it is displayed.
 
-To reference a video on YouTube within EPUB content at a location where no **img** element exists, the following markup should be used:
+To reference a video on YouTube within EPUB content at a location where no `img` element exists, the following markup should be used:
 
 ````
 <figure class="enhanced-media-display" data-fulcrum-embed-filename="[youtube video ID]"/>
@@ -1146,11 +1366,21 @@ With the placeholder value in the `data-fulcrum-embed-filename` attribute replac
 | ----------------- | ------------|
 | No | No |
 
-## 1.17 Code Blocks
+### 1.17.9 Figure, Image, and Media Placement
+
+For any object rendered as an image/graphic or media that occurs in the midst of a paragraph and interrupts text, it shall be placed either at the end of the preceding paragraph or the beginning of the nearest following paragraph within the specific page. Final placement of the image is dependent on the closest paragraph's proximity. The image must stay within the page marker it occurs on in the source PDF. If an image interrupts text, and no paragraph tag that starts or ends on the same page, then keep the image in its original location.
+
+#### Required For
+| U-M Vendor | Fulcrum Partner              |
+| ---------- | ---------------------------- |
+| Yes        | No, but strongly recommended |
+
+
+## 1.18 Code Blocks
 
 Representations of computer code within the text, referred to here as code blocks, should be encoded semantically when possible. Never use an image to represent lines of code, inline code, or code blocks.
 
-### 1.17.1 Inline Code
+### 1.18.1 Inline Code
 
 Code to be displayed inline with paragraph text should be indicated with its equivalent semantic element.
 
@@ -1173,7 +1403,7 @@ independently of one another. This means that <code>i</code> ...
 | ----------------- | ------------|
 | Yes | No |
 
-### 1.17.2 Code Blocks
+### 1.18.2 Code Blocks
 
 Code that needs its formatting preserved and should display as a block of text, like a blockquote, should be identified a figure and be wrapped with elements to preserve formatting of the code. Note the application of the CSS class code on the figure element. Rules defined in the associate spec CSS file (see [fulcrum.css](https://github.com/mlibrary/fulcrum-epub-spec/blob/master/fulcrum.css)) help ensure formatting is preserved and line breaks occur when lines of code are excessively long.
 
@@ -1206,7 +1436,7 @@ end if
 | ----------------- | ------------|
 | Yes | No |
 
-### 1.17.3 Code Blocks with Line Numbers
+### 1.18.3 Code Blocks with Line Numbers
 
 There may be instances where code blocks are long or an author refers to specific lines of code in the surrounding text. There also may be a desire to allow readers to copy and paste code blocks without line numbers included in the copied text. To do so one will need to divert
 from semantic encoding, and use CSS-only to include line numbers. Apply a CSS attribute which utilizes CSS line counting to provide line numbers automatically.
@@ -1232,7 +1462,7 @@ from semantic encoding, and use CSS-only to include line numbers. Apply a CSS at
 | ----------------- | ------------|
 | Yes | No |
 
-### 1.17.4 Code Blocks with Line Numbers as Tables
+### 1.18.4 Code Blocks with Line Numbers as Tables
 
 In cases where code does not need to be copied and pasted but the display of line numbers is desirable, it is acceptable to encode the block of code as a table. For historical references to code this may be the most desirable, where excerpts of code are only needed to be displayed and line numbers start not a 1, but 3977, for example.
 
@@ -1279,7 +1509,7 @@ class="page"></a>Table 1.1. Excerpt from Heartbleed patch
 | ----------------- | ------------|
 | Yes | No |
 
-### 1.17.5 Comparing Code Blocks with Line Numbers
+### 1.18.5 Comparing Code Blocks with Line Numbers
 
 In other cases, two different blocks of code may need to be compared to one another side-by-side, along with the display of line numbers. In this case the code blocks should be encoded in a table, and follow the general pattern in 1.16.4. Note that in this case an additional CSS attribute is applied to the table element.
 
@@ -1337,7 +1567,7 @@ Ruby</th>
 | ----------------- | ------------|
 | Yes | No |
 
-## 1.18 Footnotes and Endnotes
+## 1.19 Footnotes and Endnotes
 
 In general, the footnotes and endnotes are highly recommended to place at logical break of the book such as end of the chapter or end of the book, which will help the screen reader users to read the primary text.
 
@@ -1348,7 +1578,8 @@ Footnote and endnotes should be double-linked, allowing readers to navigate to a
 | ----------------- | ------------|
 | Yes | No |
 
-### 1.18.1 Footnotes in the body
+### 1.19.1 Footnotes in the body
+
 ````
 <p>
 In that year<a href="\#ft2f" role="doc-noteref" epub:type="noteref">2</a>
@@ -1367,7 +1598,7 @@ there were 67 mills engaged in the manufacture of cotton goods ...
 | ----------------- | ------------|
 | Yes | No |
 
-### 1.18.2 Endnote section
+### 1.19.2 Endnote section
 
 The HTML Model allows for lists to contain headings, paragraphs, images, tables, etc. This means that applying list tagging can accommodate Endnote structures following `<ol>`.
 
@@ -1395,7 +1626,7 @@ Note that `doc-endnote` role is used to identify the section containing the endn
 | ----------------- | ------------|
 | Yes | No |
 
-### 1.18.3 Back-linking notes
+### 1.19.3 Back-linking notes
 Providing links back to the primary text from the endnote or footnote section help readers navigate to and from notes. 
 
 In this example a class `none` is applied to the `<ol>` to prevent automatic numbering, and the `doc-backlink` anchor is applied to a the number in the note.
@@ -1413,7 +1644,7 @@ In this example a class `none` is applied to the `<ol>` to prevent automatic num
 | Yes | No |
 
 
-## 1.19 Bibliographies
+## 1.20 Bibliographies
 Bibliographies should be structured using sections and lists to simplify access to the references.
 
 ```
@@ -1432,7 +1663,7 @@ Bibliographies should be structured using sections and lists to simplify access 
 | ----------------- | ------------|
 | Yes | No |
 
-## 1.20 Indexes
+## 1.21 Indexes
 Indexes should be structured using sections and lists to simplify access to the subjects.
 
 ```
@@ -1453,10 +1684,10 @@ Indexes should be structured using sections and lists to simplify access to the 
 | ----------------- | ------------|
 | Yes | No |
 
-## 1.21 Content Numbering
+## 1.22 Content Numbering
 Page numbers should be applied for titles that have a print equivalent. For titles that are digital-only and do not have a print equivalent, paragraph numbers should be applied.
 
-### 1.21.1 Page Break Numbering
+### 1.22.1 Page Break Numbering
 It is the Fulcrum practice to display page numbers in the flow of text. Other publishers may choose to visually hide the page numbers within the flow of text.
 
 **Example coding that displays page numbers:**
@@ -1471,14 +1702,14 @@ In the above example, to avoid assistive technology reading the page number twic
 <span id="p1" class="page" role="doc-pagebreak" aria-label="1"></span>
 ````
 
-NOTE: When page breaks occur around headings (such as the start of a Part or Chapter), page breaks should always appear before the heading element and never inside of the heading element.
+**NOTE:** When page breaks occur around headings (such as the start of a Part or Chapter), page breaks should always appear before the heading element and never inside of the heading element.
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
 | Yes | No, but strongly recommended |
 
 
-### 1.21.2 Paragraph Numbering
+### 1.22.2 Paragraph Numbering
 
 Paragraph numbering requires adding a `class` identifier and `id` value to a `<p>`. Paragraph numbers should only be applied to elements that are true paragraphs, not elements that use the paragraph element for styling.
 
@@ -1491,7 +1722,7 @@ Paragraph numbering requires adding a `class` identifier and `id` value to a `<p
 | ----------------- | ------------|
 | Yes | No, but strongly recommended |
 
-### 1.21.3 Line Numbering
+### 1.22.3 Line Numbering
 
 Line numbering, such as in poems or code blocks, requires adding a `class` identifier and `id` value to a `<p>`.
 ````
@@ -1503,7 +1734,7 @@ Line numbering, such as in poems or code blocks, requires adding a `class` ident
 | ---------- | ---------------------------- |
 | No         | No, but strongly recommended |
 
-## 1.22 Chapters split into multiple XHTML files
+## 1.23 Chapters split into multiple XHTML files
 
 When chapters contain a large number of media and the total file size exceeds 10MB, then consider splitting the chapter into a series of HTML files. This will create smaller files for faster download and rendering within the Fulcrum EPUB Reading System. 
 
@@ -1530,9 +1761,9 @@ The reason for the metadata inclusion is to provide information so that Fulcrum 
 | ---------- | ---------------------------- |
 | No         | No, but strongly recommended |
 
-## 1.23 CSS Stylesheet
+## 1.24 CSS Stylesheet
 
-### 1.23.1 Standard CSS Stylesheets
+### 1.24.1 Standard CSS Stylesheets
 
 The Fulcrum EPUB Specification provides three different CSS files for use in EPUBs. If possible, use one of the following standard CSS files in your EPUB, depending on its conversion process:
 
@@ -1550,18 +1781,19 @@ Unique styles per book can be added as needed as additional styles at the bottom
 | ---------- | --------------- |
 | Yes        | No              |
 
-### 1.23.2 CSS Units
+### 1.24.2 CSS Units
 
--   Font-size should always be defined in [relative units](https://kb.daisy.org/publishing/docs/wcag/resize-text.html).
--   Do not use fixed values (**mm, cm, in, pt** or **pc**) in CSS file.
--   Control the **font style** over the CSS (avoid inline styles)
+- Font-size should always be defined in [relative units](https://kb.daisy.org/publishing/docs/wcag/resize-text.html).
+- Do not use fixed values (`mm`, `cm`, `in`, `pt`, or `pc`) in CSS file.
+- Do not use absolute-size values (`xx-small` - `xxx-large`) in CSS file.
+- Control the `font-style` over the CSS whenever possible and avoid inline styles.
 
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ---------- | --------------- |
 | Yes        | No              |
 
-### 1.23.3 Colors
+### 1.24.3 Colors
 
 Ensure sufficient contrast so that text is legible, links are distinguishable from text, and do not rely on color to impart information, as not all users will be able to see the colors or perceive the differences. For example, if the color of a text provides a meaning to the content, then there should be some alternate method to convey the information to an assistive technology user. When unsure, check contrast using [WebAIM's Contrast Checker](https://webaim.org/resources/contrastchecker/).
 
@@ -1570,7 +1802,7 @@ Ensure sufficient contrast so that text is legible, links are distinguishable fr
 | ---------- | ---------------------------- |
 | Yes        | No, but strongly recommended |
 
-### 1.23.4 Background Images
+### 1.24.4 Background Images
 
 If background images are to be included in the EPUB, setting the contrast between the background colors and images will help readers who have difficulty in distinguishing contrasts. Color contrast of 4:5:1 is the best practice followed in the industry.
 
@@ -1579,7 +1811,7 @@ If background images are to be included in the EPUB, setting the contrast betwee
 | ---------- | ---------------------------- |
 | Yes        | No, but strongly recommended |
 
-### 1.23.5 Hidden Content
+### 1.24.5 Hidden Content
 
 There should not be any hidden content available in the EPUB files.
 
@@ -1588,7 +1820,7 @@ There should not be any hidden content available in the EPUB files.
 | ---------- | ---------------------------- |
 | Yes        | No, but strongly recommended |
 
-### 1.23.6 CSS Property Reference
+### 1.24.6 CSS Property Reference
 
 EPUB 3 user agents that visually render content may provide support for the CSS properties listed below, but inclusion is optional. Properties not listed may still be used (e.g., from evolving CSS 3 modules), but content authors should use due diligence and assess the impact on rendering and accessibility when using such properties.
 
@@ -1698,7 +1930,7 @@ type.</p></li>
 | ---------- | ---------------------------- |
 | Yes        | No, but strongly recommended |
 
-### 1.23.8 CSS 2.1 Pseudo-Classes
+### 1.24.7 CSS 2.1 Pseudo-Classes
 Please refer to the [DAISY Accessible Publishing Knowledge Base for the most up to date pseudo-classes](https://kb.daisy.org/publishing/docs/css/reference.html#css21classes) allowed in EPUB.
 
 #### Required For
@@ -1706,130 +1938,8 @@ Please refer to the [DAISY Accessible Publishing Knowledge Base for the most up 
 | ---------- | ---------------------------- |
 | Yes        | No, but strongly recommended |
 
-### 1.23.9 CSS 2.1 Pseudo-Elements
+### 1.24.8 CSS 2.1 Pseudo-Elements
 Please refer to the [DAISY Accessible Publishing Knowledge Base for the most up to date pseudo-elements](https://kb.daisy.org/publishing/docs/css/reference.html#css21elements) allowed in EPUB.
-
-#### Required For
-| U-M Vendor | Fulcrum Partner              |
-| ---------- | ---------------------------- |
-| Yes        | No, but strongly recommended |
-
-## 1.24 Images
-
-### 1.24.1 Image File Types
-
-Acceptable file types include JPG, PNG and SVG.
-
-### 1.24.2 Recommended Criteria
-
-<table border="1">
-<tbody>
-<tr>
-<td style="vertical-align:top"><p>Resolution</p></td>
-<td style="vertical-align:top"><p>Minimum 72 dpi</p></td>
-</tr>
-<tr>
-<td style="vertical-align:top"><p>Compression</p></td>
-<td style="vertical-align:top"><p>JPG Medium</p></td>
-</tr>
-<tr>
-<td style="vertical-align:top"><p>Color space</p></td>
-<td style="vertical-align:top"><p>24-bit color (RGB) or Grayscale</p
-></td>
-</tr>
-<tr>
-<td style="vertical-align:top"><p>Format</p></td>
-<td style="vertical-align:top"><p>JPG for grayscale and color pictures
-and photographs.</p></td>
-</tr>
-<tr>
-<td style="vertical-align:top"><p>Reading orientation</p></td>
-<td style="vertical-align:top"><p>Position per reading order. Rotated
-landscape images in print versions are rotated for presentation in
-the EPUB.</p></td>
-</tr>
-<tr>
-<td style="vertical-align:top"><p>Size</p></td>
-<td style="vertical-align:top"><p>Reference Standard CSS</p></td>
-</tr>
-<tr>
-<td style="vertical-align:top"><p>Presentation</p></td>
-<td style="vertical-align:top"><p>Maximum File Size should not exceed
-1 Mb. Reprocess images greater than 1Mb in size by applying higher
-compression (not to exceed JPG Medium) or resampling to reduce the
-DPI.</p></td>
-</tr>
-<tr>
-<td style="vertical-align:top"><p>Exception note</p></td>
-<td style="vertical-align:top"><ol>
-<li><p>If a file is less than 1Mb and jpg, use jpg as is.</p></li>
-<li><p>If a file is equal to or greater than 1Mb in size apply the
-following treatment in Photoshop CC</p><ol>
-<li><p>Image Size > Adjust dpi to 96 dpi with Resample set to Bicubic
-Sharper (Reduction).</p></li>
-<li><p>Save As JPEG, Quality Setting to 8 (High), Optimized.</p></li>
-<li><p>The above can be batch processed.</p></li>
-</ol></li>
-</ol></td>
-</tr>
-</tbody>
-</table>
-
-**Note**: For EPUB source files, retain the images as per the source EPUB file with the aforementioned properties.
-#### Required For
-| U-M Vendor | Fulcrum Partner              |
-| ---------- | ---------------------------- |
-| Yes        | No, but strongly recommended |
-
-### 1.24.3 Cover Image
-
-<table>
-<tbody>
-<tr>
-<td style="vertical-align:top"><p><b>1.24.3.1</b></p></td>
-<td style="vertical-align:top"><p>The cover must consist of an XHTML file containing nothing but an image. The image must be styled to take up the entire height of the screen. This can be achieved using the CSS below (just an example) or follow sample CSS if available:</p
-><pre>img.cover {
-    height: 100%;
-}</pre></td>
-</tr>
-<tr>
-<td style="vertical-align:top"><p><b>1.24.3.2</b></p></td>
-<td style="vertical-align:top"><p>Declare the cover in metadata (OPF) (mandatory).</p></td>
-</tr>
-<tr>
-<td style="vertical-align:top"><p><b>1.23.3.3</b></p></td>
-<td style="vertical-align:top"><p>Capture cover related metadata as follows in .opf file:</p><pre>&lt;meta name="cover" content="cover-image" />&lt;item id="cover-image" href="images/cover.jpg" media-type="image/jpeg"/></pre></td>
-</tr>
-<tr>
-<td style="vertical-align:top"><p><b>1.24.3.4</b></p></td>
-<td style="vertical-align:top"><p>Minimum width of the cover should be more than 600 px and minimum height of the cover should be 800 px captured proportionately.</p></td>
-</tr>
-<tr>
-<td style="vertical-align:top"><p><b>1.24.3.5</b></p></td>
-<td style="vertical-align:top"><p>If the cover size of the source EPUB file is too small, then retain the cover per the source EPUB cover. Do not increase the size of the source EPUB cover.</p></td>
-</tr>
-<tr>
-<td style="vertical-align:top"><p><b>1.24.3.6</b></p></td>
-<td style="vertical-align:top"><p>The cover image needs to fit the page when viewed in the Fulcrum Reading System to cover as much white space as possible.</p></td>
-</tr>
-<tr>
-<td style="vertical-align:top"><p><b>1.24.3.7</b></p></td>
-<td style="vertical-align:top"><p>Never exclude the cover XHTML page from the linear flow of the EPUB. In the .opf file, it should be encoded as part of the flow: <pre>&lt;spine toc="ncx"> 
- &lt;itemref idref="cover" linear="yes"/>
-  ...
-&lt;/spine></pre> If the cover XHTML file is defined outside of the linear flow, the EPUB will not work in the Fulcrum Reading System.</p></td>
-</tr>
-</tbody>
-</table>
-
-#### Required For
-| U-M Vendor | Fulcrum Partner              |
-| ---------- | ---------------------------- |
-| Yes        | No, but strongly recommended |
-
-### 1.24.4 Image/Graphic Placement
-
-For any object rendered as an image/graphic that occurs in the midst of a paragraph and interrupts text, it shall be placed either at the end of the preceding paragraph or the beginning of the nearest following paragraph within the specific page. Final placement of the image is dependent on the closest paragraph's proximity. The image must stay within the page marker it occurs on in the source PDF. If an image interrupts text, and no paragraph tag that starts or ends on the same page, then keep the image in its original location.
 
 #### Required For
 | U-M Vendor | Fulcrum Partner              |
