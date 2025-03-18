@@ -1170,6 +1170,7 @@ An empty `alt` attribute is complimented by the `role` presentation to indicate 
 </tr>
 </tbody>
 </table>
+
 #### Required For
 | U-M Vendor | Fulcrum Partner              |
 | ---------- | ---------------------------- |
