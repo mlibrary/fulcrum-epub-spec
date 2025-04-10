@@ -1252,8 +1252,8 @@ Below is an example of an image with hyperlink pointing to the extended descript
 <figure id="image3">
     <img src="../Images/chart-ebcaadfb.png" alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3"/>
     <figcaption>Example.com Site visitors Jan to March 2014</figcaption>
+    <a id="image3-link" href="./endOfBookDescriptionsSingle.xhtml#image3-extended-desc">Follow for extended description</a>
 </figure>
-<a id="image3-link" href="./endOfBookDescriptionsSingle.xhtml#image3-extended-desc">Follow for extended description</a>
 ```
 
 Extended description is contained within a separate XHTML file contained outside of the linear flow of the EPUB. It also shows a smaller image for convenience of the users.
@@ -1512,7 +1512,7 @@ class="page"></a>Table 1.1. Excerpt from Heartbleed patch
 
 ### 1.18.5 Comparing Code Blocks with Line Numbers
 
-In other cases, two different blocks of code may need to be compared to one another side-by-side, along with the display of line numbers. In this case the code blocks should be encoded in a table, and follow the general pattern in 1.16.4. Note that in this case an additional CSS attribute is applied to the table element.
+In other cases, two different blocks of code may need to be compared to one another side-by-side, along with the display of line numbers. In this case the code blocks should be encoded in a table, and follow the general pattern in 1.18.4. Note that in this case an additional CSS attribute is applied to the table element.
 
 ````
 <table class="code compare">
