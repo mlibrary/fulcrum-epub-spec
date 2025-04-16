@@ -971,12 +971,13 @@ The user can determine the destination of the link from the text of the \<a\> el
 | ----------------- | ------------|
 | No | No |
 
+
 ### 1.16.3 Link with alternate text
 
 Adding alternate text is an optional best practice if neither of the above conditions are met. Use the title attribute to provide additional context.
 
 ````
-<a href="#..." title="The EPUB specifications">click here</a>
+<a href="#..." aria-label="The EPUB specifications">click here</a>
 ````
 
 #### Required For
@@ -987,7 +988,6 @@ Adding alternate text is an optional best practice if neither of the above condi
 ### 1.16.4 Link format for DOIs
 When using DOIs in any section of the EPUB, the title of the publication should be included in an `aria-label` attribute. See the [CrossRef Accessibility Guidelines](https://www.crossref.org/blog/accessibility-for-crossref-doi-links-call-for-comments-on-proposed-new-guidelines/) for more details.
 
-
 ````
 <a href="https://doi.org/10.5555/12345678" aria-label="DOI for Toward a Unified Theory of High-Energy Metaphysics: Silly String Theory">https://doi.org/10.5555/12345678</a>
 ````
@@ -997,6 +997,7 @@ When using DOIs in any section of the EPUB, the title of the publication should 
 | U-M Vendor | Fulcrum Partner |
 | ---------- | --------------- |
 | Yes        | No              |
+
 ### 1.16.5 Visual distinctive linking
 
 **Bold Text Option:** By specifying bolder, either a medium font or a bold one will make links visually stand out from their surrounding text.
