@@ -889,25 +889,25 @@ Excerpt from: *Core Concepts of Marketing* --- John Burnett
 
 ````
 <dl>
-<dt><def>Exchange function</def></dt>
-<dd>
-Sales of the product to the various members
-of the channel of distribution.
-</dd>
-<dt><def>Physical distribution function</def></dt>
-<dd>
-Moves the product through the exchange
-channel, along with title and ownership.
-</dd>
-<dt><def>Marketing channel</def></dt>
-<dd>
-Sets of independent organizations involved
-in the process of making a product or
-service available for use or consumption
-as well as providing a payment mechanism
-for the provider.
-</dd>
-...
+  <dt><dfn>Exchange function</dfn></dt>
+  <dd>
+   Sales of the product to the various members
+   of the channel of distribution.
+  </dd>
+  <dt><dfn>Physical distribution function</dfn></dt>
+  <dd>
+   Moves the product through the exchange
+   channel, along with title and ownership.
+  </dd>
+  <dt><dfn>Marketing channel</dfn></dt>
+  <dd>
+   Sets of independent organizations involved
+   in the process of making a product or
+   service available for use or consumption
+   as well as providing a payment mechanism
+   for the provider.
+  </dd>
+ ...
 </dl>
 ````
 
