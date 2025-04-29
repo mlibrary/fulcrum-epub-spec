@@ -105,7 +105,7 @@ If you have questions, feedback, or find errors or issues with this specificatio
 
 	- [1.17.8 Fulcrum Resource References](#1178-fulcrum-resource-references)
 	  
-	- [1.17.9 Figure, image, and media placement](#1179-figure-image-media-placement)
+	- [1.17.9 Figure, image, and media placement](#1179-figure-image-and-media-placement)
 
 - [1.18 Code Blocks](#118-code-blocks)
 
