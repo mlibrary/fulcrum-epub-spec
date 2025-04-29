@@ -1240,75 +1240,66 @@ If multiple images and captions are to be grouped together, then nested `figure`
 
 Extended description inclusion and linking via a hyperlink should be provided for complex images such as charts, graphs, maps, and images with text. Linking via a hyperlink is optional unless the description is provided in the source.
 
-The following example uses a simple text hyperlink below the image to link to a separate file containing only one extended description, and provides a text hyperlink to return back to original reading position.
+The following example uses a simple text hyperlink below the image to link to a separate XHTML file containing only one extended description, and provides a text hyperlink to return back to original reading position. **The separate XHTML file with extended description should be placed at the end of the spine and outside the linear flow of the EPUB contents.**
 
-Other techniques such as including the description in a note at the end of the chapter or including the description below the image and minimize/hiding the description with a link, however there may be issues with both cases depending on reading system support.
+See the [DAISY Consortium's Best Practices for Authoring Extended Descriptions](https://daisy.github.io/transitiontoepub/best-practices/extended-desc/ExtendedDescriptionsBestPractices.html) for other techniques and additional details.
 
-See the [DAISY Consortium's Best Practices for Authoring Extended Descriptions](https://daisy.github.io/transitiontoepub/best-practices/extended-desc/ExtendedDescriptionsBestPractices.html) for additional details.
-
-Below is an example of an image with hyperlink pointing to the extended description. The following example uses figure and figcaption elements, but the technique can also be used without these elements.
+Below is an example of Fulcrum's preferred technique of extended description with hyperlink pointing to the full description. The following example uses figure and figcaption elements, but the technique can also be used without these elements.
 
 ```
-<figure id="image3">
-    <img src="../Images/chart-ebcaadfb.png" alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3"/>
-    <figcaption>Example.com Site visitors Jan to March 2014</figcaption>
-    <a id="image3-link" href="./endOfBookDescriptionsSingle.xhtml#image3-extended-desc">Follow for extended description</a>
+<figure id="f131" class="figure">
+      	<p class="fig"><img src="images/Fig13_01.png" alt="Three pie charts illustrating the breakdowns of races, nationalities, and genders of composers of color in the most common music theory textbooks."/></p>
+      	<figcaption>
+        	<p class="figh"><span class="fighn">Figure 13.1:</span> Composers of Color in the most common music theory textbooks</p>
+      	</figcaption>
+	<p class="image-right_back" id="rFigure13.1"><a href="ExtDesc_Figure13_1.xhtml#Figure13.1">Follow for extended description of Figure 13.1</a></p>
 </figure>
-```
-
-Extended description is contained within a separate XHTML file contained outside of the linear flow of the EPUB. It also shows a smaller image for convenience of the users.
 
 ```
-<div id="image3-extended-desc" class="endDesc" aria-labelledby="barchart-desc">
-    <h5 id="barchart-desc">Description of Bar Chart</h5>
-    <img src="../Images/chart-ebcaadfb.png" alt="" role="presentation"/>
-    <div>
-        <h6>Overview</h6>
-        <p>The chart shows the website hits for the first quarter of 2014. It shows that Site 1 has more visitors than either
-            of the other sites, but the number of visitors is decreasing. Site 2 has a fairly constant number of visitors,
-            while for Site 3 page hits are increasing month on month.</p>
-        <h6>Data</h6>
-                <table>
-                    <tr>
-                        <th scope="col">Period</th>
-                        <th scope="col">Site 1</th>
-                        <th scope="col">Site 2</th>
-                        <th scope="col">Site 3</th>
-                    </tr>
-                    <tr>
-                        <th scope="row">Jan</th>
-                        <td>135</td>
-                        <td>112</td>
-                        <td>92</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Feb</th>
-                        <td>117</td>
-                        <td>114</td>
-                        <td>99</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Mar</th>
-                        <td>96</td>
-                        <td>111</td>
-                        <td>126</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Qtr Total</th>
-                        <td>348</td>
-                        <td>337</td>
-                        <td>308</td>
-                    </tr>
-                </table>
-        <h6>Presentation</h6>
-        <p>The bar chart represents both the number of visitors per month for each website, and the total number of visitors per website for the entire quarter. Website visitors for each month are represented using columns lined up horizontally, with heights indicating the number of visitors. A fourth column is provided for each website with the accumulated site visitors for the quarter.</p>
-        <p>
-        <a id="Image3DetailsBackLink" href="./testDetailsEndOfBookSingle.xhtml#image3-link">Navigate back to bar chart image.</a>
-        </p>
-    </div>
-  </div>
-```
 
+The extended description is contained within a separate XHTML file placed outside of the linear flow of the EPUB. It also shows a smaller image for convenience of the users. The separate file should be named `ExtDesc_Figure##_#.xhtml`. 
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en-US" xml:lang="en-US">
+	<head>
+    	<meta name="viewport" content="initial-scale=1.0,maximum-scale=5.0" />
+    	<title>Extended Description for Figure 13.1</title>
+    	<link rel="stylesheet" type="text/css" href="default.css" />
+    	<meta charset="UTF-8" />
+	</head>
+	<body>
+    	<section aria-labelledby="Figure13.1">
+        	<h1 class="chtitlel" id="Figure13.1">Extended Description for Figure 13.1</h1>
+        	<div>
+            	<p class="imgl"><img src="images/Fig13_01.png" alt="" role="presentation" /></p>
+            	<p>The three pie charts present the following data. Race of Composers of Color (Black, 90%) and (Asian, 10%). Genders of 		Composers of Color (men, 85%) and (women 15%). Nationalities of Composers of Color (American, 85%), (Canadian, 2%), (Brazilian, 5%), (Chinese, 2% ), (French, 2%), (English, , 2%), and (Japanese, 2%). Values are estimated.
+		</p>
+
+            	<p class="image-right_back"><a role="doc-backlink" href="LucasPruett-0029.xhtml#rFigure13.1">Navigate back to Figure 13.1</a></p>
+        	</div>
+    	</section>
+	</body>
+</html>
+```
+In the `content.opf` file, place the XHTML description file at the end of the spine and keep the extended description out of the linear flow of the EPUB contents as in the example below:
+
+```
+<spine toc="ncx">
+	<itemref idref="LucasPruett-0001"/>
+	<itemref idref="LucasPruett-0002"/>
+	<itemref idref="LucasPruett-0003"/>
+	<itemref idref="LucasPruett-0004"/>
+	<itemref idref="LucasPruett-0005"/>
+	<itemref idref="LucasPruett-0006"/>
+	<itemref idref="LucasPruett-0007"/>
+
+       ...
+
+	<itemref idref="ExtDesc_Figure13_1" linear="no"/>
+  </spine>
+```
 
 #### Required For
 | U-M Vendor | Fulcrum Partner |
