@@ -105,7 +105,7 @@ If you have questions, feedback, or find errors or issues with this specificatio
 
 	- [1.17.8 Fulcrum Resource References](#1178-fulcrum-resource-references)
 	  
-	- [1.17.9 Figure, image, and media placement](#1179-figure-image-media-placement)
+	- [1.17.9 Figure, image, and media placement](#1179-figure-image-and-media-placement)
 
 - [1.18 Code Blocks](#118-code-blocks)
 
@@ -1258,7 +1258,7 @@ Below is an example of Fulcrum's preferred technique of extended description wit
 
 ```
 
-Extended description is contained within a separate XHTML file contained outside of the linear flow of the EPUB. It also shows a smaller image for convenience of the users. The separate file should be named `ExtDesc_Figure##_#.xhtml`. 
+The extended description is contained within a separate XHTML file placed outside of the linear flow of the EPUB. It also shows a smaller image for convenience of the users. The separate file should be named `ExtDesc_Figure##_#.xhtml`. 
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -1275,8 +1275,7 @@ Extended description is contained within a separate XHTML file contained outside
         	<h1 class="chtitlel" id="Figure13.1">Extended Description for Figure 13.1</h1>
         	<div>
             	<p class="imgl"><img src="images/Fig13_01.png" alt="" role="presentation" /></p>
-            	<p>The three pie charts present the following data. Race of Composers of Color (Black, 90%) and (Asian, 10%). Genders of Composers of Color (men, 85%) and
-		(women 15%). Nationalities of Composers of Color (American, 85%), (Canadian, 2%), (Brazilian, 5%), (Chinese, 2% ), (French, 2%), (English, , 2%), and (Japanese, 2%). 			Values are estimated.
+            	<p>The three pie charts present the following data. Race of Composers of Color (Black, 90%) and (Asian, 10%). Genders of Composers of Color (men, 85%) and (women 15%). Nationalities of Composers of Color (American, 85%), (Canadian, 2%), (Brazilian, 5%), (Chinese, 2% ), (French, 2%), (English, , 2%), and (Japanese, 2%). Values are estimated.
 		</p>
 
             	<p class="image-right_back"><a role="doc-backlink" href="LucasPruett-0029.xhtml#rFigure13.1">Navigate back to Figure 13.1</a></p>
