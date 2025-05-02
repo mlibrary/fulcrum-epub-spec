@@ -1249,11 +1249,11 @@ Below is an example of Fulcrum's preferred technique of extended description wit
 
 ```
 <figure id="f131" class="figure">
-      	<p class="fig"><img src="images/Fig13_01.png" alt="Three pie charts illustrating the breakdowns of races, nationalities, and genders of composers of color in the most common music theory textbooks."/></p>
+      	<p class="fig"><img src="images/Fig13_01.png" alt="Three pie charts illustrating the breakdowns of races, nationalities, and genders of composers of color in the most common music theory textbooks." aria-details="rFigure13.1" /></p>
       	<figcaption>
         	<p class="figh"><span class="fighn">Figure 13.1:</span> Composers of Color in the most common music theory textbooks</p>
       	</figcaption>
-	<p class="image-right_back" id="rFigure13.1"><a href="ExtDesc_Figure13_1.xhtml#Figure13.1">Follow for extended description of Figure 13.1</a></p>
+	<p class="image-right_back"><a id="rFigure13.1" href="ExtDesc_Figure13_1.xhtml#Figure13.1">Follow for extended description of Figure 13.1</a></p>
 </figure>
 
 ```
