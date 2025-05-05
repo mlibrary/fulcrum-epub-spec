@@ -72,6 +72,8 @@ If you have questions, feedback, or find errors or issues with this specificatio
 	- [1.14.1 Unordered list](#1141-unordered-list)
 
 	- [1.14.2 Definition list](#1142-definition-list)
+
+    - [1.14.3 Items requiring list encoding](#1143-items-requiring-list-encoding)
 	  
 - [1.15 Epigraphs, Dialogue, Poetry](#115-epigraphs-dialogue-poetry)
 
@@ -918,6 +920,21 @@ Excerpt from: *Core Concepts of Marketing* --- John Burnett
 | ----------------- | ------------|
 | Yes | No |
 
+### 1.14.3 Items requiring list encoding
+In addition to lists appearing in body content, other recurring content that must be encoded as a list includes:
+
+* Lists of titles on Series pages (unordered list).
+* Table of Contents pages (ordered list).
+* Lists of figures/illustrations (ordered list).
+* Lists of tables (ordered list).
+* Endnotes (ordered list). See [1.19.2 for details](#1192-endnote-section).
+* Bibliographies (ordered list). See [1.20 for details](#120-bibliographies).
+* Indexes (unorded list). See [1.21 for details](#121-indexes).
+
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No |
 
 ## 1.15 Epigraphs, Dialogue, Poetry
 
