@@ -1284,7 +1284,7 @@ If a `figure` contains 2 or more images with extended descriptions, the `figure`
         Charcoal on  wood. Anonymous, circa 1423.
         </figcaption>
     </figure>
-    <p class="image-right_back" id="rlongdescription_01"><a href="Extended_desc01.xhtml#ilongdescription_01">Follow for extended description for Fig. 1</a></p>    
+    <p class="image-right_back"><a id="rlongdescription_01" href="Extended_desc01.xhtml#ilongdescription_01">Follow for extended description for Fig. 1</a></p>    
     <figure role="group" aria-labelledby="fig12">
         <img src="castle-painting.jpg"
 	        alt="The castle now has two towers and two walls."/>
@@ -1292,7 +1292,7 @@ If a `figure` contains 2 or more images with extended descriptions, the `figure`
         Oil-based paint on canvas. Eloisa Faulkner, 1756.
         </figcaption>
     </figure>
-    <p class="image-right_back" id="rlongdescription_02"><a href="Extended_desc02.xhtml#ilongdescription_02">Follow for extended description for Fig. 2</a></p>
+    <p class="image-right_back"><a id="rlongdescription_02" href="Extended_desc02.xhtml#ilongdescription_02">Follow for extended description for Fig. 2</a></p>
     <figure role="group" aria-labelledby="fig13">
         <img src="castle-fluro.jpg"
 	        alt="The castle lies in ruins, the original tower all that remains in one piece."/>
@@ -1300,7 +1300,7 @@ If a `figure` contains 2 or more images with extended descriptions, the `figure`
         Film photograph. <span lang="fr">Séraphin Médéric Mieusement</span>, 1936.
         </figcaption>
     </figure>
-     <p class="image-right_back" id="rlongdescription_03"><a href="Extended_desc03.xhtml#ilongdescription_03">Follow for extended description for Fig. 3</a></p>   
+     <p class="image-right_back"><a id="rlongdescription_03" href="Extended_desc03.xhtml#ilongdescription_03">Follow for extended description for Fig. 3</a></p>   
      <figcaption id="fig1">
     The castle through the ages: 1423, 1756, and 1936 respectively.
     </figcaption>
