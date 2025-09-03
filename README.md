@@ -994,7 +994,7 @@ The user can determine the destination of the link from the text of the \<a\> el
 Adding alternate text is an optional best practice if neither of the above conditions are met. Use the title attribute to provide additional context.
 
 ````
-<a href="#..." aria-label="The EPUB specifications">click here</a>
+<a href="#..." title="The EPUB specifications">click here</a>
 ````
 
 #### Required For
@@ -1272,8 +1272,8 @@ Below is an example of Fulcrum's preferred technique of extended description wit
       	</figcaption>	
 </figure>
 <p class="image-right_back"><a id="rFigure13.1" href="ExtDesc_Figure13_1.xhtml#Figure13.1">Follow for extended description of Figure 13.1</a></p>
-
 ```
+
 If a `figure` contains 2 or more images with extended descriptions, the `figure` should either be A) broken into multiple `figure` elements, or, in the case where they share the caption, B) use nested figures with the description link after the child `figure`.
 
 ```
