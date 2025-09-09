@@ -13,33 +13,35 @@ If you have questions, feedback, or find errors or issues with this specificatio
 
 - [1.2 Element Specification for Reformatting](#12-element-specification-for-reformatting)
 
-	- [1.2.1 Standard Functionality Levels for PDF source](#121-standard-functionality-levels-for-pdf-source)
+    - [1.2.1 Standard Functionality Levels for PDF source](#121-standard-functionality-levels-for-pdf-source)
 
 - [1.3 File Name](#13-file-name)
 
 - [1.4 Folder Structure](#14-folder-structure)
 
-	- [1.4.1 Optional File Inclusions](#141-optional-file-inclusions)
+    - [1.4.1 Optional File Inclusions](#141-optional-file-inclusions)
 
 - [1.5 EPUB Package](#15-epub-package)
 
 - [1.6 General Metadata](#16-general-metadata)
 
-	- [1.6.1 Dublin Core](#161-dublin-core)
+    - [1.6.1 Dublin Core](#161-dublin-core)
 
 - [1.7 Accessibility Metadata](#17-accessibility-metadata)
   
-	- [1.7.1 Schema.org Accessibility Metadata](#171-schemaorg-accessibility-metadata)
-	  
-	- [1.7.2 ONIX Accessibility Metadata](#172-onix-accessibility-metadata)
+    - [1.7.1 Schema.org Accessibility Metadata](#171-schemaorg-accessibility-metadata)
+      
+    - [1.7.2 ONIX Accessibility Metadata](#172-onix-accessibility-metadata)
 
 - [1.8 Navigation](#18-navigation)
   
-	- [1.8.1 Table of Contents](#181-table-of-contents)
-	  
-	- [1.8.2 Landmarks](#182-landmarks)
-	
-	- [1.8.3 Page List](#183-page-list) 
+    - [1.8.1 Table of Contents](#181-table-of-contents)
+      
+    - [1.8.2 Landmarks](#182-landmarks)
+    
+    - [1.8.3 Page List](#183-page-list)
+
+    - [1.8.4 List of Illustrations: Figures, Tables, Charts](#184-list-of-illustrations-figures-tables-charts) 
   
 - [1.9 HTML Meta Header](#19-html-meta-header)
   
@@ -49,85 +51,85 @@ If you have questions, feedback, or find errors or issues with this specificatio
 
 - [1.12 Headings](#112-headings)
 
-	- [1.12.1 Numbered headings](#1121-numbered-headings)
+    - [1.12.1 Numbered headings](#1121-numbered-headings)
 
-	- [1.12.2 Separate heading and subtitle](#1122-separate-heading-and-subtitle)
+    - [1.12.2 Separate heading and subtitle](#1122-separate-heading-and-subtitle)
 
-	- [1.12.3 Merged heading and subtitle](#1123-merged-heading-and-subtitle)
+    - [1.12.3 Merged heading and subtitle](#1123-merged-heading-and-subtitle)
 
 - [1.13 Tables](#113-tables)
 
-	- [1.13.1 Column heads and row heads](#1131-column-heads-and-row-heads)
-	  
-	- [1.13.2 Large tables](#1132-large-tables)
-	  
-	- [1.13.3 Irregular header](#1133-irregular-header)
+    - [1.13.1 Column heads and row heads](#1131-column-heads-and-row-heads)
+      
+    - [1.13.2 Large tables](#1132-large-tables)
+      
+    - [1.13.3 Irregular header](#1133-irregular-header)
 
-	- [1.13.4 Complex headings](#1134-complex-headings)
+    - [1.13.4 Complex headings](#1134-complex-headings)
 
-	- [1.13.5 Layered headings](#1135-layered-headings)
+    - [1.13.5 Layered headings](#1135-layered-headings)
 
 - [1.14 Lists](#114-lists)
 
-	- [1.14.1 Unordered list](#1141-unordered-list)
+    - [1.14.1 Unordered list](#1141-unordered-list)
 
-	- [1.14.2 Definition list](#1142-definition-list)
+    - [1.14.2 Definition list](#1142-definition-list)
 
     - [1.14.3 Items requiring list encoding](#1143-items-requiring-list-encoding)
-	  
+      
 - [1.15 Epigraphs, Dialogue, Poetry](#115-epigraphs-dialogue-poetry)
 
 - [1.16 Links](#116-links)
 
-	- [1.16.1 Guidelines for links](#1161-guidelines-for-links)
+    - [1.16.1 Guidelines for links](#1161-guidelines-for-links)
 
-	- [1.16.2 Link with full context of destination](#1162-link-with-full-context-of-destination)
+    - [1.16.2 Link with full context of destination](#1162-link-with-full-context-of-destination)
 
-	- [1.16.3 Link with alternate text](#1163-link-with-alternate-text)
-	  
-	- [1.16.4 Link format for DOIs](#1164-link-format-for-dois)
+    - [1.16.3 Link with alternate text](#1163-link-with-alternate-text)
+      
+    - [1.16.4 Link format for DOIs](#1164-link-format-for-dois)
 
-	- [1.16.5 Visual distinctive linking](#1165-visual-distinctive-linking)
+    - [1.16.5 Visual distinctive linking](#1165-visual-distinctive-linking)
 
 - [1.17 Images and Media](#117-images-and-media)
 
-	- [1.17.1 Acceptable image and media file types](#1171-acceptable-image-and-media-file-types)
-	  
-	- [1.17.2 Recommended image criteria](#1172-recommended-image-criteria)
-	  
-	- [1.17.3 Significant simple image](#1173-significant-simple-image)
+    - [1.17.1 Acceptable image and media file types](#1171-acceptable-image-and-media-file-types)
+      
+    - [1.17.2 Recommended image criteria](#1172-recommended-image-criteria)
+      
+    - [1.17.3 Significant simple image](#1173-significant-simple-image)
 
-	- [1.17.4 Decorative image](#1174-decorative-image)
-	  
-	- [1.17.5 Cover image](#1175-cover-image)
+    - [1.17.4 Decorative image](#1174-decorative-image)
+      
+    - [1.17.5 Cover image](#1175-cover-image)
 
-	- [1.17.6 Figures](#1176-figures)
+    - [1.17.6 Figures](#1176-figures)
 
-	- [1.17.7 Extended description via hyperlink](#1177-extended-description-via-hyperlink)
+    - [1.17.7 Extended description via hyperlink](#1177-extended-description-via-hyperlink)
 
-	- [1.17.8 Fulcrum Resource References](#1178-fulcrum-resource-references)
-	  
-	- [1.17.9 Figure, image, and media placement](#1179-figure-image-and-media-placement)
+    - [1.17.8 Fulcrum Resource References](#1178-fulcrum-resource-references)
+      
+    - [1.17.9 Figure, image, and media placement](#1179-figure-image-and-media-placement)
 
 - [1.18 Code Blocks](#118-code-blocks)
 
-	- [1.18.1 Inline Code](#1181-inline-code)
+    - [1.18.1 Inline Code](#1181-inline-code)
 
-	- [1.18.2 Code Blocks](#1182-code-blocks)
+    - [1.18.2 Code Blocks](#1182-code-blocks)
 
-	- [1.18.3 Code Blocks with Line Numbers](#1183-code-blocks-with-line-numbers)
+    - [1.18.3 Code Blocks with Line Numbers](#1183-code-blocks-with-line-numbers)
 
-	- [1.18.4 Code Blocks with Line Numbers as Tables](#1184-code-blocks-with-line-numbers-as-tables)
+    - [1.18.4 Code Blocks with Line Numbers as Tables](#1184-code-blocks-with-line-numbers-as-tables)
 
-	- [1.18.5 Comparing Code Blocks with Line Numbers](#1185-comparing-code-blocks-with-line-numbers)
+    - [1.18.5 Comparing Code Blocks with Line Numbers](#1185-comparing-code-blocks-with-line-numbers)
 
 - [1.19 Footnotes and Endnotes](#119-footnotes-and-endnotes)
 
-	- [1.19.1 Footnotes in the body](#1191-footnotes-in-the-body)
+    - [1.19.1 Footnotes in the body](#1191-footnotes-in-the-body)
 
-	- [1.19.2 Endnote section](#1192-endnote-section)
+    - [1.19.2 Endnote section](#1192-endnote-section)
 
-	- [1.19.3 Back-linking notes](#1193-back-linking-notes)
+    - [1.19.3 Back-linking notes](#1193-back-linking-notes)
 
 - [1.20 Bibliographies](#120-bibliographies)
   
@@ -135,45 +137,53 @@ If you have questions, feedback, or find errors or issues with this specificatio
   
 - [1.22 Content Numbering](#122-content-numbering)
 
-	- [1.22.1 Page Break Numbering](#1221-page-break-numbering)
+    - [1.22.1 Page Break Numbering](#1221-page-break-numbering)
 
-	- [1.22.2 Paragraph Numbering](#1222-paragraph-numbering)
+    - [1.22.2 Paragraph Numbering](#1222-paragraph-numbering)
 
-	- [1.22.3 Line Numbering](#1223-line-numbering)
+    - [1.22.3 Line Numbering](#1223-line-numbering)
   
-- [1.23 Chapters split into multiple XHTML files](#122-chapter-split)
+- [1.23 Chapters split into multiple XHTML files](#123-chapter-split)
 
-- [1.24 CSS Stylesheet](#124-css-stylesheet)
+- [1.24 Facing Page Translation](#124-facing-page-translation)
 
-	- [1.24.1 Standard CSS Stylesheets](#1241-standard-css-stylesheets)
+    - [1.24.1 XHTML Encoding](#1241-xhtml-encoding)
+    
+    - [1.24.2 Custom CSS](#1242-custom-css)
 
-	- [1.24.2 CSS Units](#1242-css-units)
+    - [1.24.3 Use OPF to force scroll mode in reading system](#1243-use-opf-to-force-scroll-mode-in-reading-system)
 
-	- [1.24.3 Colors](#1243-colors)
+- [1.25 CSS Stylesheet](#125-css-stylesheet)
 
-	- [1.24.4 Background Images](#1244-background-images)
+    - [1.25.1 Standard CSS Stylesheets](#1251-standard-css-stylesheets)
 
-	- [1.24.5 Hidden Content](#1245-hidden-content)
+    - [1.25.2 CSS Units](#1252-css-units)
 
-	- [1.24.6 CSS Property Reference](#1246-css-property-reference)
+    - [1.25.3 Colors](#1253-colors)
 
-	- [1.24.7 CSS 2.1 Pseudo-Classes](#1247-css-21-pseudo-classes)
+    - [1.25.4 Background Images](#1254-background-images)
 
-	- [1.24.8 CSS 2.1 Pseudo-Elements](#1248-css-21-pseudo-elements)
+    - [1.25.5 Hidden Content](#1255-hidden-content)
 
-- [1.25 Fonts](#125-fonts)
+    - [1.25.6 CSS Property Reference](#1256-css-property-reference)
 
-- [1.26 Formatting](#126-formatting)
+    - [1.25.7 CSS 2.1 Pseudo-Classes](#1257-css-21-pseudo-classes)
 
-- [1.27 Boxed Text](#127-boxed-text)
+    - [1.25.8 CSS 2.1 Pseudo-Elements](#1258-css-21-pseudo-elements)
 
-- [1.28 Marginalia and Sidebars](#128-marginalia-and-sidebars)
+- [1.26 Fonts](#126-fonts)
 
-- [1.29 Reading Order](#129-reading-order)
+- [1.27 Formatting](#127-formatting)
 
-- [1.30 DPUB ARIA Semantics](#130-dpub-aria-semantics)
+- [1.28 Boxed Text](#128-boxed-text)
 
-- [1.31 Accessibility](#131-accessibility)
+- [1.29 Marginalia and Sidebars](#129-marginalia-and-sidebars)
+
+- [1.30 Reading Order](#130-reading-order)
+
+- [1.31 DPUB ARIA Semantics](#131-dpub-aria-semantics)
+
+- [1.32 Accessibility](#132-accessibility)
 
 - [Revision History](#revision-history)
 
@@ -332,7 +342,7 @@ Dublin Core metadata is required for the following items:
 -   Publisher
 -   Identifier
 -   Source
-	- Note: Only required when the EPUB is a derivative of a print source AND the EPUB must be validated against a version of EPUBCheck less than version 5. See additional fields also needed in example below.
+    - Note: Only required when the EPUB is a derivative of a print source AND the EPUB must be validated against a version of EPUBCheck less than version 5. See additional fields also needed in example below.
 - Date
 
 **Example code:**
@@ -448,6 +458,42 @@ If a print equivalent exists and page breaks are indicated within EPUB, include 
 | ----------------- | ------------|
 | Yes | No, but strongly recommended |
 
+### 1.8.4 List of Illustrations: Figures, Tables, Charts
+If a title has 5 or more combined illustrations (figures, tables, charts, etc.) a separate XHTML document with an unstyled ordered list of links to the items should be included in the front matter following the Contents page. Types of content should be grouped together and presented in order of appearance in the title.
+
+````
+<section id="loi" class="chapter" aria-labelledby="headerloi01" epub:type="frontmatter">
+      <header id="headerloi01">
+         <span id="pvi" class="page" role="doc-pagebreak" epub:type="pagebreak" aria-label="vi">Page vi &#8594;</span><span id="pvii" class="page" role="doc-pagebreak" epub:type="pagebreak" aria-label="vii">Page vii &#8594;</span>
+        <h1 class="ctfm">Illustrations</h1>
+      </header>
+      <section>
+        <h2 id="ahaftloi01" class="ahaft">Figures</h2>
+            <ol class="list-unstyled">
+                <li class="tocill"><a class="xref" href="Esguerra_Politics-0011.xhtml#f1">Figure 1. The Basic Functioning of the Mechanism of Translation</a></li>
+                <li class="tocill"><a class="xref" href="Esguerra_Politics-0011.xhtml#f2">Figure 2. The Productive Interplay of Enclosure/Disclosure</a></li>
+                <li class="tocill"><a class="xref" href="Esguerra_Politics-0013.xhtml#f3">Figure 3. The Proposed Organizational Structure of the FSC (as of July 1993)</a></li>
+            </ol>
+       </section>
+       <section>
+         <h2 id="ahloi01" class="ah">Tables</h2>
+            <ol class="list-unstyled">
+                <li class="tocill"><a class="xref" href="Esguerra_Politics-0011.xhtml#th0101">Table 1. Theoretical Framework for Private Authority Emergence</a></li>
+                <li class="tocill"><a class="xref" href="Esguerra_Politics-0011.xhtml#th0102">Table 2. Dramaturgy as Methodology</a></li>
+                <li class="tocill"><a class="xref" href="Esguerra_Politics-0013.xhtml#th0301">Table 3. Selected Issues and Perspectives on the Development of a Sustainable Forest Products Certification Process</a></li>
+                ...
+            </ol>
+        </section>
+    ...
+</section>
+
+````
+
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | No, but strongly recommended |
+
 ## 1.9 HTML Meta Header
 The following `<meta>` elements should placed inside the `<head>` element in all the XHTML files. The `viewport` tag scales the page to the device size (`initial-scale=1.0`) but allows the user to zoom the page up to 5x its initial size (`maximum-scale=5.0`). They are optional for Fulcrum partners.
 
@@ -480,23 +526,23 @@ Shifts in primary language in the body text, footnotes, or references should ove
 
 ```
 <html ... lang="en" xml:lang="en">
-	...
-	<body>
-		...
-		<section>
-		<p>Newspapers in the People’s Republic were to 
-		function as communication channels for transmitting 
-		the central Party leaders’ positions and policies 
-		out to the nation’s provinces and counties, and 
-		relaying the conditions and experiences of the local 
-		masses and ground level (<span lang="zh-Hans" 
-		xml:lang="zh-Hans"><i>jiceng</i></span>) cadres back 
-		up to the central Party (A. P. L. Liu 1971; Schurmann 
-		1966).</p>
-		...
-		</section>
-		...
-	</body>
+    ...
+    <body>
+        ...
+        <section>
+        <p>Newspapers in the People’s Republic were to 
+        function as communication channels for transmitting 
+        the central Party leaders’ positions and policies 
+        out to the nation’s provinces and counties, and 
+        relaying the conditions and experiences of the local 
+        masses and ground level (<span lang="zh-Hans" 
+        xml:lang="zh-Hans"><i>jiceng</i></span>) cadres back 
+        up to the central Party (A. P. L. Liu 1971; Schurmann 
+        1966).</p>
+        ...
+        </section>
+        ...
+    </body>
 </html>
 ```
 
@@ -540,18 +586,18 @@ Heading numbers should decrease by one for each subsection. Never skip a heading
 
 ````
 <section role="doc-chapter">
-	<h1>Chapter 1 Democratic Communications Infrastructure, Discourse, Policy, and Advocacy</h1>
-	...
-	<section>
-		<h2>The Discourse of “Net Neutrality”</h2>
-		...
-		<section>
-		<h3>On "Net Neutrality"</h3>
-		...
-		</section>
-		...
-	</section>
-	...
+    <h1>Chapter 1 Democratic Communications Infrastructure, Discourse, Policy, and Advocacy</h1>
+    ...
+    <section>
+        <h2>The Discourse of “Net Neutrality”</h2>
+        ...
+        <section>
+        <h3>On "Net Neutrality"</h3>
+        ...
+        </section>
+        ...
+    </section>
+    ...
 </section>
 ````
 
@@ -566,11 +612,11 @@ The title and subtitle are contained in separate elements, but grouped in a head
 
 ````
 <section id="pref" aria-labelledby="headerpref01">      
-	<header id="headerpref01">
-		<h1 class="ctfm">Preface</h1>
-		<p role="doc-subtitle" class="cs">Navigating Deep Waters</p>
-	</header>
-	...
+    <header id="headerpref01">
+        <h1 class="ctfm">Preface</h1>
+        <p role="doc-subtitle" class="cs">Navigating Deep Waters</p>
+    </header>
+    ...
 </section>
 ````
 
@@ -586,9 +632,9 @@ When the subtitle is contained within the same heading element as the title, ide
 
 ````
 <section role="doc-chapter">
-	<h1>Chapter 1  
+    <h1>Chapter 1  
         <span role="doc-subtitle">Democratic Communications Infrastructure, Discourse, Policy, and Advocacy</span>
-	</h1>
+    </h1>
 ````
 
 #### Required For
@@ -604,29 +650,29 @@ Column heads and row heads must be defined as headers with appropriate scope att
 
 ```
 <table>
-	<thead>
-	<tr>
-		<td></td>
-		<th scope="col" class="tch">Emigration tax revenue<a id="tn2r" class="tnref" href="Kreutzmuller_Dispossession-0012.xhtml#tn2">a</a></th>
-		<th scope="col" class="tch">Implied capital</th>
-		<th scope="col" class="tch">Estimated transfer quota</th>
-		<th scope="col" class="tch">Taxed / Immobilized</th>
-		<th scope="col" class="tch">Implicit emigration tax rate</th>
-		<th scope="col" class="tch">For comparison: Bajohr (2003)</th>
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-		<th scope="row"><p class="td">1933</p></th>
-		<td><p class="td">17.602</p></td>
-		<td><p class="td">70.408</p></td>
-		<td><p class="td">50%</p></td>
-		<td><p class="td">44.005</p></td>
-		<td><p class="td">62.5%</p></td>
-		<td><p class="td">20%</p></td>
-	</tr>
-	...
-	</tbody>
+    <thead>
+    <tr>
+        <td></td>
+        <th scope="col" class="tch">Emigration tax revenue<a id="tn2r" class="tnref" href="Kreutzmuller_Dispossession-0012.xhtml#tn2">a</a></th>
+        <th scope="col" class="tch">Implied capital</th>
+        <th scope="col" class="tch">Estimated transfer quota</th>
+        <th scope="col" class="tch">Taxed / Immobilized</th>
+        <th scope="col" class="tch">Implicit emigration tax rate</th>
+        <th scope="col" class="tch">For comparison: Bajohr (2003)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row"><p class="td">1933</p></th>
+        <td><p class="td">17.602</p></td>
+        <td><p class="td">70.408</p></td>
+        <td><p class="td">50%</p></td>
+        <td><p class="td">44.005</p></td>
+        <td><p class="td">62.5%</p></td>
+        <td><p class="td">20%</p></td>
+    </tr>
+    ...
+    </tbody>
 </table>
 ```
 
@@ -867,15 +913,15 @@ Tag list items with proper list tags to ensure semantic encoding. Do not use oth
 
 ````
 <ul>
-	<li>Credit, consumer, 164</li>
-	<li>Cross-functional contact, 10-11</li>
-	<li>Culture
-	<ul>
-		<li>buyer behavior and, 85</li>
-		<li>defined, 85, 98, 118</li>
+    <li>Credit, consumer, 164</li>
+    <li>Cross-functional contact, 10-11</li>
+    <li>Culture
+    <ul>
+        <li>buyer behavior and, 85</li>
+        <li>defined, 85, 98, 118</li>
 ...
-	</ul>
-	</li>
+    </ul>
+    </li>
 ...
 </ul>
 ````
@@ -951,7 +997,7 @@ Special attention should be paid to epigraphs that have attribution or bylines. 
 
 ```
 <figure>  
-	<blockquote role="doc-epigraph" class="epigraph">  
+    <blockquote role="doc-epigraph" class="epigraph">  
        <p class="eps"><span lang="kyh" xml:lang="kyh">“kúna vúra kúkuum ôok tá ni’uum, pananífyiivshas nimúsarukti, kári vúra pakáruk váhi ni’aapúnmiikti.”</span></p>  
     </blockquote>  
     <figcaption>  
@@ -1224,21 +1270,21 @@ If multiple images and captions are to be grouped together, then nested `figure`
 <figure role="group" aria-labelledby="fig1">
     <figure role="group" aria-labelledby="fig11">
         <img src="castle-etching.jpg"
-	        alt="The castle has one tower, and a tall wall around it.">
+            alt="The castle has one tower, and a tall wall around it.">
         <figcaption id="fig11">
         Charcoal on  wood. Anonymous, circa 1423.
         </figcaption>
     </figure>
     <figure role="group" aria-labelledby="fig12">
         <img src="castle-painting.jpg"
-	        alt="The castle now has two towers and two walls.">
+            alt="The castle now has two towers and two walls.">
         <figcaption id="fig12">
         Oil-based paint on canvas. Eloisa Faulkner, 1756.
         </figcaption>
     </figure>
     <figure role="group" aria-labelledby="fig13">
         <img src="castle-fluro.jpg"
-	        alt="The castle lies in ruins, the original tower all that remains in one piece.">
+            alt="The castle lies in ruins, the original tower all that remains in one piece.">
         <figcaption id="fig13">
         Film photograph. <span lang="fr">Séraphin Médéric Mieusement</span>, 1936.
         </figcaption>
@@ -1266,21 +1312,21 @@ Below is an example of Fulcrum's preferred technique of extended description wit
 
 ```
 <figure id="f131" class="figure">
-      	<p class="fig"><img src="images/Fig13_01.png" alt="Three pie charts illustrating the breakdowns of races, nationalities, and genders of composers of color in the most common music theory textbooks." aria-details="rFigure13.1" /></p>
-      	<figcaption>
-        	<p class="figh"><span class="fighn">Figure 13.1:</span> Composers of Color in the most common music theory textbooks</p>
-      	</figcaption>	
+        <p class="fig"><img src="images/Fig13_01.png" alt="Three pie charts illustrating the breakdowns of races, nationalities, and genders of composers of color in the most common music theory textbooks." aria-details="rFigure13.1" /></p>
+        <figcaption>
+            <p class="figh"><span class="fighn">Figure 13.1:</span> Composers of Color in the most common music theory textbooks</p>
+        </figcaption>	
 </figure>
 <p class="image-right_back"><a id="rFigure13.1" href="ExtDesc_Figure13_1.xhtml#Figure13.1">Follow for extended description of Figure 13.1</a></p>
-```
 
+```
 If a `figure` contains 2 or more images with extended descriptions, the `figure` should either be A) broken into multiple `figure` elements, or, in the case where they share the caption, B) use nested figures with the description link after the child `figure`.
 
 ```
 <figure role="group" aria-labelledby="fig1">
     <figure role="group" aria-labelledby="fig11">
         <img src="castle-etching.jpg"
-	        alt="The castle has one tower, and a tall wall around it."/>
+            alt="The castle has one tower, and a tall wall around it."/>
         <figcaption id="fig11">
         Charcoal on  wood. Anonymous, circa 1423.
         </figcaption>
@@ -1288,7 +1334,7 @@ If a `figure` contains 2 or more images with extended descriptions, the `figure`
     <p class="image-right_back"><a id="rlongdescription_01" href="Extended_desc01.xhtml#ilongdescription_01">Follow for extended description for Fig. 1</a></p>    
     <figure role="group" aria-labelledby="fig12">
         <img src="castle-painting.jpg"
-	        alt="The castle now has two towers and two walls."/>
+            alt="The castle now has two towers and two walls."/>
         <figcaption id="fig12">
         Oil-based paint on canvas. Eloisa Faulkner, 1756.
         </figcaption>
@@ -1296,7 +1342,7 @@ If a `figure` contains 2 or more images with extended descriptions, the `figure`
     <p class="image-right_back"><a id="rlongdescription_02" href="Extended_desc02.xhtml#ilongdescription_02">Follow for extended description for Fig. 2</a></p>
     <figure role="group" aria-labelledby="fig13">
         <img src="castle-fluro.jpg"
-	        alt="The castle lies in ruins, the original tower all that remains in one piece."/>
+            alt="The castle lies in ruins, the original tower all that remains in one piece."/>
         <figcaption id="fig13">
         Film photograph. <span lang="fr">Séraphin Médéric Mieusement</span>, 1936.
         </figcaption>
@@ -1314,41 +1360,41 @@ The extended description is contained within a separate XHTML file placed outsid
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en-US" xml:lang="en-US">
-	<head>
-    	<meta name="viewport" content="initial-scale=1.0,maximum-scale=5.0" />
-    	<title>Extended Description for Figure 13.1</title>
-    	<link rel="stylesheet" type="text/css" href="default.css" />
-    	<meta charset="UTF-8" />
-	</head>
-	<body>
-    	<section aria-labelledby="Figure13.1">
-        	<h1 class="chtitlel" id="Figure13.1">Extended Description for Figure 13.1</h1>
-        	<div>
-            	<p class="imgl"><img src="images/Fig13_01.png" alt="" role="presentation" /></p>
-            	<p>The three pie charts present the following data. Race of Composers of Color (Black, 90%) and (Asian, 10%). Genders of Composers of Color (men, 85%) and (women 15%). Nationalities of Composers of Color (American, 85%), (Canadian, 2%), (Brazilian, 5%), (Chinese, 2% ), (French, 2%), (English, , 2%), and (Japanese, 2%). Values are estimated.
-		</p>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0,maximum-scale=5.0" />
+        <title>Extended Description for Figure 13.1</title>
+        <link rel="stylesheet" type="text/css" href="default.css" />
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <section aria-labelledby="Figure13.1">
+            <h1 class="chtitlel" id="Figure13.1">Extended Description for Figure 13.1</h1>
+            <div>
+                <p class="imgl"><img src="images/Fig13_01.png" alt="" role="presentation" /></p>
+                <p>The three pie charts present the following data. Race of Composers of Color (Black, 90%) and (Asian, 10%). Genders of Composers of Color (men, 85%) and (women 15%). Nationalities of Composers of Color (American, 85%), (Canadian, 2%), (Brazilian, 5%), (Chinese, 2% ), (French, 2%), (English, , 2%), and (Japanese, 2%). Values are estimated.
+        </p>
 
-            	<p class="image-right_back"><a role="doc-backlink" href="LucasPruett-0029.xhtml#rFigure13.1">Navigate back to Figure 13.1</a></p>
-        	</div>
-    	</section>
-	</body>
+                <p class="image-right_back"><a role="doc-backlink" href="LucasPruett-0029.xhtml#rFigure13.1">Navigate back to Figure 13.1</a></p>
+            </div>
+        </section>
+    </body>
 </html>
 ```
 In the `content.opf` file, place the XHTML description file at the end of the spine and keep the extended description out of the linear flow of the EPUB contents as in the example below:
 
 ```
 <spine toc="ncx">
-	<itemref idref="LucasPruett-0001"/>
-	<itemref idref="LucasPruett-0002"/>
-	<itemref idref="LucasPruett-0003"/>
-	<itemref idref="LucasPruett-0004"/>
-	<itemref idref="LucasPruett-0005"/>
-	<itemref idref="LucasPruett-0006"/>
-	<itemref idref="LucasPruett-0007"/>
+    <itemref idref="LucasPruett-0001"/>
+    <itemref idref="LucasPruett-0002"/>
+    <itemref idref="LucasPruett-0003"/>
+    <itemref idref="LucasPruett-0004"/>
+    <itemref idref="LucasPruett-0005"/>
+    <itemref idref="LucasPruett-0006"/>
+    <itemref idref="LucasPruett-0007"/>
 
        ...
 
-	<itemref idref="ExtDesc_Figure13_1" linear="no"/>
+    <itemref idref="ExtDesc_Figure13_1" linear="no"/>
   </spine>
 ```
 
@@ -1653,14 +1699,14 @@ Note that `doc-endnote` role is used to identify the section containing the endn
 
 ````
 <section epub:type="endnotes" role="doc-endnotes">
-	<h2>Notes</h2>
-	<ol role="list">
-		<li role="listitem" class="endnote" epub:type="endnote" id="en172">
-			<p class="en"><a role="doc-backlink" class="ennum" href="LucasPruett-0021.xhtml#en172r">1</a>.  The 2016 annual meeting of the American Musicological Society included a panel discussion entitled “Sexual Violence on Stage,” later published as a colloquy in the <i>Journal of the American Musicological Society</i> 71, no. 1 (2018): 213–53. Operas discussed included Mozart’s <i>Don Giovanni</i>, Floyd’s <i>Susannah</i>, Monteverdi’s <span lang="it" xml:lang="it"><i>L’Arianna</i></span>, Britten’s <i>The Rape of Lucretia</i>, Mazzoli’s <i>Breaking the Waves,</i> and Sankaram’s <i>Thumbprint</i>.
-			</p>  
+    <h2>Notes</h2>
+    <ol role="list">
+        <li role="listitem" class="endnote" epub:type="endnote" id="en172">
+            <p class="en"><a role="doc-backlink" class="ennum" href="LucasPruett-0021.xhtml#en172r">1</a>.  The 2016 annual meeting of the American Musicological Society included a panel discussion entitled “Sexual Violence on Stage,” later published as a colloquy in the <i>Journal of the American Musicological Society</i> 71, no. 1 (2018): 213–53. Operas discussed included Mozart’s <i>Don Giovanni</i>, Floyd’s <i>Susannah</i>, Monteverdi’s <span lang="it" xml:lang="it"><i>L’Arianna</i></span>, Britten’s <i>The Rape of Lucretia</i>, Mazzoli’s <i>Breaking the Waves,</i> and Sankaram’s <i>Thumbprint</i>.
+            </p>  
         </li>
-		...
-	</ol>
+        ...
+    </ol>
 </section>
 ````
 
@@ -1676,8 +1722,8 @@ In this example a class `none` is applied to the `<ol>` to prevent automatic num
 
 ````
 <ol class="none">  
-	<li><p epub:type="footnote" role="doc-footnote" id="p_3"><a role="doc-backlink" href="07_Preface.xhtml#not_1" id="pre_fn1">1</a>. Karla Jay, <i>Tales of a Lavender Menace: A Memoir of Liberation</i> (New York: Basic Books, 2000), 143.</p></li>
-	...
+    <li><p epub:type="footnote" role="doc-footnote" id="p_3"><a role="doc-backlink" href="07_Preface.xhtml#not_1" id="pre_fn1">1</a>. Karla Jay, <i>Tales of a Lavender Menace: A Memoir of Liberation</i> (New York: Basic Books, 2000), 143.</p></li>
+    ...
 </ol>
 ````
 
@@ -1692,12 +1738,12 @@ Bibliographies should be structured using sections and lists to simplify access 
 
 ```
 <section role="doc-bibliography">  
-	<h3 id="eh0602" class="eh">Works Cited</h3>  
+    <h3 id="eh0602" class="eh">Works Cited</h3>  
     <ol role="list" class="references">  
-	    <li class="rf" role="listitem">Afzal-Khan, Fawzia. “The Politics of Pity and the Individual Heroine Syndrome: Mukhtaran Mai and Malala Yousafzai of Pakistan.” <i>Performing Islam</i> 4, no. 2 (2015): 151–71.</li>  
-	    <li class="rf" role="listitem">Baranello, Micaela. “When Cries of Rape are Heard in Opera Halls.” <i>New York Times</i>, July 16, 2015.</li>
-	    ...
-	</ol>
+        <li class="rf" role="listitem">Afzal-Khan, Fawzia. “The Politics of Pity and the Individual Heroine Syndrome: Mukhtaran Mai and Malala Yousafzai of Pakistan.” <i>Performing Islam</i> 4, no. 2 (2015): 151–71.</li>  
+        <li class="rf" role="listitem">Baranello, Micaela. “When Cries of Rape are Heard in Opera Halls.” <i>New York Times</i>, July 16, 2015.</li>
+        ...
+    </ol>
 </section>    
 ```
 
@@ -1711,14 +1757,14 @@ Indexes should be structured using sections and lists to simplify access to the 
 
 ```
 <section id="index" class="chapter" aria-labelledby="headerindex01" epub:type="index" role="doc-index">      
-	<header id="headerindex01">
-		<h1 class="ctbm">Index</h1>      
-	</header>      
-	<ul class="index list-unstyled">
-		<li id="in001" class="inf"><i>1619 Project</i>. <i>See</i> <a class="xref" href="LucasPruett-0033.xhtml#in163">Hannah-Jones, Nikole</a></li>
-		<li id="in002" class="in"><i>20 Feet from Stardom</i> (documentary), <a class="xref" href="LucasPruett-0017.xhtml#p47">47</a></li>        
-		...
-	</ul>
+    <header id="headerindex01">
+        <h1 class="ctbm">Index</h1>      
+    </header>      
+    <ul class="index list-unstyled">
+        <li id="in001" class="inf"><i>1619 Project</i>. <i>See</i> <a class="xref" href="LucasPruett-0033.xhtml#in163">Hannah-Jones, Nikole</a></li>
+        <li id="in002" class="in"><i>20 Feet from Stardom</i> (documentary), <a class="xref" href="LucasPruett-0017.xhtml#p47">47</a></li>        
+        ...
+    </ul>
 </section>
 ```
 
@@ -1804,18 +1850,122 @@ The reason for the metadata inclusion is to provide information so that Fulcrum 
 | ---------- | ---------------------------- |
 | No         | No, but strongly recommended |
 
-## 1.24 CSS Stylesheet
+## 1.24 Facing Page Translation
+Facing page translation, or, the display of two versions of the same text in different languages side-by-side to each other on a single page in a Reading System, can be achieved in the Fulcrum Reader through a combination of distinct XHTML encoding, custom CSS, and reading settings in the OPF file. 
 
-### 1.24.1 Standard CSS Stylesheets
+**NOTE:** This does not guarantee other reading systems will correctly render a side-by-side display and may only function properly within the Fulcrum Reader.
+
+### 1.24.1 XHTML Encoding
+Content from each version should be sectioned by natural breaks in the content. For example, heading levels from the original and translated materials should be wrapped within the same grid container with a CSS class of `facing-page-grid-container` and child elements with a CSS class of `grid-child`. Likewise, each paragraph of the original and translated materials should be wrapped within their own grid container.
+
+Special CSS classes are added to `<div>` elements to enable a grid layout of the XHTML content. Content should be encoded as follows:
+
+````
+<!-- Headings from both versions grouped together -->
+<!-- The first item will be displayed on the left -->
+
+<div class="facing-page-grid-container">
+    <div class="facing-page-grid-child" lang="fr" xml:lang="fr">
+        <h4>Première partie</h4>
+    </div>
+    <div class="facing-page-grid-child" lang="en-US" xml:lang="en-US">
+        <h4>Part One</h4>
+    </div>
+</div>
+
+<!-- Paragraphs from both versions grouped together -->
+<!-- The first item will be displayed on the left -->
+
+<div class="facing-page-grid-container" id="para1">
+    <div class="facing-page-grid-child" lang="fr" xml:lang="fr">
+        <p id="paragraph_1">
+            <span class="ParagraphNumber" aria-label="Paragraph #1">[1]</span>
+            La magnificence et la galanterie n’ont jamais paru en France avec tant d’éclat que dans les dernières années du règne de Henri second. Ce Prince était galant, bien fait et amoureux ; quoique sa passion pour Diane de Poitiers, Duchesse de Valentinois, eût commencé il y avait plus de vingt ans, elle n’en était pas moins violente, et il n’en donnait pas des moins éclatants.</p>
+    </div>
+    <div class="facing-page-grid-child" lang="en-US" xml:lang="en-US">
+        <p id="paragraph_en_1">
+            <span class="ParagraphNumber" aria-label="Paragraph #1">[1]</span> 
+            Magnificence and gallantry have never sparkled as brilliantly in France as during the final years of the reign of Henri II. The King was gallant, handsome, and in love; though his romance with Diane de Poitiers, Duchesse de Valentinois, had begun more than twenty years before, his passion was no less violent, and his display of it no less striking.
+        </p>
+    </div>
+</div>
+<div class="facing-page-grid-container" id="para2">
+    <div class="facing-page-grid-child" lang="fr" xml:lang="fr">
+        <p id="paragraph_2">
+            ...
+        </p>
+    </div>
+    <div class="facing-page-grid-child" lang="en-US" xml:lang="en-US">
+        <p id="paragraph_en_2">
+            ...
+        </p>
+    </div>
+</div>
+````
+
+**NOTE:** To meet WCAG 2.2 AA and EPUB Accessibility 1.1 requirements, languages should be indicated using the `lang` and `xml:lang` attributes on the wrapping `<div>`. 
+
+**NOTE:** To aid the reader, it is suggested paragraphs are numbered and visible, but not required. Paragraph or line numbering should be specified on a per-project basis.
+
+#### Required For
+| U-M Vendor | Fulcrum Partner              |
+| ---------- | ---------------------------- |
+| Yes, when applicable         | Yes, when applicable |
+
+### 1.24.2 Custom CSS
+The following CSS should be added to the existing CSS file, or, if desired, added to a new CSS file. It enables a grid layout with two columns.
+
+````
+.facing-page-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 80px;
+}
+
+facing-page-grid-child {
+  text-align: left;
+  width: fit-content;
+  margin: 10px;
+}
+````
+#### Required For
+| U-M Vendor | Fulcrum Partner              |
+| ---------- | ---------------------------- |
+| Yes, when applicable         | Yes, when applicable |
+
+### 1.24.3 Use OPF to force scroll mode in reading system
+To ensure the side-by-side display is maintained in the reading system, the content.opf file should communicate a preferred "scrolling" rendition of the EPUB content to the reading system. The default paginated display of the readind system will likely not maintain a side-by-side display. 
+
+Add the following child to your `<metadata>` in the OPF file (typically named `content.opf`):
+
+````
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:opf="http://www.idpf.org/2007/opf">
+
+    ...
+
+    <meta property="rendition:flow">scrolled-continuous</meta>
+
+    ...
+</metadata>
+````
+#### Required For
+| U-M Vendor | Fulcrum Partner              |
+| ---------- | ---------------------------- |
+| Yes, when applicable         | Yes, when applicable |
+
+
+## 1.25 CSS Stylesheet
+
+### 1.25.1 Standard CSS Stylesheets
 
 The Fulcrum EPUB Specification provides three different CSS files for use in EPUBs. If possible, use one of the following standard CSS files in your EPUB, depending on its conversion process:
 
 - [fulcrum.css](https://github.com/mlibrary/fulcrum-epub-spec/blob/master/fulcrum.css)
-	- A generic CSS file for use in Fulcrum EPUBs
+    - A generic CSS file for use in Fulcrum EPUBs
 - [newgen.css](https://github.com/mlibrary/fulcrum-epub-spec/blob/master/newgen.css)
-	- A CSS file for EPUBs produced by NewGen, adapting Fulcrum styles to NewGen conversion classes.
+    - A CSS file for EPUBs produced by NewGen, adapting Fulcrum styles to NewGen conversion classes.
 - [scribe.css](https://github.com/mlibrary/fulcrum-epub-spec/blob/master/scribe.css)
-	- A CSS file for EPUBs produced through the Scribe Digital Hub, adapting Fulcrum styles to Scribe's conversion classes.
+    - A CSS file for EPUBs produced through the Scribe Digital Hub, adapting Fulcrum styles to Scribe's conversion classes.
 
 Unique styles per book can be added as needed as additional styles at the bottom of these CSS files. If styles are added or an external stylesheet is included, [validate the CSS](https://www.css-validator.org/).
 
@@ -1824,7 +1974,7 @@ Unique styles per book can be added as needed as additional styles at the bottom
 | ---------- | --------------- |
 | Yes        | No              |
 
-### 1.24.2 CSS Units
+### 1.25.2 CSS Units
 
 - Font-size should always be defined in [relative units](https://kb.daisy.org/publishing/docs/wcag/resize-text.html).
 - Do not use fixed values (`mm`, `cm`, `in`, `pt`, or `pc`) in CSS file.
@@ -1836,7 +1986,7 @@ Unique styles per book can be added as needed as additional styles at the bottom
 | ---------- | --------------- |
 | Yes        | No              |
 
-### 1.24.3 Colors
+### 1.25.3 Colors
 
 Ensure sufficient contrast so that text is legible, links are distinguishable from text, and do not rely on color to impart information, as not all users will be able to see the colors or perceive the differences. For example, if the color of a text provides a meaning to the content, then there should be some alternate method to convey the information to an assistive technology user. When unsure, check contrast using [WebAIM's Contrast Checker](https://webaim.org/resources/contrastchecker/).
 
@@ -1845,7 +1995,7 @@ Ensure sufficient contrast so that text is legible, links are distinguishable fr
 | ---------- | ---------------------------- |
 | Yes        | No, but strongly recommended |
 
-### 1.24.4 Background Images
+### 1.25.4 Background Images
 
 If background images are to be included in the EPUB, setting the contrast between the background colors and images will help readers who have difficulty in distinguishing contrasts. Color contrast of 4:5:1 is the best practice followed in the industry.
 
@@ -1854,7 +2004,7 @@ If background images are to be included in the EPUB, setting the contrast betwee
 | ---------- | ---------------------------- |
 | Yes        | No, but strongly recommended |
 
-### 1.24.5 Hidden Content
+### 1.25.5 Hidden Content
 
 There should not be any hidden content available in the EPUB files.
 
@@ -1863,7 +2013,7 @@ There should not be any hidden content available in the EPUB files.
 | ---------- | ---------------------------- |
 | Yes        | No, but strongly recommended |
 
-### 1.24.6 CSS Property Reference
+### 1.25.6 CSS Property Reference
 
 EPUB 3 user agents that visually render content may provide support for the CSS properties listed below, but inclusion is optional. Properties not listed may still be used (e.g., from evolving CSS 3 modules), but content authors should use due diligence and assess the impact on rendering and accessibility when using such properties.
 
@@ -1973,7 +2123,7 @@ type.</p></li>
 | ---------- | ---------------------------- |
 | Yes        | No, but strongly recommended |
 
-### 1.24.7 CSS 2.1 Pseudo-Classes
+### 1.25.7 CSS 2.1 Pseudo-Classes
 Please refer to the [DAISY Accessible Publishing Knowledge Base for the most up to date pseudo-classes](https://kb.daisy.org/publishing/docs/css/reference.html#css21classes) allowed in EPUB.
 
 #### Required For
@@ -1981,7 +2131,7 @@ Please refer to the [DAISY Accessible Publishing Knowledge Base for the most up 
 | ---------- | ---------------------------- |
 | Yes        | No, but strongly recommended |
 
-### 1.24.8 CSS 2.1 Pseudo-Elements
+### 1.25.8 CSS 2.1 Pseudo-Elements
 Please refer to the [DAISY Accessible Publishing Knowledge Base for the most up to date pseudo-elements](https://kb.daisy.org/publishing/docs/css/reference.html#css21elements) allowed in EPUB.
 
 #### Required For
@@ -1989,7 +2139,7 @@ Please refer to the [DAISY Accessible Publishing Knowledge Base for the most up 
 | ---------- | ---------------------------- |
 | Yes        | No, but strongly recommended |
 
-## 1.25 Fonts
+## 1.26 Fonts
 
 If the input EPUB file contains fonts, then retain them in the output EPUB3 files. For web-ready PDF input files, do not embed fonts, unless otherwise requested by customer.
 
@@ -1998,7 +2148,7 @@ If the input EPUB file contains fonts, then retain them in the output EPUB3 file
 | ---------- | --------------- |
 | Yes        | No              |
 
-## 1.26 Formatting
+## 1.27 Formatting
 
 Retain as much as possible of the formatting of the source EPUB and PDF files in the output EPUB3 file.
 
@@ -2007,7 +2157,7 @@ Retain as much as possible of the formatting of the source EPUB and PDF files in
 | ---------- | --------------- |
 | Yes        | No              |
 
-## 1.27 Boxed Text
+## 1.28 Boxed Text
 
 Treat as text + images in reading order.
 
@@ -2016,7 +2166,7 @@ Treat as text + images in reading order.
 | ---------- | --------------- |
 | Yes        | No              |
 
-## 1.28 Marginalia and Sidebars
+## 1.29 Marginalia and Sidebars
 
 Treat as text + images in reading order.
 
@@ -2025,7 +2175,7 @@ Treat as text + images in reading order.
 | ---------- | --------------- |
 | Yes        | No              |
 
-## 1.29 Reading Order
+## 1.30 Reading Order
 
 Retain the reading order of the EPUB source files in the EPUB3 output. For the PDF source files, then match the source reading order in the EPUB3 output.
 
@@ -2034,7 +2184,7 @@ Retain the reading order of the EPUB source files in the EPUB3 output. For the P
 | ---------- | --------------- |
 | Yes        | No              |
 
-## 1.30 DPUB ARIA Semantics
+## 1.31 DPUB ARIA Semantics
 
 Apply DPUB-ARIA semantic attributes according to the type of content.
 
@@ -2045,7 +2195,7 @@ Refer to the [DAISY Accessible Publishing Knowledge Base DPUB-ARIA guidelines](h
 | ---------- | --------------- |
 | Yes        | No              |
 
-## 1.31 Accessibility
+## 1.32 Accessibility
 
 While much of the guidance in the Fulcrum EPUB Specification is aimed at ensuring an accessible EPUB3 file, in general applying the following points will help make the output accessible.
 
@@ -2165,6 +2315,11 @@ While much of the guidance in the Fulcrum EPUB Specification is aimed at ensurin
 <td>FULCRUMOPS-234 - indicate what is recommended vs. required and for whom; updates to extended description best practices; additional updates to match accessibility requirements; changes to EPUB specification; support for YouTube embeds; and more</td>
 <td>J McGlone and T Belch</td>
 </tr>
+<tr class="even">
+<td>3.1</td>
+<td>September 2025</td>
+<td>Adds examples of facing page translation support for EPUB; add list of figures requirements</td>
+<td>J McGlone</td>
+</tr>
 </tbody>
 </table>
-
