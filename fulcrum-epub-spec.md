@@ -678,9 +678,9 @@ Column heads and row heads must be defined as headers with appropriate scope att
 
 
 ### 1.13.2 Large tables
-If a table exceeds more than 8 columns or its layout could be compromised in its presentation on a Reading System, it is acceptable to present the table as an image. However, in such cases you must also provide a link to an XHTML file outside of the linear flow of the EPUB that contains the HTML version of the large table. Users with text-to-speech playback available will be able to navigate the markup regardless of the rendering quality. 
+If a table exceeds more than 8 columns or its layout could be compromised in its presentation on a Reading System, it is acceptable to present the table as an image. However, in such cases you must also provide an extended description of the table via a link to an XHTML file outside of the linear flow of the EPUB. The extended description should contain, in order of preference, either the HTML version of the large table or a summary and description of the data within the table. Users with text-to-speech playback available will be able to navigate the markup regardless of the rendering quality. 
 
-See the technique in section 1.15.4 for providing an extended description of an image as guidance for including images of tables.
+See the technique in section [1.17.7](#1177-extended-description-via-hyperlink) for providing an extended description of an image as guidance for including images of tables.
 
 #### Required For
 | U-M Vendor | Fulcrum Partner |
@@ -1193,6 +1193,19 @@ An empty `alt` attribute is complimented by the `role` presentation to indicate 
 | Yes | No, but strongly recommended |
 
 ### 1.17.5 Cover Image
+Cover images should appear as the first page of an EPUB and always be included inside the linear flow of the spine. They should be encoded with appropriate `aria` and `epub:type` attribute values and include alt text.
+
+```
+<section id="cvi" class="chapter" epub:type="cover">
+  <div class="cover">
+    <img src="images/Leefront.jpg" role="doc-cover" alt="Cover: Unsettling Catan: Detached Design in Eurogames by J. Rey Lee"/>
+  </div>
+</section>
+```
+Cover alt text should follow the following template to ensure consistency across titles:
+
+"Cover: [Title: Subtitle] by [Author(s)]"
+"Cover: [Title: Subtitle] edited by [Editor(s)]"
 
 <table>
 <tbody>
@@ -1231,6 +1244,10 @@ An empty `alt` attribute is complimented by the `role` presentation to indicate 
 &lt;/spine></pre> 
 
 <p>If the cover XHTML file is defined outside of the linear flow, the EPUB will not work in the Fulcrum Reading System.</p></td>
+</tr>
+<tr>
+<td style="vertical-align:top"><p><b>1.17.5.8</b></p></td>
+<td style="vertical-align:top"><p>In format conversion from scanned page image to reflowable EPUB, inclusion of the back cover is not necessary.</p></td>
 </tr>
 </tbody>
 </table>
