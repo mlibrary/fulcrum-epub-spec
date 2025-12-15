@@ -1,9 +1,9 @@
 /*
-  // Version 2.0
+  // Version 2.1
   // OEPS filename: default.css
-  // Last update: Dec 12 2025
+  // Last update: Dec 15 2025
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
-  // to Scribe classes.
+  // to Scribe classes. Custom overrides start at line 1755.
 */
 
 /**Scribe Default CSS**/
@@ -1771,7 +1771,6 @@ a:hover, a:focus, a:active {
   color: #587abc;
 }
 a.enref, a.fnref, a.tnref, a.tnnum  {
-  font-size: .5em;
   line-height: 1.2;
   border: 0;
   position: relative;
@@ -1791,7 +1790,6 @@ a.ennum:hover, a.ennum:active, a.ennum:focus {
 a.fn, .fn {font-size:.8em; text-indent: -1em; text-align:left; text-decoration: none;}
 a.fn:hover, a.fn:active, a.fn:focus {text-decoration: underline;}
 a.footnote, a.endnote {
- font-size: .6em;
  border: 0;
  position: relative;
  display: inline-block;
@@ -1838,7 +1836,6 @@ blockquote, .blockquote {
   height: auto !important;
 }
 .figcap, .figcap1, .figh, .figh1, .fign, figcaption, .figatr {
-  font-size: .8rem;
   text-align: left;
   text-indent: 0em;
   font-weight: 600;
@@ -1869,10 +1866,9 @@ h1,h2,h3,h4,h5,h6{
  font-weight:600;
  color:inherit;
 }
-h4, h5, h6, p, ul, ol, li, blockquote {
+h4, h5, h6, blockquote {
   font-size: .95em;
   line-height: 1.6em;
-  margin-bottom: 0.8em;
 }
 hr.sec-break, hr {position: absolute !important; clip: rect(1px,1px,1px,1px) !important; clip: rect(1px,1px,1px,1px) !important; height: 1px !important; width: 1px !important; overflow: hidden !important; padding: 0 !important; margin: 0 !important; }
 img {
@@ -1885,6 +1881,7 @@ ol.list-unstyled {list-style-type: none;}
 p {
   orphans:3;
   widows: 3;
+  text-align: left;
 }
 sub {font-size: .6em;}
 sup {font-size: .6em;}
@@ -1893,7 +1890,8 @@ sup > a {
     font-weight: bold;
 }
 
-
+/*Table of Contents*/
+.tocpt { font-size: initial; font-weight: normal;}
 /*Frontmatter Paragraph Styles*/
 /**Title Page**/
 .bk {font-size:2em; line-height: 1.25;}
@@ -1936,12 +1934,12 @@ body section section:nth-of-type(1) h4 {
 .serf {margin-bottom: 0; font-style: italic;}
 .ser1 {font-size: 90%; margin-top: 0; margin-bottom: 0; text-indent: 1em;}
 /*Part, Chapter, Head Level Styles*/
-span.cn {font-size:100%; text-align:center; text-indent:0; font-weight: bold; margin-top:1%; display:block;}
-span.cs {text-align:center; text-indent:0; font-size:100%; font-weight: bold; margin-bottom:2em; margin-top: 1em; display:block;}
-span.ct {text-align:center; text-indent:0; font-size:100%; margin-top:1em; margin-bottom: 1em; display: block; line-height:1.1em;}
-span.ctbm {text-align:center; text-indent:0; font-size:100%; margin-top:1em; margin-bottom: 1em; display: block; line-height:1.1em;}
-span.pn {font-size:140%; text-align:center; text-indent:0; margin-top:10%; display:block;}
-span.pt {font-size:100%; text-align:center; font-weight:bold; text-indent:0; margin-top:1em; margin-bottom: 1em; display: block; line-height:1.1em;}
+span.cn { text-align:center; text-indent:0; font-weight: bold; margin-top:1%; display:block;}
+span.cs {text-align:center; text-indent:0;  font-weight: bold; margin-bottom:2em; margin-top: 1em; display:block;}
+span.ct {text-align:center; text-indent:0;  margin-top:1em; margin-bottom: 1em; display: block; line-height:1.1em;}
+span.ctbm {text-align:center; text-indent:0;  margin-top:1em; margin-bottom: 1em; display: block; line-height:1.1em;}
+span.pn {text-align:center; text-indent:0; margin-top:10%; display:block;}
+span.pt {font-size:140%; text-align:center; font-weight:bold; text-indent:0; margin-top:1em; margin-bottom: 1em; display: block; line-height:1.1em;}
 .serah {margin-top: .75em; margin-bottom: .5em; text-align:left; text-indent: 0; font-weight: bold;}
 h2.serah {font-size: 1em; margin-top: .75em; margin-bottom: .5em; text-align:left; text-indent: 0; font-weight: bold;}
 /*Main Body Paragraph Styles*/
@@ -1972,6 +1970,11 @@ h2.serah {font-size: 1em; margin-top: .75em; margin-bottom: .5em; text-align:lef
 .sli {text-align:left; text-indent: 1em; margin-bottom: 0;}
 .slif {text-align:left; text-indent: 1em; margin-top: 1em; margin-bottom: 0;}
 .slil {text-align:left; text-indent: 1em; margin-bottom: 1em;}
+/*Notes Paragraph Stsyles*/
+.ed, .edf, .edl, .eds, .enhn, .en, .enp, .fn, .fnp, .ntcon,
+.ntbq, .ntbqf, .ntbql, .ntbqs, .ntbqt, .nteq, .ntnl, .ntnlf,
+.ntnll, .ntnls, .ntul, .ntulf, .ntull, .ntuls,
+.ntsl, .ntslf, .ntsll, .ntsls, .nttd	{font-size: 95%;}
 /*Blockquote*/
 .bqulf { margin-left: .5em; margin-right:.5em; margin-top: 1em;}
 .bqull { margin-left: .5em; margin-right: .5em; text-indent: -1em; margin-bottom: 1em;}
@@ -2169,7 +2172,7 @@ table.code > tbody > tr > td > pre {
 }
 /*Cross-Reference Character Styles**/
 .page {
-    font-size: 75%;
+    font-size: 80%;
     color: #666666;
     text-decoration: none;
 }
