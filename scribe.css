@@ -1926,7 +1926,7 @@ body section section:nth-of-type(1) h4 {
   */
 }
 /*Structure Divisions*/
-.bkbk1, .pnpt, .unut, .cnct	{font-size: .95em;}
+.bkbk1, .pnpt, .unut, .cnct	{font-size: 150%;}
 .senseline { font-size: 0.95em;}
 /*Series*/
 .ser {margin-bottom: 0; font-style: italic;}
