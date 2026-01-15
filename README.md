@@ -1,5 +1,5 @@
 # Fulcrum EPUB Specification
-The Fulcrum EPUB Specification is designed to help ebook production vendors and publishers create EPUB files compatible with the Fulcrum platform's Reading System. This specification does not repeat conformance requirements contained in the official EPUB specification. However, requirements and techniques regarding file and directory structure, naming conventions, treatments for images, time-based media, navigation, metadata, accessibility, HTML and other such details are included in this specification.
+The Fulcrum EPUB Specification is designed to help ebook production vendors and publishers create EPUB files compatible with the Fulcrum platform's Reading System and conform to [WCAG AA](https://www.w3.org/WAI/WCAG2AA-Conformance) and [EPUB Accessibility](https://www.w3.org/TR/epub-a11y-11/) requirements. This specification does not repeat conformance requirements contained in the official EPUB specification or others. However, requirements and techniques regarding file and directory structure, naming conventions, treatments for images, time-based media, navigation, metadata, accessibility, HTML and other such details are included in this specification.
 
 Wherever possible, the Fulcrum EPUB Specification follows the recommendations and techniques in the [DAISY Accessible Publishing Knowledge Base](http://kb.daisy.org/publishing/docs/) but offers scholarly monograph specific examples or techniques Fulcrum prefers.
 
@@ -213,6 +213,7 @@ When converting backlist titles from PDF to EPUB3, use the following table a gui
 | Parts/Chapters                | All Heading Levels                       |
 | Graphics + Captions           | Image + Text                             |
 | Tables + Captions             | Text                                     |
+| Tables with 8 or more columns | Image + Text in Extended Description     |
 | Sidebars                      | Text                                     |
 | Display Math                  | MathML                                   |
 | In-line Math                  | Text (if keyable) / MathML (non-keyable) |
@@ -227,8 +228,8 @@ When converting backlist titles from PDF to EPUB3, use the following table a gui
 | About the Author              | Text                                     |
 | Acknowledgements              | Text                                     |
 | Copyright Page                | Text                                     |
-| Table of Contents             | Bi-directional                           |
-| Lists of Tables/Figs, etc.    | Text with bi-directional links           |
+| Table of Contents             | Text with links                          |
+| Lists of Tables/Figs, etc.    | Text with links                          |
 | Dedications/Epigraphs         | Text                                     |
 | Foreword/Introduction/Preface | Text                                     |
 | References/Bibliography       | Text                                     |
@@ -240,7 +241,7 @@ When converting backlist titles from PDF to EPUB3, use the following table a gui
 ### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No |
+| Yes | Yes |
 
 ## 1.3 File Name
 The EPUB3 output file name will be the 13-digit ISBN number of the same input file name.
@@ -394,7 +395,7 @@ EPUB that include accessibility conformance and certification information must a
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No, but strongly recommended |
+| Yes | Yes |
 
 ### 1.7.2 ONIX Accessibility Metadata
 
@@ -430,7 +431,7 @@ In the `nav epub:type="contents"`, typically in the `toc.xhtml` file, include th
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No, but strongly recommended |
+| Yes | Yes |
 
 ### 1.8.2 Landmarks
 In the  `<nav epub:type="landmarks">`, typically in the `toc.xhtml` file, include the following EPUB sections as follows (if section is applicable):
@@ -448,7 +449,7 @@ In the  `<nav epub:type="landmarks">`, typically in the `toc.xhtml` file, includ
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No, but strongly recommended |
+| Yes | Yes |
 
 ### 1.8.3 Page List
 If a print equivalent exists and page breaks are indicated within EPUB, include a page list in the `nav epub:type="page-list"`, typically in the `toc.xhtml` file, that includes a listing of all pages and links to those pages. See the [DAISY Accessible Publishing Knowledge Base for examples](https://kb.daisy.org/publishing/docs/navigation/pagelist.html).
@@ -456,7 +457,7 @@ If a print equivalent exists and page breaks are indicated within EPUB, include 
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No, but strongly recommended |
+| Yes | Yes |
 
 ### 1.8.4 List of Illustrations: Figures, Tables, Charts
 If a title has 5 or more combined illustrations (figures, tables, charts, etc.) a separate XHTML document with an unstyled ordered list of links to the items should be included in the front matter following the Contents page. Types of content should be grouped together and presented in order of appearance in the title.
@@ -492,7 +493,7 @@ If a title has 5 or more combined illustrations (figures, tables, charts, etc.) 
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No, but strongly recommended |
+| Yes | Yes |
 
 ## 1.9 HTML Meta Header
 The following `<meta>` elements should placed inside the `<head>` element in all the XHTML files. The `viewport` tag scales the page to the device size (`initial-scale=1.0`) but allows the user to zoom the page up to 5x its initial size (`maximum-scale=5.0`). They are optional for Fulcrum partners.
@@ -506,7 +507,7 @@ The following `<meta>` elements should placed inside the `<head>` element in all
 ### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No, but strongly recommended |
+| Yes | Yes |
 
 
 ## 1.10 Language
@@ -551,7 +552,7 @@ Language attribute values must be valid. The [W3C provides guidance on selecting
 ### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No |
+| Yes | Yes |
 
 ## 1.11 HTML Title
 Assigning meaningful titles is a recommended best practice for \<title\> elements in the EPUB. Such titles help all users to find and navigate through the documents, and, are essential for screen reader users.
@@ -624,7 +625,7 @@ The title and subtitle are contained in separate elements, but grouped in a head
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ---------- | --------------- |
-| Yes        | No              |
+| Yes        | Yes             |
 
 ### 1.12.3 Merged heading and subtitle
 
@@ -676,6 +677,10 @@ Column heads and row heads must be defined as headers with appropriate scope att
 </table>
 ```
 
+#### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Yes | Yes |
 
 ### 1.13.2 Large tables
 If a table exceeds more than 8 columns or its layout could be compromised in its presentation on a Reading System, it is acceptable to present the table as an image. However, in such cases you must also provide an extended description of the table via a link to an XHTML file outside of the linear flow of the EPUB. The extended description should contain, in order of preference, either the HTML version of the large table or a summary and description of the data within the table. Users with text-to-speech playback available will be able to navigate the markup regardless of the rendering quality. 
@@ -685,7 +690,7 @@ See the technique in section [1.17.7](#1177-extended-description-via-hyperlink) 
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No |
+| Yes | Yes |
 
 ### 1.13.3 Irregular header
 
@@ -757,7 +762,7 @@ attribute:
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No |
+| Yes | Yes |
 
 ### 1.13.4 Complex headings
 
@@ -844,7 +849,7 @@ Use `scope="col"` to make the start destinations the column headers and
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No |
+| Yes | Yes |
 
 ### 1.13.5 Layered headings
 
@@ -931,7 +936,7 @@ Excerpt from: *Core Concepts of Marketing* --- John Burnett
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No |
+| Yes | Yes |
 
 ### 1.14.2 Definition list
 
@@ -964,7 +969,7 @@ Excerpt from: *Core Concepts of Marketing* --- John Burnett
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No |
+| Yes | Yes |
 
 ### 1.14.3 Items requiring list encoding
 In addition to lists appearing in body content, other recurring content that must be encoded as a list includes:
@@ -980,7 +985,7 @@ In addition to lists appearing in body content, other recurring content that mus
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No |
+| Yes | Yes |
 
 ## 1.15 Epigraphs, Dialogue, Poetry
 
@@ -1019,7 +1024,7 @@ All the cross-references such as notes and footnotes are two-way linked. Other r
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No |
+| Yes | Yes |
 
 ### 1.16.2 Link with full context of destination
 
@@ -1059,7 +1064,7 @@ When using DOIs in any section of the EPUB, the title of the publication should 
 
 | U-M Vendor | Fulcrum Partner |
 | ---------- | --------------- |
-| Yes        | No              |
+| Yes        | Yes             |
 
 ### 1.16.5 Visual distinctive linking
 
@@ -1177,7 +1182,7 @@ Images should have an alternate text (`img/@alt` attribute) for screen reader us
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No, but strongly recommended |
+| Yes | Yes |
 
 ### 1.17.4 Decorative image
 
@@ -1190,7 +1195,7 @@ An empty `alt` attribute is complimented by the `role` presentation to indicate 
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No, but strongly recommended |
+| Yes | Yes |
 
 ### 1.17.5 Cover Image
 Cover images should appear as the first page of an EPUB and always be included inside the linear flow of the spine. They should be encoded with appropriate `aria` and `epub:type` attribute values and include alt text.
@@ -1255,7 +1260,7 @@ Cover alt text should follow the following template to ensure consistency across
 #### Required For
 | U-M Vendor | Fulcrum Partner              |
 | ---------- | ---------------------------- |
-| Yes        | No, but strongly recommended |
+| Yes        | Yes |
 
 ### 1.17.6 Figures
 
@@ -1418,7 +1423,7 @@ In the `content.opf` file, place the XHTML description file at the end of the sp
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No |
+| Yes | Yes |
 
 ### 1.17.8 Fulcrum Resource References
 
@@ -1507,7 +1512,7 @@ independently of one another. This means that <code>i</code> ...
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No |
+| Yes | Yes |
 
 ### 1.18.2 Code Blocks
 
@@ -1540,7 +1545,7 @@ end if
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No |
+| Yes | Yes |
 
 ### 1.18.3 Code Blocks with Line Numbers
 
@@ -1566,7 +1571,7 @@ from semantic encoding, and use CSS-only to include line numbers. Apply a CSS at
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No |
+| Yes | Yes |
 
 ### 1.18.4 Code Blocks with Line Numbers as Tables
 
@@ -1613,7 +1618,7 @@ class="page"></a>Table 1.1. Excerpt from Heartbleed patch
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No |
+| Yes | Yes |
 
 ### 1.18.5 Comparing Code Blocks with Line Numbers
 
@@ -1671,7 +1676,7 @@ Ruby</th>
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No |
+| Yes | Yes |
 
 ## 1.19 Footnotes and Endnotes
 
@@ -1682,7 +1687,7 @@ Footnote and endnotes should be double-linked, allowing readers to navigate to a
 ### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No |
+| Yes | Yes |
 
 ### 1.19.1 Footnotes in the body
 
@@ -1702,7 +1707,7 @@ there were 67 mills engaged in the manufacture of cotton goods ...
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No |
+| Yes | Yes |
 
 ### 1.19.2 Endnote section
 
@@ -1730,7 +1735,7 @@ Note that `doc-endnote` role is used to identify the section containing the endn
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No |
+| Yes | Yes |
 
 ### 1.19.3 Back-linking notes
 Providing links back to the primary text from the endnote or footnote section help readers navigate to and from notes. 
@@ -1747,7 +1752,7 @@ In this example a class `none` is applied to the `<ol>` to prevent automatic num
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No |
+| Yes | Yes |
 
 
 ## 1.20 Bibliographies
@@ -1767,7 +1772,7 @@ Bibliographies should be structured using sections and lists to simplify access 
 ### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No |
+| Yes | Yes |
 
 ## 1.21 Indexes
 Indexes should be structured using sections and lists to simplify access to the subjects.
@@ -1788,7 +1793,7 @@ Indexes should be structured using sections and lists to simplify access to the 
 ### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No |
+| Yes | Yes |
 
 ## 1.22 Content Numbering
 Page numbers should be applied for titles that have a print equivalent. For titles that are digital-only and do not have a print equivalent, paragraph numbers should be applied.
@@ -1812,7 +1817,7 @@ In the above example, to avoid assistive technology reading the page number twic
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
-| Yes | No, but strongly recommended |
+| Yes | Yes |
 
 
 ### 1.22.2 Paragraph Numbering
@@ -2001,7 +2006,7 @@ Unique styles per book can be added as needed as additional styles at the bottom
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ---------- | --------------- |
-| Yes        | No              |
+| Yes        | Yes              |
 
 ### 1.25.3 Colors
 
@@ -2010,7 +2015,7 @@ Ensure sufficient contrast so that text is legible, links are distinguishable fr
 #### Required For
 | U-M Vendor | Fulcrum Partner              |
 | ---------- | ---------------------------- |
-| Yes        | No, but strongly recommended |
+| Yes        | Yes |
 
 ### 1.25.4 Background Images
 
@@ -2019,7 +2024,7 @@ If background images are to be included in the EPUB, setting the contrast betwee
 #### Required For
 | U-M Vendor | Fulcrum Partner              |
 | ---------- | ---------------------------- |
-| Yes        | No, but strongly recommended |
+| Yes        | Yes |
 
 ### 1.25.5 Hidden Content
 
@@ -2028,7 +2033,7 @@ There should not be any hidden content available in the EPUB files.
 #### Required For
 | U-M Vendor | Fulcrum Partner              |
 | ---------- | ---------------------------- |
-| Yes        | No, but strongly recommended |
+| Yes        | Yes |
 
 ### 1.25.6 CSS Property Reference
 
@@ -2199,7 +2204,7 @@ Retain the reading order of the EPUB source files in the EPUB3 output. For the P
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ---------- | --------------- |
-| Yes        | No              |
+| Yes        | Yes              |
 
 ## 1.31 DPUB ARIA Semantics
 
@@ -2210,7 +2215,7 @@ Refer to the [DAISY Accessible Publishing Knowledge Base DPUB-ARIA guidelines](h
 #### Required For
 | U-M Vendor | Fulcrum Partner |
 | ---------- | --------------- |
-| Yes        | No              |
+| Yes        | Yes              |
 
 ## 1.32 Accessibility
 
@@ -2233,7 +2238,7 @@ While much of the guidance in the Fulcrum EPUB Specification is aimed at ensurin
 #### Required For
 | U-M Vendor | Fulcrum Partner              |
 | ---------- | ---------------------------- |
-| Yes        | No, but strongly recommended |
+| Yes        | Yes |
 
 ## Revision History
 
@@ -2336,6 +2341,12 @@ While much of the guidance in the Fulcrum EPUB Specification is aimed at ensurin
 <td>3.1</td>
 <td>September 2025</td>
 <td>Adds examples of facing page translation support for EPUB; add list of figures requirements</td>
+<td>J McGlone</td>
+</tr>
+<tr class="odd">
+<td>3.2</td>
+<td>January 2026</td>
+<td>Modifies required items for Fulcrum partner to ensure EPUBs conform to accessibility requirements.</td>
 <td>J McGlone</td>
 </tr>
 </tbody>
