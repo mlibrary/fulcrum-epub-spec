@@ -1,7 +1,7 @@
 /*
-  // Version 2.1
+  // Version 2.2
   // OEPS filename: default.css
-  // Last update: Dec 15 2025
+  // Last update: Jan 27 2026
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes. Custom overrides start at line 1755.
 */
@@ -1942,6 +1942,11 @@ span.pn {text-align:center; text-indent:0; margin-top:10%; display:block;}
 span.pt {font-size:140%; text-align:center; font-weight:bold; text-indent:0; margin-top:1em; margin-bottom: 1em; display: block; line-height:1.1em;}
 .serah {margin-top: .75em; margin-bottom: .5em; text-align:left; text-indent: 0; font-weight: bold;}
 h2.serah {font-size: 1em; margin-top: .75em; margin-bottom: .5em; text-align:left; text-indent: 0; font-weight: bold;}
+/*h6*/
+.eh	{font-size: 100%; font-style: italic; font-weight: normal; margin-bottom: 0.25em; margin-top: 1.25em; text-align: center; text-indent: 0;}
+.ehaft	{font-size: 100%; font-style: italic; font-weight: normal; margin-bottom: 0.25em; margin-top: 0.25em; text-align: center; text-indent: 0;}
+.fh	{font-size: 90%; font-style: normal; font-weight: normal; margin-bottom: 0.25em; margin-top: 1.25em; text-align: center; text-indent: 0;}
+
 /*Main Body Paragraph Styles*/
 .pf {margin-top: 4em; text-align:left;}
 .paft {margin-top: .5em; text-align:left;}
