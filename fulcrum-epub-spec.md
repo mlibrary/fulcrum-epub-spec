@@ -11,6 +11,8 @@ If you have questions, feedback, or find errors or issues with this specificatio
 
 - [1.1 EPUB Version](#11-epub-version)
 
+    - [1.1.2 EPUB Layout Rendering](#112-epub-layout-rendering)
+
 - [1.2 Element Specification for Reformatting](#12-element-specification-for-reformatting)
 
     - [1.2.1 Standard Functionality Levels for PDF source](#121-standard-functionality-levels-for-pdf-source)
@@ -201,6 +203,14 @@ EPUB conforming to a specification less than EPUB 3.0 will not function as expec
 | U-M Vendor        | Fulcrum Partner   |
 | ----------------- | ----------------- |
 | Must be EPUB 3.0+ | Must be EPUB 3.0+ |
+
+### 1.1.2 EPUB Layout Rendering
+[Reflowable EPUB 3.0+ layouts](https://www.w3.org/TR/epub-33/#sec-reflowable-layouts) are required for the Fulcrum Reader. Fixed layouts are unsupported in the Fulcrum Reader and should either be converted to a reflowable EPUB layout or, if a fixed layout is required, another ebook format such as PDF.
+
+#### Required For
+| U-M Vendor        | Fulcrum Partner   |
+| ----------------- | ----------------- |
+| Yes | Yes |
 
 ## 1.2 Element Specification for Reformatting
 The following matrix details recommendations for converting different elements from PDF to EPUB 3.
@@ -2347,6 +2357,12 @@ While much of the guidance in the Fulcrum EPUB Specification is aimed at ensurin
 <td>3.2</td>
 <td>January 2026</td>
 <td>Modifies required items for Fulcrum partner to ensure EPUBs conform to accessibility requirements.</td>
+<td>J McGlone</td>
+</tr>
+<tr class="even">
+<td>3.3</td>
+<td>February 2026</td>
+<td>Adds Fulcrum Reader requirements for EPUB layout rendering.</td>
 <td>J McGlone</td>
 </tr>
 </tbody>
