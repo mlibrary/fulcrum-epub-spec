@@ -145,7 +145,7 @@ If you have questions, feedback, or find errors or issues with this specificatio
 
     - [1.22.3 Line Numbering](#1223-line-numbering)
   
-- [1.23 Chapters split into multiple XHTML files](#123-chapter-split)
+- [1.23 Chapters split into multiple XHTML files](#123-chapters-split-into-multiple-xhtml-files)
 
 - [1.24 Facing Page Translation](#124-facing-page-translation)
 
@@ -1857,11 +1857,17 @@ Line numbering, such as in poems or code blocks, requires adding a `class` ident
 
 ## 1.23 Chapters split into multiple XHTML files
 
-When chapters contain a large number of media and the total file size exceeds 10MB, then consider splitting the chapter into a series of HTML files. This will create smaller files for faster download and rendering within the Fulcrum EPUB Reading System. 
+Whenever possible our preference is for chapters to be contained within a single XHTML file. However, when chapters contain a large number of media and the total file size exceeds 10MB, consider splitting the chapter into a series of XHTML files. This will create smaller files for faster download and rendering within the web-based Fulcrum EPUB Reading System. 
 
-Inside each HTML file, please include `<meta content="chapter2" name="chapter2a" role="section"/>` updated by section to represent relationships between all files for a chapter. 
+To help facilitate chapter display and linking in the Fulcrum Reading System, in the `<head>` of each XHTML file the chapter is split into, include the following `<meta>` element with values to represent relationships between all files for a chapter:
 
-The reason for the metadata inclusion is to provide information so that Fulcrum is able to parse files to allow only chapters to display.
+````
+<meta content="chapter2" name="chapter2a" role="section"/>
+````
+
+In the above example the `content` contains the chapter number and the `name` should contain the same chapter number but with its "part" appended (eg, a, b, c d, etc.). Including this metadata will provide the necessary information so that Fulcrum is able to parse files to allow only chapters to display in the TOC and to ensure if a download is initiated by a user, the full chapter is downloaded.
+
+The example below demonstrates where this `<meta>` element should be included in each XHTML file:
 
 ````
 <html xmlns="http://www.w3.org/1999/xhtml"
