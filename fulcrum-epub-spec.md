@@ -1886,7 +1886,7 @@ The example below demonstrates where this `<meta>` element should be included in
 ### Required For
 | U-M Vendor | Fulcrum Partner              |
 | ---------- | ---------------------------- |
-| No         | No, but strongly recommended |
+| Yes, when XHTML file size exceeds 10MB | Yes, when XHTML file size exceeds 10MB |
 
 ## 1.24 Facing Page Translation
 Facing page translation, or, the display of two versions of the same text in different languages side-by-side to each other on a single page in a Reading System, can be achieved in the Fulcrum Reader through a combination of distinct XHTML encoding, custom CSS, and reading settings in the OPF file. 
