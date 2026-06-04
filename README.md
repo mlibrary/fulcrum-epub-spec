@@ -1813,7 +1813,7 @@ In this example a class `none` is applied to the `<ol>` to prevent automatic num
 Bibliographies should be structured using sections and lists to simplify access to the references. Bibliographies and lists of references should be structured in an unordered list (`<ul>`).
 
 ```
-<section role="doc-bibliography">  
+<section epub:type="bibliography" role="doc-bibliography">  
     <h3 id="eh0602" class="eh">Works Cited</h3>  
     <ul role="list" class="references">  
         <li class="rf" role="listitem">Afzal-Khan, Fawzia. “The Politics of Pity and the Individual Heroine Syndrome: Mukhtaran Mai and Malala Yousafzai of Pakistan.” <i>Performing Islam</i> 4, no. 2 (2015): 151–71.</li>  
