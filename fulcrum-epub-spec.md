@@ -1810,16 +1810,16 @@ In this example a class `none` is applied to the `<ol>` to prevent automatic num
 
 
 ## 1.20 Bibliographies
-Bibliographies should be structured using sections and lists to simplify access to the references.
+Bibliographies should be structured using sections and lists to simplify access to the references. Bibliographies and lists of references should be structured in an unordered list (`<ul>`).
 
 ```
 <section role="doc-bibliography">  
     <h3 id="eh0602" class="eh">Works Cited</h3>  
-    <ol role="list" class="references">  
+    <ul role="list" class="references">  
         <li class="rf" role="listitem">Afzal-Khan, Fawzia. “The Politics of Pity and the Individual Heroine Syndrome: Mukhtaran Mai and Malala Yousafzai of Pakistan.” <i>Performing Islam</i> 4, no. 2 (2015): 151–71.</li>  
         <li class="rf" role="listitem">Baranello, Micaela. “When Cries of Rape are Heard in Opera Halls.” <i>New York Times</i>, July 16, 2015.</li>
         ...
-    </ol>
+    </ul>
 </section>    
 ```
 
@@ -2305,10 +2305,10 @@ While much of the guidance in the Fulcrum EPUB Specification is aimed at ensurin
 <table>
 <thead>
 <tr class="header">
-<th><strong>Rev Num</strong></th>
-<th><strong>Release Date</strong></th>
-<th><strong>Changes </strong></th>
-<th><strong>Author</strong></th>
+<th scope="col"><strong>Rev Num</strong></th>
+<th scope="col"><strong>Release Date</strong></th>
+<th scope="col"><strong>Changes </strong></th>
+<th scope="col"><strong>Author</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -2417,7 +2417,7 @@ While much of the guidance in the Fulcrum EPUB Specification is aimed at ensurin
 </tr>
 <tr class="odd">
 <td>3.4</td>
-<td>June 2026</td>
+<td>June 4, 2026</td>
 <td>New requirements for large tables.</td>
 <td>J McGlone</td>
 </tr>
