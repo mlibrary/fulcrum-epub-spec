@@ -64,6 +64,10 @@ If you have questions, feedback, or find errors or issues with this specificatio
     - [1.13.1 Column heads and row heads](#1131-column-heads-and-row-heads)
       
     - [1.13.2 Large tables](#1132-large-tables)
+
+        - [1.13.2.1 Table container](#11321-table-container)
+
+        - [1.13.2.2 Table as image with extended description](#11322-table-as-image-with-extended-description)
       
     - [1.13.3 Irregular header](#1133-irregular-header)
 
@@ -692,15 +696,55 @@ Column heads and row heads must be defined as headers with appropriate scope att
 | ----------------- | ------------|
 | Yes | Yes |
 
+
 ### 1.13.2 Large tables
-If a table exceeds more than 8 columns or its layout could be compromised in its presentation on a Reading System, it is acceptable to present the table as an image. However, in such cases you must also provide an extended description of the table via a link to an XHTML file outside of the linear flow of the EPUB. The extended description should contain, in order of preference, either the HTML version of the large table or a summary and description of the data within the table. Users with text-to-speech playback available will be able to navigate the markup regardless of the rendering quality. 
+Tables in reflowable EPUBs often lose information when zoomed to 200% or contain a large number of columns. If a table exceeds more than 8 columns or its display is compromised and information is lost when zoomed in its presentation on a Reading System, one of the following two approaches are required.
 
-See the technique in section [1.17.7](#1177-extended-description-via-hyperlink) for providing an extended description of an image as guidance for including images of tables.
+#### 1.13.2.1 Table container
+*Note: This is the current preferred method of Fulcrum.* 
+To control table display via a horizontal/vertical scrollable container, wrap the table in a `<figure>` element, move the table `<caption>` to a `<figcaption>` and wrap the `<table>` with `<div class="table_container" tabindex="0">` (the `.table_container` selector is contained within all CSS files in this spec). An example of the proper encoding follows:
 
-#### Required For
+```
+<figure>
+ <figcaption>
+   <p id="t2" class="th"><span class="thn">Table 2.</span> The Debate between the Liberals and the New Left</p>
+ </figcaption>
+ <div class="table_container" tabindex="0">
+  <table> 
+   <thead>
+    <tr>
+      <td></td>
+      <th scope="col">
+        <p class="tch">The Liberals</p>
+      </th>
+      <th scope="col">
+        <p class="tch">The New Left</p>
+      </th>
+    </tr>
+   </thead>
+   <tbody>
+    ...
+   </tbody>
+  </table>
+ </div>
+</figure>
+```
+
+##### Required For
 | U-M Vendor | Fulcrum Partner |
 | ----------------- | ------------|
 | Yes | Yes |
+
+#### 1.13.2.2 Table as image with extended description
+*Note: This approach is less preferred but acceptable when the technique in 1.13.2.1 does not resolve the display issues.* 
+Capture the table as a JPG image and include as a `<figure>`. However, in such cases you must also provide an extended description of the table via a link to an XHTML file outside of the linear flow of the EPUB. The extended description should contain, in order of preference, either the HTML version of the large table or a summary and description of the data within the table. Users with text-to-speech playback available will be able to navigate the markup regardless of the rendering quality. 
+
+See the technique in section [1.17.7](#1177-extended-description-via-hyperlink) for providing an extended description of an image as guidance for including images of tables.
+
+##### Required For
+| U-M Vendor | Fulcrum Partner |
+| ----------------- | ------------|
+| Only if 1.13.2.1 fails to resolve display issue | No |
 
 ### 1.13.3 Irregular header
 
@@ -2369,6 +2413,12 @@ While much of the guidance in the Fulcrum EPUB Specification is aimed at ensurin
 <td>3.3</td>
 <td>February 2026</td>
 <td>Adds Fulcrum Reader requirements for EPUB layout rendering.</td>
+<td>J McGlone</td>
+</tr>
+<tr class="odd">
+<td>3.4</td>
+<td>June 2026</td>
+<td>New requirements for large tables.</td>
 <td>J McGlone</td>
 </tr>
 </tbody>

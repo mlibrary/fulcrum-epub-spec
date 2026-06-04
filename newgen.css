@@ -1,7 +1,7 @@
 /*
-  // Version 1.0
+  // Version 1.1
   // OPS filename: epub.css
-  // Last update: March 21 2019
+  // Last update: June 4 2026
   // About: this CSS file is for NewGen produced EPUBs, adapting Fulcrum styles
   // to NewGen classes.
 */
@@ -803,6 +803,15 @@ font-style:italic;
 table { 
 width:100%;
 border-collapse:collapse;
+}
+/* Table container prevents columns from spilling out of container */ 
+/* when there are many columns or text is resized to 200%+ */
+.table_container {
+      width: 100%;
+      overflow-x: auto; 
+      overflow-y: auto; 
+      max-height: 90vh; 
+      max-width: 100rem;
 }
 hr.line { 
 border-bottom:1px solid black;

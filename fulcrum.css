@@ -1,6 +1,6 @@
 /*
-  // Version 2.5
-  // Last update: October 22 2019
+  // Version 2.6
+  // Last update: June 4 2026
   // About: this CSS file is a generic CSS file for Fulcrum EPUBs
 */
 
@@ -249,6 +249,16 @@ tbody {
     padding-top: 1em;
     padding-bottom: 1em;
     text-align: left;
+}
+
+/* Table container prevents columns from spilling out of container */ 
+/* when there are many columns or text is resized to 200%+ */
+.table_container {
+      width: 100%;
+      overflow-x: auto; 
+      overflow-y: auto; 
+      max-height: 90vh; 
+      max-width: 100rem;
 }
 
 

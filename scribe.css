@@ -1,7 +1,7 @@
 /*
-  // Version 2.2
+  // Version 2.3
   // OEPS filename: default.css
-  // Last update: Jan 27 2026
+  // Last update: June 4 2026
   // About: this CSS file is for Scribe produced EPUBs, adapting Fulcrum styles
   // to Scribe classes. Custom overrides start at line 1755.
 */
@@ -2039,6 +2039,15 @@ tbody {
     padding-top: 1em;
     padding-bottom: 1em;
     text-align: left;
+}
+/* Table container prevents columns from spilling out of container */ 
+/* when there are many columns or text is resized to 200%+ */
+.table_container {
+      width: 100%;
+      overflow-x: auto; 
+      overflow-y: auto; 
+      max-height: 90vh; 
+      max-width: 100rem;
 }
 /* tables for poetry translations */
 table.poetry_translation {
