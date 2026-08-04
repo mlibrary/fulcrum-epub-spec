@@ -200,7 +200,7 @@ If you have questions, feedback, or find errors or issues with this specificatio
 
 EPUB conforming to a specification less than EPUB 3.0 will not function as expected in the Fulcrum Reader and should be converted to EPUB 3.0+ before submission to Fulcrum whenever possible.
 
-- EPUB 3.3 must be validated against [EPUBCheck version 5.2.1](https://github.com/w3c/epubcheck/releases/tag/v5.2.1).
+- EPUB 3.3 must be validated against [EPUBCheck version 5.3.0](https://github.com/w3c/epubcheck/releases/tag/v5.3.0).
 - XHTML files should be compliant with HTML5.
 
 ### Required For
